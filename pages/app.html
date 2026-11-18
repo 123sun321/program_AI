@@ -198,8 +198,8 @@ var $=function(id){return document.getElementById(id)};
 
 /* ============ 账号与角色 ============ */
 var ACCOUNTS={
-  student:{user:'194115042001',pwd:'000000',name:'张同学',role:'student',label:'学生端'},
-  teacher:{user:'463621',pwd:'000000',name:'李老师',role:'teacher',label:'教师端'},
+  student:{user:'194115042001',pwd:'000000',name:'孙同学',role:'student',label:'学生端'},
+  teacher:{user:'463621',pwd:'000000',name:'董老师',role:'teacher',label:'教师端'},
   admin:{user:'admin',pwd:'zznuadmin2026',name:'管理员',role:'admin',label:'管理端'}
 };
 var curRole='student', curUser=null;
@@ -246,30 +246,29 @@ var MENUS={
 /* ============ 模拟数据 ============ */
 var DATA={
   courses:[
-    {id:'C01',name:'Java 程序设计基础',teacher:'李老师',progress:78,status:'学习中',color:'#409eff'},
-    {id:'C02',name:'数据结构与算法',teacher:'王老师',progress:45,status:'学习中',color:'#67c23a'},
-    {id:'C03',name:'Web 应用开发',teacher:'李老师',progress:92,status:'即将完成',color:'#e6a23c'}
+    {id:'C01',name:'人工智能基础与应用',teacher:'董老师',progress:78,status:'学习中',color:'#409eff'},
+    {id:'C02',name:'Java 程序设计基础',teacher:'董老师',progress:45,status:'学习中',color:'#67c23a'}
   ],
   practices:[
     {id:'P01',title:'循环与累加：数列求和',course:'Java 程序设计基础',diff:'基础',done:true,score:95},
     {id:'P02',title:'条件判断：素数判定',course:'Java 程序设计基础',diff:'基础',done:true,score:88},
     {id:'P03',title:'数组应用：FizzBuzz',course:'Java 程序设计基础',diff:'进阶',done:false,score:null},
-    {id:'P04',title:'函数设计：最大公约数',course:'数据结构与算法',diff:'进阶',done:false,score:null},
-    {id:'P05',title:'综合练习：成绩统计',course:'Web 应用开发',diff:'挑战',done:true,score:92}
+    {id:'P04',title:'神经网络入门：手写数字识别',course:'人工智能基础与应用',diff:'进阶',done:false,score:null},
+    {id:'P05',title:'综合练习：简易文本分类',course:'人工智能基础与应用',diff:'挑战',done:true,score:92}
   ],
   students:[
-    {id:'194115042001',name:'张同学',course:'Java 程序设计',progress:78,runs:42,errors:9,status:'正常'},
-    {id:'194115042002',name:'刘同学',course:'Java 程序设计',progress:35,runs:18,errors:22,status:'需关注'},
-    {id:'194115042003',name:'陈同学',course:'数据结构',progress:66,runs:55,errors:7,status:'正常'},
-    {id:'194115042004',name:'赵同学',course:'数据结构',progress:52,runs:31,errors:15,status:'需关注'},
-    {id:'194115042005',name:'王同学',course:'Web 开发',progress:88,runs:67,errors:5,status:'优秀'},
-    {id:'194115042006',name:'周同学',course:'Java 程序设计',progress:24,runs:11,errors:19,status:'需关注'}
+    {id:'194115042001',name:'孙同学',course:'人工智能基础与应用',progress:78,runs:42,errors:9,status:'正常'},
+    {id:'194115042002',name:'刘同学',course:'人工智能基础与应用',progress:35,runs:18,errors:22,status:'需关注'},
+    {id:'194115042003',name:'陈同学',course:'Java 程序设计基础',progress:66,runs:55,errors:7,status:'正常'},
+    {id:'194115042004',name:'赵同学',course:'Java 程序设计基础',progress:52,runs:31,errors:15,status:'需关注'},
+    {id:'194115042005',name:'王同学',course:'人工智能基础与应用',progress:88,runs:67,errors:5,status:'优秀'},
+    {id:'194115042006',name:'周同学',course:'Java 程序设计基础',progress:24,runs:11,errors:19,status:'需关注'}
   ],
   assignments:[
-    {id:'A01',title:'实验一：Java 基础语法',course:'Java 程序设计基础',deadline:'2026-11-20',submit:28,total:32},
-    {id:'A02',title:'实验二：循环与数组',course:'Java 程序设计基础',deadline:'2026-11-25',submit:25,total:32},
-    {id:'A03',title:'实验三：素数与排序',course:'数据结构与算法',deadline:'2026-11-28',submit:19,total:30},
-    {id:'A04',title:'实验四：简易计算器',course:'Web 应用开发',deadline:'2026-12-02',submit:30,total:32}
+    {id:'A01',title:'实验一：Python 基础语法',course:'人工智能基础与应用',deadline:'2026-11-20',submit:28,total:32},
+    {id:'A02',title:'实验二：数据处理与可视化',course:'人工智能基础与应用',deadline:'2026-11-25',submit:25,total:32},
+    {id:'A03',title:'实验三：机器学习入门',course:'人工智能基础与应用',deadline:'2026-11-28',submit:19,total:30},
+    {id:'A04',title:'实验四：简易分类模型',course:'人工智能基础与应用',deadline:'2026-12-02',submit:30,total:32}
   ],
   logs:[
     {t:'2026-11-18 19:32',user:'admin',act:'登录系统',ip:'127.0.0.1'},
@@ -360,7 +359,7 @@ var PAGES={student:{},teacher:{},admin:{}};
 PAGES.student.home=function(){
   return pageHd('工作台','欢迎回来，'+curUser.name+'！这里是你的学习概览。')+demoNotice()+
   statRow([
-    {c:'b',i:'▤',n:'3',l:'在学课程'},
+    {c:'b',i:'▤',n:'2',l:'在学课程'},
     {c:'g',i:'✓',n:'3/5',l:'已完成实验'},
     {c:'o',i:'⏱',n:'12.5h',l:'累计学习时长'},
     {c:'p',i:'★',n:'92',l:'综合评分'}
@@ -368,7 +367,7 @@ PAGES.student.home=function(){
   '<div class="grid-2-3">'+
   panel('学习进度',DATA.courses.map(function(c){
     return '<div style="margin-bottom:16px"><div style="display:flex;justify-content:space-between;margin-bottom:5px"><span>'+c.name+'</span><b style="color:var(--primary)">'+c.progress+'%</b></div><div class="bar" style="height:8px;background:#eef2f7;border-radius:6px;overflow:hidden"><i style="display:block;height:100%;width:'+c.progress+'%;background:linear-gradient(90deg,#409eff,#67c23a);border-radius:6px"></i></div></div>';
-  }).join(''),'共 3 门课程')+
+  }).join(''),'共 2 门课程')+
   panel('最近活动',
     '<div class="timeline">'+
     '<div class="tl-item ok"><div class="tt">今天 19:15</div><div class="th">完成实验「循环与累加」· 得分 95</div></div>'+
@@ -453,7 +452,7 @@ PAGES.student.feedback=function(){
 
 /* ============ 教师端页面 ============ */
 PAGES.teacher.home=function(){
-  return pageHd('工作台','李老师，欢迎回来。以下是班级整体学情概览。')+demoNotice()+
+  return pageHd('工作台','董老师，欢迎回来。以下是班级整体学情概览。')+demoNotice()+
   statRow([
     {c:'b',i:'♙',n:'32',l:'在班学生'},
     {c:'g',i:'▤',n:'4',l:'进行中作业'},
@@ -527,16 +526,16 @@ PAGES.admin.home=function(){
   return pageHd('工作台','系统总体运行概览。')+demoNotice()+
   statRow([
     {c:'b',i:'♙',n:'128',l:'注册用户'},
-    {c:'g',i:'▤',n:'12',l:'课程总数'},
+    {c:'g',i:'▤',n:'2',l:'课程总数'},
     {c:'o',i:'▥',n:'5600+',l:'累计运行'},
     {c:'p',i:'◎',n:'99.2%',l:'系统可用率'}
   ])+
-  panel('系统公告','<div style="line-height:2;color:var(--text-reg);font-size:13.5px"><p>• 平台运行正常，所有服务可用。</p><p>• 本学期新增 3 门课程，累计 128 名用户注册。</p><p>• 建议定期导出过程数据用于教学研究。</p></div>');
+  panel('系统公告','<div style="line-height:2;color:var(--text-reg);font-size:13.5px"><p>• 平台运行正常，所有服务可用。</p><p>• 本学期新增 2 门课程，累计 128 名用户注册。</p><p>• 建议定期导出过程数据用于教学研究。</p></div>');
 };
 
 PAGES.admin.users=function(){
   var all=DATA.students.map(function(s){return {user:s.id,name:s.name,role:'学生',status:'正常'}});
-  all.push({user:'463621',name:'李老师',role:'教师',status:'正常'});
+  all.push({user:'463621',name:'董老师',role:'教师',status:'正常'});
   all.push({user:'admin',name:'管理员',role:'管理员',status:'正常'});
   return pageHd('用户管理','管理平台所有用户账号。')+
   panel('用户列表','<table class="tbl"><thead><tr><th>账号</th><th>姓名</th><th>角色</th><th>状态</th><th>操作</th></tr></thead><tbody>'+
@@ -561,7 +560,7 @@ PAGES.admin.stats=function(){
   ])+
   panel('各课程运行量',
     '<div class="bars">'+
-    [['Java基础',2100],['数据结构',1850],['Web开发',1650]].map(function(x){return '<div class="bar-col"><span class="v">'+x[1]+'</span><div class="bar" style="height:'+(x[1]/2100*100)+'%"></div><span class="lbl">'+x[0]+'</span></div>'}).join('')+
+    [['人工智能基础',2100],['Java 程序设计',1450]].map(function(x){return '<div class="bar-col"><span class="v">'+x[1]+'</span><div class="bar" style="height:'+(x[1]/2100*100)+'%"></div><span class="lbl">'+x[0]+'</span></div>'}).join('')+
     '</div>');
 };
 
