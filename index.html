@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>智训云枢 · 从结果评价走向过程理解的 AI 编程实训平台</title>
+<meta name="description" content="智训云枢——面向编程实训场景的过程评价平台，把学习过程从不可见走向可追溯。">
+<style>
+:root{--blue:#2563eb;--cyan:#0891b2;--ink:#0f172a;--muted:#64748b;--bg:#f8fafc;--card:#ffffff;--line:#e2e8f0}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+header{background:linear-gradient(135deg,#1e3a8a 0%,#2563eb 45%,#0891b2 100%);color:#fff;padding:72px 0 88px;position:relative;overflow:hidden}
+header::after{content:"";position:absolute;right:-120px;top:-120px;width:460px;height:460px;border-radius:50%;background:rgba(255,255,255,.07)}
+.badge{display:inline-block;border:1px solid rgba(255,255,255,.45);border-radius:999px;padding:5px 16px;font-size:13px;letter-spacing:.5px;margin-bottom:22px}
+h1{font-size:46px;line-height:1.25;letter-spacing:-1px;margin-bottom:14px}
+h1 span{display:block;font-size:24px;font-weight:400;opacity:.92;margin-top:12px;letter-spacing:0}
+.sub{font-size:17px;opacity:.9;max-width:680px;margin-top:18px}
+.btns{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:10px;font-weight:600;font-size:15px;transition:.2s}
+.btn-main{background:#fff;color:#1d4ed8}
+.btn-main:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.15)}
+.btn-ghost{border:1px solid rgba(255,255,255,.6);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+section{padding:64px 0}
+section h2{font-size:30px;margin-bottom:10px;letter-spacing:-.5px}
+.lead{color:var(--muted);font-size:16px;margin-bottom:34px;max-width:760px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px;box-shadow:0 2px 10px rgba(15,23,42,.04)}
+.card .ico{width:42px;height:42px;border-radius:10px;background:#eff6ff;color:var(--blue);display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:15px}
+.card h3{font-size:18px;margin-bottom:8px}
+.card p{color:var(--muted);font-size:14.5px}
+.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.pill{display:inline-block;background:#ecfeff;color:#0e7490;border-radius:6px;padding:3px 10px;font-size:12.5px;margin:3px 4px 3px 0}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(15,23,42,.04);font-size:14.5px}
+th,td{padding:15px 18px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:#f1f5f9;font-weight:600;color:#334155}
+tr:last-child td{border-bottom:none}
+code{background:#f1f5f9;padding:2px 7px;border-radius:5px;font-size:13.5px;color:#0f172a}
+.note{background:#fffbeb;border-left:4px solid #f59e0b;padding:16px 20px;border-radius:8px;color:#78350f;font-size:14px;margin-top:22px}
+footer{background:#0f172a;color:#94a3b8;padding:34px 0;text-align:center;font-size:13.5px}
+footer b{color:#e2e8f0}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="badge">郑州师范学院 · 软件应用与开发</div>
+    <h1>智训云枢<span>从结果评价走向过程理解的 AI 编程实训平台</span></h1>
+    <p class="sub">把学生的试错、修改、改进过程，转化为可复盘、可指导的过程数据；让学习过程从「不可见」走向「可追溯」，从「结果判断」走向「过程理解」。</p>
+    <div class="btns">
+      <a class="btn btn-main" href="http://82.156.228.216:8001/" target="_blank">进入在线平台 →</a>
+      <a class="btn btn-ghost" href="#accounts">查看测试账号</a>
+      <a class="btn btn-ghost" href="https://github.com/123sun321/program_AI" target="_blank">查看源码</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>系统做什么</h2>
+    <p class="lead">面向编程教学场景，构建「可记录、可理解、可反馈」的学习过程评价系统。</p>
+    <div class="grid">
+      <div class="card"><div class="ico">◎</div><h3>过程感知</h3><p>记录代码输入、程序运行、错误触发、代码修改、再次运行的完整链路，沉淀细粒度行为与关键状态快照。</p></div>
+      <div class="card"><div class="ico">↗</div><h3>轨迹重构</h3><p>基于代码差异对比与时序对齐，把碎片化离散操作重构为连续、可还原的学习轨迹与学习路径。</p></div>
+      <div class="card"><div class="ico">✦</div><h3>过程建模</h3><p>融合行为特征、错误信息与知识点关联，定位学生卡点，让学习困难从结果层面下沉到过程层面。</p></div>
+      <div class="card"><div class="ico">◈</div><h3>反馈与画像</h3><p>结合上下文增强生成可理解的错误原因与改进建议，汇总学习画像，为教师教学诊断提供数据支撑。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="accounts">
+  <div class="wrap">
+    <h2>在线体验</h2>
+    <p class="lead">平台已部署在公网，可直接用浏览器访问。建议使用 Chrome 或 Edge。</p>
+    <table>
+      <thead><tr><th>端</th><th>访问地址</th><th>测试账号</th><th>密码</th></tr></thead>
+      <tbody>
+        <tr><td>学生端</td><td><a href="http://82.156.228.216:8001/" target="_blank"><code>http://82.156.228.216:8001/</code></a></td><td>194115042001</td><td>000000</td></tr>
+        <tr><td>教师端</td><td><a href="http://82.156.228.216:8001/manager" target="_blank"><code>http://82.156.228.216:8001/manager</code></a></td><td>463621</td><td>000000</td></tr>
+        <tr><td>管理端</td><td><a href="http://82.156.228.216:8001/manager" target="_blank"><code>http://82.156.228.216:8001/manager</code></a></td><td>admin</td><td>zznuadmin2026</td></tr>
+      </tbody>
+    </table>
+    <div class="note">教师端与管理端共用后台入口，系统按账号权限进入对应页面。建议学生端与后台用不同浏览器打开；切换账号请先退出或清除缓存后重新登录。</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>技术构成</h2>
+    <p class="lead">后端基于 Spring Boot 多模块架构，前端为学生端与管理/教师端两套 Vue 应用。</p>
+    <div>
+      <span class="pill">Spring Boot</span><span class="pill">Java</span><span class="pill">Maven 多模块</span>
+      <span class="pill">Vue.js</span><span class="pill">在线代码编辑</span><span class="pill">行为日志采集</span>
+      <span class="pill">RAG 上下文增强</span><span class="pill">学习画像</span>
+    </div>
+    <div class="card" style="margin-top:26px">
+      <h3>源码结构</h3>
+      <p style="margin-top:8px;line-height:2">
+        <code>backend/</code> — 后端多模块源码（Java / 配置，敏感信息已脱敏）<br>
+        <code>frontend/managerWeb/</code> — 教师端与管理端前端源码<br>
+        <code>frontend/studentWeb/</code> — 学生端前端源码<br>
+        <code>访问说明.md</code> — 在线体验地址与测试账号<br>
+        <code>原始readme.txt</code> — 原始提交包说明
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 2026 智训云枢 · 郑州师范学院 · <b>看见过程，才能理解学习</b></div>
+</footer>
+</body>
+</html>

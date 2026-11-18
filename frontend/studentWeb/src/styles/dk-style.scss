@@ -1,0 +1,255 @@
+
+html,body{height: 100%;}
+// ul{margin:0;padding:0;}
+// ul,li{list-style: none;}
+.top-info,.searchFormWrap,.totalCourse,.studypathBox{
+  ul{margin:0;padding:0;}
+  ul,li{list-style: none;}
+}
+
+.dk-margin { margin: 10px;}
+.dk-margined { margin: 0px;}
+.dk-margin-top { margin-top: 10px;}
+.dk-margin-bottom { margin-bottom: 10px;}
+.dk-margin-right { margin-right: 10px;}
+.dk-margin-left { margin-left: 10px;}
+
+.dk-f-yahei{font-family: "微软雅黑";}
+.dk-font600{font-weight: 600;}
+.dk-font400{font-weight: 400;}
+.dk-f-block{color: #000;}
+.dk-f-white{color:#fff;}
+.dk-f-blue{color:#66D9EF;}
+.dk-f-red{color: #ef4f4f;}
+.dk-f-orange{color: #f60;}
+.dk-f-purple{color:#AE81FF; }
+.dk-f-gray{color: #ccc;}
+.dk-f-green{color: #10a54a;}
+.dk-f-color8{color:#888;}
+.dk-f-color4{color: #444;}
+
+.dk-txt-center{text-align: center;}
+.dk-txt-left{text-align: left;}
+.dk-txt-right{text-align: right;}
+
+.dk-fl{float: left;}
+.dk-fr{float: right;}
+.dk-hide{overflow: hidden;}
+
+
+.dk-border{border:1px #e8e8e8 solid;}
+.dk-noBorder{border: 0px;}
+.dk-border-top{border-top: 1px #e8e8e8 solid;}
+.dk-border-bottom{border-bottom: 1px #e8e8e8 solid;}
+.dk-border-left{border-left: 1px #e8e8e8 solid;}
+.dk-border-right{border-right: 1px #e8e8e8 solid;}
+
+.dk-f12 { font-size: 12px !important;}
+.dk-f13 { font-size: 13px !important;}
+.dk-f14 { font-size: 14px !important;}
+.dk-f15 { font-size: 15px !important;}
+.dk-f16 { font-size: 16px !important;}
+.dk-f17 { font-size: 17px !important;}
+.dk-f18 { font-size: 18px !important;}
+.dk-f19 { font-size: 19px !important;}
+.dk-f20 { font-size: 20px !important;}
+.dk-f21 { font-size: 21px !important;}
+.dk-f22 { font-size: 22px !important;}
+.dk-f23 { font-size: 23px !important;}
+.dk-f24 { font-size: 24px !important;}
+.dk-f25 { font-size: 25px !important;}
+.dk-f26 { font-size: 26px !important;}
+.dk-f27 { font-size: 27px !important;}
+.dk-f28 { font-size: 28px !important;}
+.dk-f29 { font-size: 29px !important;}
+.dk-f30 { font-size: 30px !important;}
+.dk-f31 { font-size: 31px !important;}
+.dk-f32 { font-size: 32px !important;}
+.dk-f35 { font-size: 35px !important;}
+.dk-f40 { font-size: 40px !important;}
+.dk-f45 { font-size: 45px !important;}
+.dk-f50 { font-size: 50px !important;}
+.dk-f55 { font-size: 55px !important;}
+
+.dk-lineHeight{height: 1.5;}
+
+.dk-tab-fixed { position: fixed; top: 0; width: 100%; z-index: 100;}
+.dk-tab-bottom { bottom: 0; width: 100%; position: fixed;}
+.dk-relative{ position: relative; }
+.dk-absolute{ position: absolute; }
+.dk-flex{ display: flex; }
+.dk-flex-item{ flex: 1;}
+.dk-flex-wrap{ display: flex;	flex-wrap: wrap;}
+.dk-placeholder { margin: 5px;    text-align: center}
+.dk-inline-block{ display: inline-block;}
+.dk-block{	display: block;}
+.dk-fl{	float: left;}
+.dk-fr{	float: right;}
+.dk-radius-left-top{ border-top-left-radius: 50%;}
+.dk-radius-right-top{ border-top-right-radius: 50%;}
+.dk-radius-left-bottom{	border-bottom-left-radius: 50%;}
+.dk-radius-right-bottom{ border-bottom-right-radius: 50%;}
+.dk-circle{	-webkit-border-radius: 50%; border-radius: 50%}
+.dk-w10{width: 10%;}
+.dk-w15{width: 15%;}
+.dk-w20{width: 20%;}
+.dk-w25{width: 25%;}
+.dk-w30{width: 30%;}
+.dk-w33{width:33.33%}
+.dk-w35{width: 35%;}
+.dk-w40{width: 40%;}
+.dk-w45{width: 45%;}
+.dk-w50{width: 50%;}
+.dk-w55{width: 55%;}
+.dk-w60{width: 60%;}
+.dk-w65{width: 65%;}
+.dk-w70{width: 70%;}
+.dk-w75{width: 75%;}
+.dk-w80{width: 80%;}
+.dk-w85{width: 85%;}
+.dk-w90{width: 90%;}
+.dk-w95{width: 95%;}
+.dk-w100{width: 100%;}
+
+.dk-h10{height: 10%;}
+.dk-h15{height: 15%;}
+.dk-h20{height: 20%;}
+.dk-h25{height: 25%;}
+.dk-h30{height: 30%;}
+.dk-h33{height:33.33%}
+.dk-h35{height: 35%;}
+.dk-h40{height: 40%;}
+.dk-h45{height: 45%;}
+.dk-h50{height: 50%;}
+.dk-h55{height: 55%;}
+.dk-h60{height: 60%;}
+.dk-h65{height: 65%;}
+.dk-h70{height: 70%;}
+.dk-h75{height: 75%;}
+.dk-h80{height: 80%;}
+.dk-h85{height: 85%;}
+.dk-h90{height: 90%;}
+.dk-h95{height: 95%;}
+.dk-h100{height: 100%;}
+
+.dk-ellipsis{white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+
+.dk-btn{padding:8px 10px; display: inline-block;}
+.dk-btn-default{border: 1px #ccc solid;color: #333;}
+
+
+.dk-m5{margin:5px;}
+.dk-m10{margin:10px;}
+.dk-m15{margin:15px;}
+.dk-m20{margin:20px;}
+.dk-mt5 { margin-top: 5px; }
+.dk-mt10 { margin-top: 10px; }
+.dk-mt15 { margin-top: 15px;}
+.dk-mt20 { margin-top: 20px;}
+.dk-mb10 {margin-bottom: 10px;}
+.dk-mb15 { margin-bottom: 15px;}
+.dk-mb20 { margin-bottom: 20px;}
+.dk-ml5 { margin-left: 5px;}
+.dk-ml10 { margin-left: 10px;}
+.dk-ml15 { margin-left: 15px;}
+.dk-ml20 { margin-left: 20px;}
+.dk-mr5 {margin-right:5px;}
+.dk-mr10 { margin-right: 10px;}
+.dk-mr15 { margin-right: 15px;}
+.dk-mr20 { margin-right: 20px;}
+
+.dk-p5{ padding:5px;}
+.dk-p10 { padding: 10px;}
+.dk-p15 { padding: 15px;}
+.dk-p20 { padding: 20px;}
+.dk-pt5 {padding-top:5px;}
+.dk-pt10 { padding-top: 10px;}
+.dk-pt15 { padding-top: 15px;}
+.dk-pt20 { padding-top: 20px;}
+.dk-pb5 {padding-bottom: 5px;}
+.dk-pb10 { padding-bottom: 10px;}
+.dk-pb15 { padding-bottom: 15px;}
+.dk-pb20 { padding-bottom: 20px;}
+.dk-pl5 {padding-left: 5px;}
+.dk-pl10 { padding-left: 10px;}
+.dk-pl15 { padding-left: 15px;}
+.dk-pl20 { padding-left: 20px;}
+.dk-pr5 {padding-right: 5px;}
+.dk-pr10 { padding-right: 10px;}
+.dk-pr15 { padding-right: 15px;}
+.dk-pr20 { padding-right: 20px;}
+
+
+
+
+.dk-col-box{display: flex;flex-direction: column;}
+
+.dk-card-blue{ background-color:#007bff;color:#fff; }
+.dk-card-green{ background-color:#658F29;color:#fff; }
+.dk-card-orange{background-color:#E0670A;color:#fff;}
+.dk-card-lightblue{background-color:#089E9C;color:#fff;}
+.dk-card-red{background-color:#dc3545;color:#fff;}
+.dk-card-brown{background-color:#45343C;color:#fff;}/* 棕色的 */
+
+
+.dk-bg-blue{background-color: #007bff;}/* 蓝色 */
+.dk-bg-indigo{background-color:#6610f2;}/* 靛蓝色 */
+.dk-bg-purple{background-color: #6f42c1;}/* 紫色 */
+.dk-bg-pink{background-color: #e83e8c;}/* 粉红色 */
+.dk-bg-red{background-color: #dc3545;}/* 红色 */
+.dk-bg-orange{background-color: #fd7e14;}/* 橙色 */
+.dk-bg-yellow{background-color: #ffc107;}/* 黄色 */
+.dk-bg-green{background-color: #28a745;}/* 绿色 */
+.dk-bg-teal{background-color: #20c997;}/* 蓝绿色 */
+.dk-bg-cyan{background-color: #17a2b8;}/* 青色的 */
+.dk-bg-white{background-color: #fff;}/* 白色 */
+.dk-bg-gray{background-color: #F4F4F5;}/* 灰色 */
+.dk-bg-gray-dark{background-color: #343a40;}/* 暗灰色 */
+.dk-bg-primary{background-color: #007bff;}/* 首要的 */
+.dk-bg-secondary{background-color: #6c757d;}/* 第二的 */
+.dk-bg-success{background-color: #28a745;}/* 成功 */
+.dk-bg-info{background-color: #17a2b8;}/* 信息 */
+.dk-bg-warning{background-color: #ffc107;}/* 警告 */
+.dk-bg-danger{background-color: #dc3545;}/* 危险 */
+.dk-bg-light{background-color: #f8f9fa;}/* 光，发光体 */
+.dk-bg-dark{background-color: #343a40;}/* 暗黑的 */
+.dk-bg-block{background-color: #000;}/* 黑色 */
+
+/* input[type="checkbox"]开始 */
+input.dk-checkbox[type="checkbox"]{width:20px;height:20px;display: inline-block;text-align: center;/*vertical-align: middle;*/    vertical-align: -20%; line-height: 18px;position: relative;}
+input.dk-checkbox[type="checkbox"]::before{content: "";position: absolute;top: 0;left: 0;background: #fff;width: 100%;height: 100%;border: 1px solid #d9d9d9}
+input.dk-checkbox[type="checkbox"]:checked::before{content: "\2713";background-color: #fff;position: absolute;top: 0;left: 0;width:100%;border: 1px solid #e50232;color:#e50232;font-size: 20px;font-weight: bold;}
+
+
+/* input[type="checkbox"]结束 */
+
+.dk-pointer{cursor: pointer;}
+
+.dk-panel-card {
+  border-radius: 4px;
+  border: 1px solid #ebeef5;
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  color: #303133;
+  padding: 10px;
+  margin: 10px;
+}
+i.el-icon-info {
+  color: #ccc;
+  font-size: 12px;
+}
+
+/* 标题相关样式开始 */
+.dk-title-green{border-left:2px solid #85CE61;padding-left: 5px;}
+.dk-title-blue{border-left:2px solid #409EFF;padding-left: 5px;}
+.dk-title-darkblue{border-left:2px solid #2C4E78;padding-left: 5px;}
+/* 标题相关样式结束 */
+
+/* 测评系统开始 */
+.dk-box{padding: 20px;}
+.dk-title-icon{
+  height: 17px;
+  vertical-align: bottom;
+}
+/* 测评系统结束 */

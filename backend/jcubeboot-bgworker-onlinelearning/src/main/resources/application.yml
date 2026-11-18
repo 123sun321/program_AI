@@ -1,0 +1,258 @@
+##########################################################
+##################  所有profile共有的配置  #################
+##########################################################
+
+###################  cubeboot配置  ###################
+cubeboot:
+  swagger-open: true #是否开启swagger (true/false)
+  kaptcha-open: false #是否开启登录时验证码 (true/false)
+  file-upload-path: D:\upload  #文件上传目录(不配置的话为java.io.tmpdir目录)
+  muti-datasource-open: false #是否开启多数据源(true/false)
+  spring-session-open: false #是否开启spring session,如果是多机环境需要开启(true/false)
+  session-invalidate-time: 1800 #session失效时间(只在单机环境下生效，多机环境在SpringSessionConfig类中配置) 单位：秒
+  session-validation-interval: 9000 #多久检测一次失效的session(只在单机环境下生效) 单位：秒
+  app-manager-path: AppMgr #用户管理后台路径
+  app-design-path: AppDesign #界面设计器路径
+  app-preview-path: AppPreview #界面预览路径
+  app-file-path: AppFile #文件上传路径
+  tenant-filter-tables: sys_tenant,sys_role,sys_permission,sys_edition,sys_notification_template,sys_notification_usersetting,sys_notification_message,sys_notification_messagetext,sys_user,sys_captchalog,sys_permission,t_abilitycate,sys_permissionrelation,sys_userRole,sys_notification_history,sys_notification_module,sys_notification_platform,sys_table_condition,sys_data_permission,sys_user_wechat,sys_dictionary,sys_dictionary_item  #不过滤租户的表名称
+  app-host-name: http://cll.cube001.com
+  front-host-name: http://127.0.0.1:8088/ #手机端服务器地址
+  jwt-token-invalidate-time: 1800 #jwtToken 失效时间  1800
+  jwt-refreshtoken-invalidate-time: 259200 #jwt刷新token 失效时间
+  default-cache-manager:  redis #默认使用的缓存管fork理器 使用缓存时可以通过加前缀使用指定的缓存管理器, 前缀为redis- 使用redis  前缀为ehCache-  使用chCache
+  email-enable: true #是否启用电子邮件消息发送
+  weixin-enable: true #是否启用微信消息发送
+  sms-enable: true #是否启用短信消息发送
+  open-data-permission: false
+  permissionPackage: com.cube001.cubeboot.base.controller,com.cube001.cubeboot.assess.controller,com.cube001.cubeboot.company.controller,com.cube001.cubeboot.gradeCourse.controller,com.cube001.cubeboot.schedule.controller,com.cube001.cubeboot.report.controller
+
+#  wx:
+#    wxCertPath: C:/Users/Administrator/Desktop/cert(1)/apiclient_cert.p12
+#    appId: wx5e7f1b84e59924e2
+#    appSecret: 4b1c291fda12af2e0ffd0b9dd53ab6dd
+#    mchID: 1493979112
+#    key: OL239O250PF5G3LG8LTK2KNEGZL5866H
+  wx:
+    appId: wx0072d5d1c28bf8c8
+    appSecret: 1662835f57bef0066c9730e034ab3772
+#  Juci的测试账号
+#  wx:
+#    appId: wx2ba4cb3eeb433ce9
+#    appSecret: d46e26bd8e1a6a86eb0141ba0fae5ca6
+#  wx:
+#    appId: wx6eb985fcbdc8a4c5
+#    appSecret: 05f0105e6f2627d6544ddb345ee6a69c
+#    token: zxy2019zxyzxy
+
+  sms:
+    appkeyId: 123 #短信发送appid
+    appKeySecret: 123123123  #短信发送密钥
+  notification:
+    dev: true
+    email:
+      devReceiverAccount: 185186826@qq.com
+    wx:
+      devReceiverAppId: o1rj_w8G7SHdGCPna5WTeZJcbhcE
+
+
+
+###################  项目启动端口  ###################
+server:
+  port: 8081
+
+###################  beetl配置  ###################
+beetl:
+  delimiter-statement-start:    #开始结束标签(yaml不允许@开头)
+  delimiter-statement-end: null
+  delimiter-placeholder-start: \$[
+  delimiter-placeholder-end: \]
+  resource-tagroot: common/tags   #自定义标签文件Root目录和后缀
+  resource-tagsuffix: tag
+  resource-auto-check: true #是否检测文件变化,开发用true合适，但线上要改为false
+
+
+###################  spring配置  ###################
+spring:
+  servlet:
+    multipart:
+      max-file-size: 30Mb
+  beetl:
+    cache: false
+  messages:
+    basename: i18n/message
+    encoding: utf-8
+  profiles:
+    active: dev
+  mail:
+    host: smtp.163.com
+    username: amys0001@163.com
+    password: YOUR_VALUE_HERE  # 已脱敏，请填写实际值
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+  redis:
+      host: 10.36.20.8
+      port: 6379
+      password:
+      YOUR_VALUE_HERE  # 已脱敏，请填写实际值
+      database: 0 # Redis默认情况下有16个分片，这里配置具体使用的分片
+  mvc:
+    static-path-pattern: /static/**
+    view:
+      prefix: /templates
+    locale: zh_CN
+  http:
+    converters:
+      preferred-json-mapper: fastjson
+  devtools:
+    livereload:
+        enabled: true
+    restart:
+      enabled: true #是否开启开发者工具（true/false）
+      #additional-paths: src/main/java
+      exclude: static/**,WEB-INF/view/**,templates/**
+  aop:
+    proxy-target-class: true #false为启用jdk默认动态代理,true为cglib动态代理
+
+
+###################  mybatis-plus配置  ###################
+mybatis-plus:
+  mapper-locations: classpath*:com/cube001/cubeboot/**/xml/*.xml
+  typeAliasesPackage: com.cube001.cubeboot.**.entity
+   #枚举基础包  支持统配符 * 或者 ; 分割
+  typeEnumsPackage: com.cube001.cubeboot.*.entity.enums;com.cube001.cubeboot.core.*.entity.enums
+  global-config:
+    id-type: 0  #0:数据库ID自增   1:用户输入id  2:全局唯一id(IdWorker)  3:全局唯一ID(uuid)
+    db-column-underline: true
+    refresh-mapper: true
+    logic-delete-value: 1
+    logic-not-delete-value: 0
+    sql-injector: com.baomidou.mybatisplus.mapper.LogicSqlInjector
+    meta-object-handler: com.cube001.cubeboot.core.domain.AutoFillEntityMetaObjectHandler
+    sql-parser-cache: true
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: true #配置的缓存的全局开关
+    lazyLoadingEnabled: true #延时加载的开关
+    multipleResultSetsEnabled: true #开启的话，延时加载一个属性时会加载该对象全部属性，否则按需加载属性
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #打印sql语句,调试用
+
+---
+
+##########################################################
+###################  开发环境的profile  ###################
+##########################################################
+spring:
+  profiles: dev
+  mail:
+    host: smtp.qq.com
+    username: 863139521@qq.com
+    password: YOUR_VALUE_HERE  # 已脱敏，请填写实际值
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+  datasource:
+      url: jdbc:mysql://10.36.20.8:3306/onlinelearning?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false
+      username: cubedb
+      password: YOUR_VALUE_HERE  # 已脱敏，请填写实际值
+      db-name: studentmanager
+      filters: log4j,wall,mergeStat
+  quartz:
+    properties:
+      org:
+        quartz:
+          scheduler:
+            instanceName: clusteredScheduler
+            instanceId: AUTO
+          jobStore:
+            class: org.quartz.impl.jdbcjobstore.JobStoreTX
+            driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+            tablePrefix: QRTZ_
+            isClustered: false
+            clusterCheckinInterval: 10000
+            useProperties: false
+            dataSource: cubeboot
+          threadPool:
+            class: org.quartz.simpl.SimpleThreadPool
+            threadCount: 10
+            threadPriority: 5
+            threadsInheritContextClassLoaderOfInitializingThread: true
+          dataSource:
+            cubeboot:
+              driver: com.mysql.jdbc.Driver
+              URL: jdbc:mysql://10.36.20.8:3306/onlinelearning?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false
+              user: cubedb
+              password: YOUR_VALUE_HERE  # 已脱敏，请填写实际值
+    jdbc-store-type: jdbc
+    #jdbc:
+     #initialize-schema: never
+
+
+
+#flowable数据源和多数据源配置
+cubeboot:
+#  app-host-name: http://cll.cube001.com
+  app-host-name: http://gq.cube001.com
+#  teacher-host-name: http://two1.cube001.com #教师域名
+  teacher-host-name: http://127.0.0.1:8099 #教师域名
+  student-host-name: http://two1.cube001.com #学生域名
+  company-host-name: http://two1.cube001.com #企业域名
+  front-host-name: http://localhost:8091/views/default/app.html #手机端服务器地址
+  flowable:
+    datasource:
+      url: jdbc:mysql://10.1.51.31:3306/cubeboot_flowable?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false
+      username: root
+      password: YOUR_VALUE_HERE  # 已脱敏，请填写实际值
+  muti-datasource:
+    default-dataSource-name: dataSourceCubeBoot #默认的数据源名称
+    url: jdbc:mysql://10.1.51.31:3306/cubeboot_flowable?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    username: root
+    password: YOUR_VALUE_HERE  # 已脱敏，请填写实际值
+
+logging:
+  level.root: info
+  level.com.stylefeng: debug
+  path: logs/
+  file: jcubeBoot.log
+---
+
+##########################################################
+###################  正式环境的profile  ###################
+##########################################################
+spring:
+  profiles: produce
+  mail:
+    host: smtp.qq.com
+    username: 863139521@qq.com
+    password: YOUR_VALUE_HERE  # 已脱敏，请填写实际值
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+  datasource:
+      url: jdbc:mysql://10.1.51.31:3306/studentmanager?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false
+      username: root
+      password: YOUR_VALUE_HERE  # 已脱敏，请填写实际值
+      filters: log4j,wall,mergeStat
+cubeboot:
+    app-host-name: http://localhost:8080
+    front-host-name: http://localhost:8080/h5/ #手机端服务器地址
+logging:
+  level.root: warn
+  path: logs/
+  file: jcubeBoot.log
+
+
+
