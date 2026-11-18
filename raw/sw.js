@@ -12,7 +12,7 @@ function handle(s,req){
   if(/account\/(studentlogin|jugeLogin|login)/.test(s))return json('demo-token');
   if(s.indexOf('account/userinfo')>=0)return json(USERINFO);
   if(/account\/(logout|changePassword)/.test(s))return json('ok');
-  if(/userPermission\/list/.test(s))return json([]);
+  if(/userPermission\/list/.test(s))return json([{id:1,name:'工作台',path:'/dashboard',icon:'el-icon-s-grid'},{id:2,name:'课程',path:'/course',icon:'el-icon-reading'},{id:3,name:'实验',path:'/experiment',icon:'el-icon-s-platform'}]);
   if(s.indexOf('message/countNoRead')>=0)return json(3);
   if(s.indexOf('message/get')>=0)return json([]);
   if(s.indexOf('message/read')>=0)return json('ok');
