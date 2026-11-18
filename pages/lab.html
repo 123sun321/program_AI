@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>在线实验室 · 智训云枢</title>
+<meta name="description" content="智训云枢在线实验室——在线写代码、运行、记录过程轨迹、生成反馈与学习画像">
+<link rel="stylesheet" href="../assets/css/style.css">
+<style>
+:root{--lab-bg:#f5f7fa;--ok:#059669;--err:#dc2626;--warn:#d97706}
+.lab{display:grid;grid-template-columns:1.15fr .85fr;gap:18px}
+.lab .pane{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.03)}
+.pane-hd{padding:11px 16px;border-bottom:1px solid var(--line);background:var(--bg-soft);display:flex;align-items:center;gap:10px;font-weight:600;font-size:14px}
+.pane-hd .sp{margin-left:auto;font-weight:400;color:var(--text-soft);font-size:12.5px}
+.toolbar{padding:10px 14px;display:flex;gap:8px;align-items:center;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+.toolbar select,.toolbar button{font-size:13px;padding:7px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--text);cursor:pointer}
+.toolbar select{padding:7px 8px}
+.btn-run{background:var(--primary)!important;color:#fff!important;border-color:var(--primary)!important;font-weight:600}
+.btn-run:hover{background:var(--primary-dark)!important}
+.btn-run:disabled{opacity:.6;cursor:wait}
+.editor-wrap{position:relative;display:flex;background:#1e293b;min-height:280px}
+.ln{font-family:"SF Mono",Consolas,monospace;font-size:13px;line-height:1.6;color:#64748b;text-align:right;padding:14px 10px 14px 12px;background:#16213a;user-select:none;white-space:pre;overflow:hidden;border-right:1px solid #24324e}
+#code{flex:1;resize:vertical;border:0;outline:0;background:#1e293b;color:#e2e8f0;font-family:"SF Mono",Consolas,monospace;font-size:13px;line-height:1.6;padding:14px 14px;tab-size:2;white-space:pre;overflow:auto;min-height:280px}
+.out-body{padding:0;max-height:340px;overflow:auto;font-family:"SF Mono",Consolas,monospace;font-size:13px;line-height:1.65}
+.out-line{padding:5px 16px;border-bottom:1px solid #f1f5f9;white-space:pre-wrap;word-break:break-word;color:#334155}
+.out-line.log::before{content:"› ";color:#94a3b8}
+.out-line.info{color:#1d4ed8;background:#eff6ff}
+.out-line.warn{color:var(--warn);background:#fffbeb}
+.out-line.error{color:var(--err);background:#fef2f2}
+.out-empty{padding:26px 16px;color:var(--text-soft);text-align:center;font-family:inherit}
+.out-status{padding:9px 16px;font-size:12.5px;font-weight:600;border-bottom:1px solid var(--line)}
+.out-status.ok{color:var(--ok);background:#ecfdf5}
+.out-status.err{color:var(--err);background:#fef2f2}
+.out-status.run{color:var(--primary);background:#eff6ff}
+.tabs{display:flex;border-bottom:1px solid var(--line)}
+.tab{flex:1;text-align:center;padding:10px 6px;font-size:13px;cursor:pointer;color:var(--text-mid);border-bottom:2px solid transparent}
+.tab.active{color:var(--primary);border-bottom-color:var(--primary);font-weight:600}
+.tabpane{display:none;padding:16px}
+.tabpane.active{display:block}
+.fb{background:#eff6ff;border-left:4px solid var(--primary);border-radius:8px;padding:12px 14px;margin-bottom:12px;font-size:13.5px}
+.fb.err{background:#fef2f2;border-left-color:var(--err)}
+.fb.ok{background:#ecfdf5;border-left-color:var(--ok)}
+.fb.warn{background:#fffbeb;border-left-color:var(--warn)}
+.fb b{display:block;margin-bottom:4px}
+.fb .fix{color:var(--text-mid);margin-top:6px;font-size:13px}
+.tl{position:relative;padding-left:22px;max-height:360px;overflow:auto}
+.tl::before{content:"";position:absolute;left:6px;top:4px;bottom:4px;width:2px;background:#e5e7eb}
+.ev{position:relative;margin-bottom:14px;font-size:13px}
+.ev::before{content:"";position:absolute;left:-20px;top:4px;width:10px;height:10px;border-radius:50%;background:#fff;border:2px solid var(--primary)}
+.ev.err::before{border-color:var(--err)}
+.ev.ok::before{border-color:var(--ok)}
+.ev.edit::before{border-color:var(--warn)}
+.ev .t{color:var(--text-soft);font-size:11.5px}
+.ev .h{font-weight:600;margin:1px 0 3px}
+.ev .d{color:var(--text-mid);font-size:12px}
+.ev .d .add{color:var(--ok)}
+.ev .d .del{color:var(--err);text-decoration:line-through}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px}
+.stat{background:var(--bg-soft);border:1px solid var(--line);border-radius:9px;padding:10px;text-align:center}
+.stat .n{font-size:22px;font-weight:700;color:var(--primary)}
+.stat .l{font-size:11.5px;color:var(--text-soft);margin-top:2px}
+.bar-row{margin-bottom:8px;font-size:12.5px}
+.bar-row .lbl{display:flex;justify-content:space-between;margin-bottom:3px;color:var(--text-mid)}
+.bar{height:8px;background:#eef2f7;border-radius:6px;overflow:hidden}
+.bar>i{display:block;height:100%;background:linear-gradient(90deg,var(--primary),var(--accent));border-radius:6px}
+.profile-txt{font-size:13px;color:var(--text-mid);background:#f8fafc;border:1px solid var(--line);border-radius:9px;padding:12px;margin-top:12px}
+.task-box{background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:14px}
+.task-box h3{margin:0 0 6px;font-size:15px}
+.task-box .desc{font-size:13px;color:var(--text-mid)}
+.task-box .meta{margin-top:8px;font-size:12px;color:var(--text-soft)}
+.task-box .btns{margin-top:10px;display:flex;gap:8px}
+.task-box button{font-size:12.5px;padding:6px 12px;border:1px solid var(--line);border-radius:7px;background:#fff;cursor:pointer;color:var(--text)}
+.note-inline{font-size:12.5px;color:var(--text-soft);padding:10px 16px;background:#fbfcfe;border-top:1px solid var(--line)}
+.hint{background:#fffbeb;border:1px solid #fde68a;color:#78350f;border-radius:8px;padding:10px 12px;font-size:13px;margin-top:10px;display:none}
+.hint.show{display:block}
+@media(max-width:1000px){.lab{grid-template-columns:1fr}}
+</style>
+</head><body>
+<header class="hdr">
+  <button class="menu-btn" aria-label="菜单">☰</button>
+  <div class="logo"><a href="../index.html" style="color:inherit">智训<span>云枢</span></a></div>
+  <div class="hdr-link">
+    <a href="access.html">访问说明</a>
+    <a href="https://github.com/123sun321/program_AI" target="_blank">GitHub</a>
+  </div>
+</header>
+<aside class="sidebar">
+  <div class="nav-group"><div class="nav-title">入门</div>
+    <a href="../index.html">首页</a><a href="overview.html">项目概述</a><a href="access.html">访问说明</a></div>
+  <div class="nav-group"><div class="nav-title">背景与问题</div>
+    <a href="background.html">现实痛点</a><a href="motivation.html">问题定义</a></div>
+  <div class="nav-group"><div class="nav-title">核心能力</div>
+    <a href="features.html">系统功能</a><a href="perception.html">过程感知</a><a href="trajectory.html">轨迹重构</a><a href="feedback.html">反馈与画像</a></div>
+  <div class="nav-group"><div class="nav-title">动手实践</div>
+    <a href="lab.html" class="active">在线实验室 <span class="ind">LIVE</span></a></div>
+  <div class="nav-group"><div class="nav-title">技术方案</div>
+    <a href="architecture.html">总体架构</a><a href="innovation.html">创新对比</a></div>
+  <div class="nav-group"><div class="nav-title">展示与成果</div>
+    <a href="gallery.html">界面展示</a><a href="achievements.html">成果与规划</a></div>
+  <div class="nav-group"><div class="nav-title">资源</div>
+    <a href="source.html">源码结构</a><a href="https://github.com/123sun321/program_AI" target="_blank">GitHub 仓库 ↗</a></div>
+</aside>
+<div class="main"><div class="content">
+<h1 id="top">在线实验室 <span class="anchor">#</span></h1>
+<p class="lead">这是一个<strong>真实可操作</strong>的页面：写代码 → 运行 → 系统会记录你的每一次编辑与运行，重构为学习轨迹，并生成反馈与学习画像。所有运算都在你的浏览器本地完成，无需后端、无需登录。</p>
+
+<div class="lab">
+  <!-- 左栏：编辑器 + 输出 -->
+  <div>
+    <div class="pane">
+      <div class="pane-hd">⌨ 代码编辑器 <span class="sp">JavaScript · 浏览器本地运行</span></div>
+      <div class="toolbar">
+        <button class="btn-run" id="runBtn">▶ 运行代码</button>
+        <button id="clearOut">清空输出</button>
+        <button id="resetCode">重置代码</button>
+        <span class="sp" id="saveHint">过程已自动保存在本机</span>
+      </div>
+      <div class="editor-wrap">
+        <div class="ln" id="ln">1</div>
+        <textarea id="code" spellcheck="false" aria-label="代码编辑器">// 试试：计算 1 到 10 的和
+let sum = 0;
+for (let i = 1; i <= 10; i++) {
+  sum += i;
+}
+console.log("1 到 10 的和 =", sum);</textarea>
+      </div>
+      <div class="note-inline">支持 JavaScript。用 <code>console.log()</code> 查看输出。死循环会在 3 秒后自动终止。</div>
+    </div>
+    <div class="pane" style="margin-top:18px">
+      <div class="pane-hd">▤ 运行结果 <span class="sp" id="runMeta">尚未运行</span></div>
+      <div class="out-status run" id="outStatus">点击「运行代码」查看输出</div>
+      <div class="out-body" id="outBody"><div class="out-empty">输出会显示在这里</div></div>
+    </div>
+  </div>
+
+  <!-- 右栏：任务 + 反馈/轨迹/画像 -->
+  <div>
+    <div class="pane">
+      <div class="pane-hd">◎ 练习任务 <span class="sp">点击载入</span></div>
+      <div id="tasks" style="padding:14px"></div>
+    </div>
+    <div class="pane" style="margin-top:18px">
+      <div class="tabs">
+        <div class="tab active" data-t="fb">智能反馈</div>
+        <div class="tab" data-t="tl">过程轨迹</div>
+        <div class="tab" data-t="pf">学习画像</div>
+      </div>
+      <div class="tabpane active" id="pane-fb">
+        <div id="fbList"><div class="fb"><b>等待运行</b>写代码并点击运行，这里会解释错误原因、给出改进建议。</div></div>
+      </div>
+      <div class="tabpane" id="pane-tl"><div class="tl" id="tlList"></div></div>
+      <div class="tabpane" id="pane-pf">
+        <div class="stats" id="statGrid"></div>
+        <div id="errBars"></div>
+        <div class="profile-txt" id="profileTxt">运行几次后，这里会生成你的学习画像。</div>
+      </div>
+    </div>
+    <div style="margin-top:10px;text-align:right"><button id="clearLog" style="font-size:12.5px;padding:6px 12px;border:1px solid var(--line);border-radius:7px;background:#fff;cursor:pointer;color:var(--text-mid)">清空过程记录</button></div>
+  </div>
+</div>
+
+<div class="tip" style="margin-top:22px">这个实验室演示了本作品的核心链路——<strong>过程感知</strong>（记录每次编辑与运行）、<strong>轨迹重构</strong>（把离散操作串成时间线与代码差异）、<strong>反馈生成</strong>（解释错误、给改进建议）、<strong>学习画像</strong>（统计与诊断）。数据只保存在你的浏览器里，刷新不会丢失，点"清空过程记录"可重置。</div>
+
+<div class="pager"><a href="feedback.html"><small>← 上一篇</small>反馈与画像</a><a class="next" href="architecture.html"><small>下一篇 →</small>总体架构</a></div>
+<div class="footer">© 2026 智训云枢 · 软件应用与开发 ｜ 看见过程，才能理解学习</div>
+</div></div>
+<script src="../assets/js/main.js"></script>
+<script>
+(function(){
+"use strict";
+var $=function(id){return document.getElementById(id)};
+var codeEl=$('code'), lnEl=$('ln'), runBtn=$('runBtn');
+var KEY='zx_lab_state_v1';
+var state=load();
+
+function load(){
+  try{ var s=JSON.parse(localStorage.getItem(KEY)); if(s&&Array.isArray(s.events)) return s; }catch(e){}
+  return {events:[], code:codeEl.value};
+}
+function save(){ try{ localStorage.setItem(KEY,JSON.stringify(state)); }catch(e){} }
+
+/* ---------- 行号 ---------- */
+function updLn(){
+  var n=codeEl.value.split('\n').length;
+  var s=''; for(var i=1;i<=n;i++) s+=i+(i<n?'\n':'');
+  lnEl.textContent=s;
+  lnEl.scrollTop=codeEl.scrollTop;
+}
+codeEl.addEventListener('input',function(){ updLn(); queueEdit(); });
+codeEl.addEventListener('scroll',function(){ lnEl.scrollTop=codeEl.scrollTop; });
+codeEl.addEventListener('keydown',function(e){
+  if(e.key==='Tab'){ e.preventDefault(); var s=this.selectionStart,t=this.selectionEnd;
+    this.value=this.value.slice(0,s)+'  '+this.value.slice(t); this.selectionStart=this.selectionEnd=s+2; updLn(); queueEdit(); }
+});
+updLn();
+
+/* ---------- 执行引擎（Web Worker，防死循环） ---------- */
+var WORKER_SRC=[
+'const fmt=(v,d)=>{',
+'  if(d>3) return "…";',
+'  if(v===undefined) return "undefined";',
+'  if(v===null) return "null";',
+'  if(typeof v==="string") return v;',
+'  if(typeof v==="function") return "[Function "+(v.name||"anonymous")+"]";',
+'  if(typeof v==="object"){ const seen=new WeakSet(); try{ return JSON.stringify(v,(k,val)=>{ if(typeof val==="function") return "[Function]"; if(val&&typeof val==="object"){ if(seen.has(val)) return "[Circular]"; seen.add(val);} return val;}); }catch(e){ return String(v);} }',
+'  return String(v);',
+'};',
+'let logs=[];',
+'const push=(lv,a)=>{ logs.push({level:lv,text:Array.from(a).map(x=>fmt(x,0)).join(" ")}); };',
+'console.log=(...a)=>push("log",a); console.info=(...a)=>push("info",a);',
+'console.warn=(...a)=>push("warn",a); console.error=(...a)=>push("error",a);',
+'onmessage=function(e){ logs=[]; const t0=Date.now();',
+'  try{ (new Function(e.data))();',
+'    postMessage({ok:true,logs:logs,ms:Date.now()-t0}); }',
+'  catch(err){ postMessage({ok:false,logs:logs,ms:Date.now()-t0,err:{name:err.name,message:err.message,stack:(err.stack||"").split("\\n").slice(0,5).join("\\n")}}); }',
+'};'
+].join('\n');
+
+function runCode(src){
+  return new Promise(function(resolve){
+    var url;
+    try{ url=URL.createObjectURL(new Blob([WORKER_SRC],{type:'application/javascript'})); }
+    catch(e){ resolve({ok:false,logs:[],err:{name:'EnvError',message:'当前浏览器不支持本地运行，请更换 Chrome 或 Edge'}}); return; }
+    var w; try{ w=new Worker(url); }catch(e){ URL.revokeObjectURL(url); resolve({ok:false,logs:[],err:{name:'EnvError',message:'当前环境禁止运行，请直接用浏览器打开本网址'}}); return; }
+    var done=false;
+    var timer=setTimeout(function(){ if(!done){done=true;w.terminate();URL.revokeObjectURL(url);resolve({ok:false,logs:[],err:{name:'TimeoutError',message:'执行超过 3 秒，可能存在死循环，已自动终止'}});} },3000);
+    w.onmessage=function(e){ if(done)return; done=true; clearTimeout(timer); w.terminate(); URL.revokeObjectURL(url); resolve(e.data); };
+    w.onerror=function(e){ if(done)return; done=true; clearTimeout(timer); w.terminate(); URL.revokeObjectURL(url); resolve({ok:false,logs:[],err:{name:'WorkerError',message:e.message||'运行出错'}}); };
+    w.postMessage(src);
+  });
+}
+
+/* ---------- 过程记录 ---------- */
+var editTimer=null, lastCode=state.code||codeEl.value;
+function queueEdit(){
+  clearTimeout(editTimer);
+  editTimer=setTimeout(function(){
+    var c=codeEl.value;
+    if(c===lastCode) return;
+    state.events.push({type:'edit',ts:Date.now(),from:lastCode,to:c});
+    lastCode=c; state.code=c; save();
+    if(state.events.filter(function(e){return e.type==='edit'}).length<=1) renderAll(); else {renderTL();renderPF();}
+  },700);
+}
+
+runBtn.addEventListener('click',function(){
+  var src=codeEl.value;
+  runBtn.disabled=true; runBtn.textContent='⏳ 运行中…';
+  $('outStatus').className='out-status run'; $('outStatus').textContent='正在执行…';
+  $('runMeta').textContent='运行中';
+  setTimeout(function(){
+    runCode(src).then(function(r){
+      state.events.push({type:'run',ts:Date.now(),code:src,result:r,
+        task:currentTask?currentTask.title:null});
+      state.code=src; save();
+      renderOut(r); renderAll();
+      runBtn.disabled=false; runBtn.textContent='▶ 运行代码';
+    });
+  },30);
+});
+
+$('clearOut').onclick=function(){ $('outBody').innerHTML='<div class="out-empty">输出会显示在这里</div>'; $('outStatus').className='out-status run'; $('outStatus').textContent='输出已清空'; };
+$('resetCode').onclick=function(){ codeEl.value=DEFAULT_CODE; lastCode=DEFAULT_CODE; updLn(); state.code=DEFAULT_CODE; save(); };
+$('clearLog').onclick=function(){ if(!confirm('确定清空所有过程记录（轨迹、反馈、画像）？')) return; state.events=[]; save(); renderAll(); };
+
+function renderOut(r){
+  var b=$('outBody'); b.innerHTML='';
+  if(!r.logs||!r.logs.length){
+    b.innerHTML='<div class="out-empty">（没有输出。试试 console.log()）</div>';
+  }else{
+    r.logs.forEach(function(l){
+      var d=document.createElement('div'); d.className='out-line '+l.level;
+      d.textContent=l.text; b.appendChild(d);
+    });
+  }
+  var st=$('outStatus');
+  if(r.ok){ st.className='out-status ok'; st.textContent='✓ 运行成功 · 耗时 '+(r.ms||0)+' ms · 输出 '+((r.logs||[]).length)+' 行'; }
+  else{ st.className='out-status err'; st.textContent='✕ 运行出错 · '+((r.err&&r.err.name)||'Error'); }
+  $('runMeta').textContent=new Date().toLocaleTimeString('zh-CN',{hour12:false})+' · '+((r.ms||0))+'ms';
+}
+
+/* ---------- 代码差异（行级：公共前缀+后缀） ---------- */
+function lineDiff(a,b){
+  var A=a.split('\n'),B=b.split('\n');
+  var p=0; while(p<A.length&&p<B.length&&A[p]===B[p])p++;
+  var s=0; while(s<A.length-p&&s<B.length-p&&A[A.length-1-s]===B[B.length-1-s])s++;
+  return {pre:p, del:A.slice(p,A.length-s), add:B.slice(p,B.length-s)};
+}
+
+/* ---------- 反馈生成 ---------- */
+function errFeedback(r){
+  if(!r.err) return null;
+  var n=r.err.name, m=r.err.message||'';
+  var vm=/(\w+|'[^']+'|"[^"]+")\s+is not defined/.exec(m);
+  var map={
+    SyntaxError:['语法错误','代码不符合 JavaScript 语法规则，引擎无法解析。常见原因：括号或引号没成对、少了逗号/分号、用了中文标点。','检查报错行附近的括号、引号与标点，改用英文半角符号。'],
+    ReferenceError:['变量未定义',(vm?('「'+vm[1].replace(/['"]/g,'')+'」'):'某个标识符')+' 没有定义就被使用了。可能是拼写错误，或忘记先声明/赋值。','使用前先声明：let '+(vm?vm[1].replace(/['"]/g,''):'x')+' = 初始值; 并核对拼写。'],
+    TypeError:['类型错误','对某个值做了它不支持的操作，例如调用非函数、访问 undefined 或 null 的属性。','先 console.log() 打印该值，确认它是什么类型，再决定操作。'],
+    RangeError:['范围错误','数值或递归超出了允许范围，例如数组长度非法、递归层数过深。','检查循环终止条件与递归出口。'],
+    TimeoutError:['执行超时','程序超过 3 秒仍未结束，通常是循环没有正确的退出条件。','检查 while/for 的循环变量是否在变化，是否会满足条件跳出。'],
+    EnvError:['环境限制','当前环境不允许本地代码运行。','请用系统浏览器（Chrome/Edge）直接打开本网址，不要在预览窗口内点击。'],
+    WorkerError:['运行错误','代码执行时发生错误。','查看下方输出与代码，逐步排查。']
+  };
+  var e=map[n]||['运行错误',m,'根据输出定位出错位置，逐步排查。'];
+  return {title:e[0]+'：'+n, why:e[1], fix:e[2], stack:r.err.stack};
+}
+function renderFB(last){
+  var box=$('fbList'); box.innerHTML='';
+  var runs=state.events.filter(function(e){return e.type==='run'});
+  var errs=runs.filter(function(e){return e.result&&!e.result.ok});
+  if(last&&last.type==='run'&&!last.result.ok){
+    var f=errFeedback(last.result);
+    var d=document.createElement('div'); d.className='fb err';
+    d.innerHTML='<b>❌ '+f.title+'</b>'+esc(f.why)+'<div class="fix">💡 '+esc(f.fix)+'</div>'+(f.stack?'<div class="fix" style="font-family:monospace;font-size:11.5px;white-space:pre-wrap;color:#b91c1c">'+esc(f.stack)+'</div>':'');
+    box.appendChild(d);
+    // 行为层反馈
+    if(errs.length>=3){
+      var b2=document.createElement('div'); b2.className='fb warn';
+      b2.innerHTML='<b>⚠ 行为观察</b>你已经遇到 '+errs.length+' 次错误。建议把问题拆小：先写最小可运行版本，逐步增加功能，每步都运行验证。';
+      box.appendChild(b2);
+    }
+  }else if(last&&last.type==='run'&&last.result.ok){
+    var d2=document.createElement('div'); d2.className='fb ok';
+    var outn=(last.result.logs||[]).length;
+    d2.innerHTML='<b>✅ 运行成功</b>'+(outn?('本次产生 '+outn+' 行输出，耗时 '+(last.result.ms||0)+' ms。代码逻辑跑通，继续尝试练习任务巩固。'):'代码成功执行，但没有输出。可以用 console.log() 打印关键变量，验证结果是否符合预期。');
+    box.appendChild(d2);
+  }else{
+    box.innerHTML='<div class="fb"><b>等待运行</b>写代码并点击运行，这里会解释错误原因、给出改进建议。</div>';
+  }
+}
+function esc(s){ return String(s==null?'':s).replace(/[&<>]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c]}); }
+
+/* ---------- 轨迹 ---------- */
+function renderTL(){
+  var box=$('tlList'); box.innerHTML='';
+  var evs=state.events.slice().reverse();
+  if(!evs.length){ box.innerHTML='<div style="color:var(--text-soft);font-size:13px">暂无过程记录。编辑或运行代码后，这里会按时间倒序展示你的每一步。</div>'; return; }
+  evs.forEach(function(e,i){
+    var d=document.createElement('div');
+    var tm=new Date(e.ts).toLocaleTimeString('zh-CN',{hour12:false});
+    if(e.type==='edit'){
+      var df=lineDiff(e.from||'',e.to||'');
+      d.className='ev edit';
+      d.innerHTML='<div class="t">'+tm+'</div><div class="h">✎ 修改代码</div><div class="d"><span class="add">+'+df.add.length+' 行</span> · <span class="del">−'+df.del.length+' 行</span>'+(df.add.length?'<br>'+esc(df.add.slice(0,3).join(' / ')):'')+'</div>';
+    }else{
+      var ok=e.result&&e.result.ok;
+      d.className='ev '+(ok?'ok':'err');
+      var det=ok?('成功 · '+((e.result.logs||[]).length)+' 行输出'):((e.result&&e.result.err&&e.result.err.name)||'运行');
+      d.innerHTML='<div class="t">'+tm+(e.task?' · '+esc(e.task):'')+'</div><div class="h">'+(ok?'▶ 运行成功':'▶ 运行失败')+'</div><div class="d">'+esc(det)+'</div>';
+    }
+    box.appendChild(d);
+  });
+}
+
+/* ---------- 画像 ---------- */
+function renderPF(){
+  var runs=state.events.filter(function(e){return e.type==='run'});
+  var edits=state.events.filter(function(e){return e.type==='edit'});
+  var oks=runs.filter(function(e){return e.result&&e.result.ok});
+  var errs=runs.filter(function(e){return e.result&&!e.result.ok});
+  var rate=runs.length?Math.round(oks.length/runs.length*100):0;
+  $('statGrid').innerHTML=[
+    ['运行次数',runs.length],['成功次数',oks.length],['成功率',rate+'%'],
+    ['编辑次数',edits.length],['错误次数',errs.length],['代码行数',codeEl.value.split('\n').length]
+  ].map(function(x){return '<div class="stat"><div class="n">'+x[1]+'</div><div class="l">'+x[0]+'</div></div>'}).join('');
+  // 错误类型分布
+  var cnt={}; errs.forEach(function(e){var n=(e.result.err&&e.result.err.name)||'Error';cnt[n]=(cnt[n]||0)+1});
+  var keys=Object.keys(cnt);
+  var max=keys.length?Math.max.apply(null,keys.map(function(k){return cnt[k]})):1;
+  $('errBars').innerHTML=keys.length?('<div style="font-size:12.5px;color:var(--text-soft);margin-bottom:6px">错误类型分布</div>'+keys.map(function(k){
+    return '<div class="bar-row"><div class="lbl"><span>'+esc(k)+'</span><span>'+cnt[k]+'</span></div><div class="bar"><i style="width:'+Math.round(cnt[k]/max*100)+'%"></i></div></div>';
+  }).join('')):'<div style="font-size:12.5px;color:var(--text-soft)">暂无错误记录</div>';
+  // 画像文字
+  var txt;
+  if(!runs.length){ txt='运行几次后，这里会生成你的学习画像。'; }
+  else if(rate===100&&runs.length>=2){ txt='诊断：本轮 '+runs.length+' 次运行全部成功，正确率 100%。过程稳定，可以尝试更有挑战的任务，或主动增加边界用例验证代码健壮性。'; }
+  else if(errs.length>=3){ txt='诊断：共 '+runs.length+' 次运行、'+errs.length+' 次出错，正确率 '+rate+'%。你在持续试错——这正是过程学习的核心。建议：先复制错误信息搜索含义，再只修改一处后重新运行，缩小问题范围。'; }
+  else{ txt='诊断：已运行 '+runs.length+' 次、编辑 '+edits.length+' 次，正确率 '+rate+'%。保持"小步修改、频繁运行"的节奏，能更快定位问题、形成清晰的学习轨迹。'; }
+  $('profileTxt').textContent=txt;
+}
+
+function renderAll(){
+  var last=state.events.length?state.events[state.events.length-1]:null;
+  renderFB(last); renderTL(); renderPF();
+}
+
+/* ---------- 练习任务 ---------- */
+var DEFAULT_CODE=codeEl.value;
+var TASKS=[
+  {title:'任务 1 · 数列求和',desc:'计算 1 到 n 的累加和并输出（n=10）。',starter:'// 计算 1 到 10 的和并输出\nlet sum = 0;\nfor (let i = 1; i <= 10; i++) {\n  sum += i;\n}\nconsole.log("结果:", sum);',hint:'用 for 循环从 1 累加到 10，循环外 console.log(sum)。',check:function(txt){return /55/.test(txt);}},
+  {title:'任务 2 · 判断素数',desc:'编写函数 isPrime(n)，判断 7 是否为素数并输出 true/false。',starter:'function isPrime(n) {\n  if (n < 2) return false;\n  for (let i = 2; i < n; i++) {\n    if (n % i === 0) return false;\n  }\n  return true;\n}\nconsole.log("7 是素数?", isPrime(7));',hint:'n 小于 2 不是素数；从 2 到 n-1 若能被整除则不是素数。',check:function(txt){return /true/i.test(txt);}},
+  {title:'任务 3 · FizzBuzz',desc:'输出 1 到 15：3 的倍数输出 Fizz，5 的倍数输出 Buzz，两者都是输出 FizzBuzz。',starter:'for (let i = 1; i <= 15; i++) {\n  let s = "";\n  if (i % 3 === 0) s += "Fizz";\n  if (i % 5 === 0) s += "Buzz";\n  console.log(i, s || i);\n}',hint:'先判断是否被 3 整除拼接 Fizz，再判断是否被 5 整除拼接 Buzz。',check:function(txt){return /FizzBuzz/.test(txt);}}
+];
+var currentTask=null;
+function renderTasks(){
+  var box=$('tasks'); box.innerHTML='';
+  TASKS.forEach(function(t,i){
+    var d=document.createElement('div'); d.className='task-box';
+    d.innerHTML='<h3>'+esc(t.title)+'</h3><div class="desc">'+esc(t.desc)+'</div>'+
+      '<div class="btns"><button data-load="'+i+'">载入代码</button><button data-hint="'+i+'">查看提示</button></div>'+
+      '<div class="hint" id="hint'+i+'">💡 '+esc(t.hint)+'</div>';
+    box.appendChild(d);
+  });
+  box.querySelectorAll('[data-load]').forEach(function(b){ b.onclick=function(){
+    var t=TASKS[+b.getAttribute('data-load')]; currentTask=t;
+    codeEl.value=t.starter; lastCode=t.starter; updLn();
+    state.code=t.starter; save();
+    $('resetCode').onclick=function(){ codeEl.value=t.starter; lastCode=t.starter; updLn(); };
+    window.scrollTo({top:0,behavior:'smooth'});
+  }});
+  box.querySelectorAll('[data-hint]').forEach(function(b){ b.onclick=function(){
+    var h=$('hint'+b.getAttribute('data-hint')); h.classList.toggle('show');
+  }});
+}
+renderTasks();
+
+/* ---------- Tab 切换 ---------- */
+document.querySelectorAll('.tab').forEach(function(t){ t.onclick=function(){
+  document.querySelectorAll('.tab').forEach(function(x){x.classList.remove('active')});
+  document.querySelectorAll('.tabpane').forEach(function(x){x.classList.remove('active')});
+  t.classList.add('active'); $('pane-'+t.getAttribute('data-t')).classList.add('active');
+}});
+
+/* ---------- 初始化 ---------- */
+if(state.code) { codeEl.value=state.code; lastCode=state.code; updLn(); }
+renderAll();
+})();
+</script>
+</body></html>
