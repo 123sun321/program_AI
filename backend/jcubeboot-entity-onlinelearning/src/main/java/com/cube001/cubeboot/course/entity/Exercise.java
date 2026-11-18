@@ -12,7 +12,7 @@ import lombok.experimental.Accessors;
  * Copyright (C), 2018-2019, ZhengZhouChuangZhi. Co., Ltd.
  * FileName: Exercise
  * 实验练习实体类
- * @author Juci
+ * @author anonymous
  * @date 2025/03/11 14:48
  * @version 1.0
  */

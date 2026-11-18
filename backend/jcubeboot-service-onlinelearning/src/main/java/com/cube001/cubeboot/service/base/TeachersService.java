@@ -17,7 +17,7 @@ public interface TeachersService extends IService<Teachers> {
 
     /**  
     * @description  分页/搜索
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/12/4 14:16  
     * @param   page：当前页面；size：页面显示数目； name搜索的字段
      *  @param   formToEntityWrapperWithSearch：当前页面；size：页面显示数目； name搜索的字段
@@ -27,7 +27,7 @@ public interface TeachersService extends IService<Teachers> {
 
     /**  
     * @description  解析Excel
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/12/4 14:19  
     * @param  mapList
     * @return   List数据
@@ -36,7 +36,7 @@ public interface TeachersService extends IService<Teachers> {
 
     /**
     * @description  新建教师的实现方法，同时创建新的user用户
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/12/4 14:21
     * @param   teachers
     * @return   Boolean
@@ -53,7 +53,7 @@ public interface TeachersService extends IService<Teachers> {
 
     /**
     * @description  教师首页统计
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/4/8 16:49
     * @param   id
     * @return   dashboardCount
@@ -62,7 +62,7 @@ public interface TeachersService extends IService<Teachers> {
 
     /**
     * @description  学校管理端首页统计
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/5/14 8:40
     * @param
     * @return

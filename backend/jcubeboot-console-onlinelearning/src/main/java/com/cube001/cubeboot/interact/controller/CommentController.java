@@ -29,7 +29,7 @@ import java.util.Map;
  *  CommentController
  * </p>
  *
- * @author qw
+ * @author anonymous
  * @since 2019-03-12
  */
 @Api(value = "CommentController",produces = "评论功能")
@@ -45,7 +45,7 @@ public class CommentController implements IApplicationService {
     private CommentConverter commentConverter;
     /**
      * @description 学生端的课程评价分页
-     * @author 宋泽山
+     * @author anonymous
      * @date   2019年3月19日 08:43:28
      * @param
      * @return
@@ -68,7 +68,7 @@ public class CommentController implements IApplicationService {
     }
     /**
     * @description  展示路径详情评论
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/4/2 17:20
     * @param   commonSearchDto
     * @return   commentPathPage
@@ -85,7 +85,7 @@ public class CommentController implements IApplicationService {
     }
     /**
      * @description 分页查询课程评价
-     * @author 张浩杰
+     * @author anonymous
      * @date   2019年3月19日 08:43:28
      * @param
      * @return
@@ -102,7 +102,7 @@ public class CommentController implements IApplicationService {
 
     /**
      * 删除评论
-     * @author Juci
+     * @author anonymous
      * @date 2025/5/14 09:26
      * @param id
      */
@@ -114,7 +114,7 @@ public class CommentController implements IApplicationService {
     }
     /**
      * 点赞！
-     * @author qw
+     * @author anonymous
      * @date 2025/3/19 17:33
      * * @Param id
      *
@@ -128,7 +128,7 @@ public class CommentController implements IApplicationService {
 
     /**
      * 报告评价分页
-     * @author Juci
+     * @author anonymous
      * @param commonSearchDto
      * @return
      */
@@ -145,7 +145,7 @@ public class CommentController implements IApplicationService {
 
     /**
      * 创建评论（通用方法）
-     * @author Juci
+     * @author anonymous
      * @param commentDto
      */
     @ApiOperation(value = "创建评价",notes = "创建评价")
@@ -157,7 +157,7 @@ public class CommentController implements IApplicationService {
     }
     /**
     * @description社区主题管理中帖子标题对应的所有评论回复
-    * @author 张人杰
+    * @author anonymous
     * @date 2025/4/1 14:50
     * @Param
     * @return

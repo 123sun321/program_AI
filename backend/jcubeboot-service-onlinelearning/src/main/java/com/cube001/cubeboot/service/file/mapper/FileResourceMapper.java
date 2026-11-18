@@ -14,7 +14,7 @@ import java.util.List;
 * FileName: FileResourceMapper.java
 * 类的详细说明
 *
-* @author 马勇超
+* @author anonymous
 * @date 2025/3/14 9:49
 * @version 1.0
 */
@@ -22,7 +22,7 @@ public interface FileResourceMapper extends BaseMapper<FileResource> {
 
     /**
     * @description  资源分页
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/3/20 10:34
     * @param
     * @return

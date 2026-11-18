@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
  * FileName: BaseLibraryServiceImpl
  * BaseLibraryServiceImpl
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025/7/29 16:34
  */

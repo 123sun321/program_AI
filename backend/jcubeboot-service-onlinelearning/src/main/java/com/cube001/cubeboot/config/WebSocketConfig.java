@@ -9,7 +9,7 @@ import org.springframework.web.socket.server.standard.ServerEndpointExporter;
 * FileName: WebSocketConfig.java
 * 类的详细说明
 *
-* @author 张人杰
+* @author anonymous
 * @date 2025/7/4 14:41
 * @version 1.0
 */

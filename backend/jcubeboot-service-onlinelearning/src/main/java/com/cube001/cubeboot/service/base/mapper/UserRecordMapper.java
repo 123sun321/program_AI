@@ -14,14 +14,14 @@ import java.util.List;
  * FileName: UserRecordMapper
  * 用户浏览记录Mapper
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025/4/22 13:39
  */
 public interface UserRecordMapper extends BaseMapper<UserRecord> {
     /**
      * 分页查询浏览记录
-     * @author Juci
+     * @author anonymous
      * @param page
      * @param wrapper
      * @return

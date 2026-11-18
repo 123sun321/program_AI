@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import java.util.List;
 
 /**
- * @Author:张向宇
+ * @Author:anonymous
  * @Description:
  * @Date:Create in 15:13 2018/08/03
  * @Modified By:
@@ -57,6 +57,6 @@ public class HomeController extends BaseController {
         String avatar = user.getUserPic();
         model.addAttribute("avatar", avatar);
         model.addAttribute("user",user);
-        model.addAttribute("newUserName","张向宇111");
+        model.addAttribute("newUserName","anonymous111");
     }
 }

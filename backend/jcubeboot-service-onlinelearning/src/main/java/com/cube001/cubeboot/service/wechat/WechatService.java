@@ -11,7 +11,7 @@ import javax.servlet.http.HttpSession;
  * FileName: WechatService
  * 微信service
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025 01/08 14:38
  */

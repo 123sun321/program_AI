@@ -11,7 +11,7 @@ import java.util.List;
 
 /**
  * teachers双向转换类
- * @author 黄鹏举
+ * @author anonymous
  * @since 2018-11-23
  */
 @Mapper(componentModel = "spring")

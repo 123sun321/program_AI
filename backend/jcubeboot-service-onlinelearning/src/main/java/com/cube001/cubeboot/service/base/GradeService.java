@@ -15,7 +15,7 @@ import java.util.List;
 * FileName:  GradeService
 * 班级业务接口
 *
-* @author 郭广明
+* @author anonymous
 * @date   2018/11/28 10:36
 * @version 1.0
 */
@@ -23,7 +23,7 @@ public interface GradeService extends IService<Grade> {
 
     /**
      * @description 通过id获取包括学院和专业
-     * @author 郭广明
+     * @author anonymous
      * @date 2025/11/28 10:06
      * @param id 学生id
      * @return   班级详情
@@ -32,7 +32,7 @@ public interface GradeService extends IService<Grade> {
 
     /**
      * @description 分页查询
-     * @author 郭广明
+     * @author anonymous
      * @date 2025/11/28 10:07
      * @param page                    分页
      * @param formToEntityWrapper     条件构造器
@@ -42,7 +42,7 @@ public interface GradeService extends IService<Grade> {
 
     /**
      * @description 检查批量导入
-     * @author 郭广明
+     * @author anonymous
      * @date 2025/11/28 10:08
      * @param list 上传Excel解析Object集合
      * @return     校验过的班级Dto集合
@@ -52,7 +52,7 @@ public interface GradeService extends IService<Grade> {
 
     /**
      * @description 获取所有
-     * @author 郭广明
+     * @author anonymous
      * @date 2025/11/28 10:09
      * @param ids 班级id集合
      * @return    班级集合
@@ -61,7 +61,7 @@ public interface GradeService extends IService<Grade> {
 
     /**
      * @description 批量添加
-     * @author 郭广明
+     * @author anonymous
      * @date 2025/11/28 10:09
      * @param data 批量添加学生Dto集合
      * @return     批量添加结果

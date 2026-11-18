@@ -25,7 +25,7 @@ import java.util.List;
  * FileName: ExerciseJoinReportServiceImpl
  * ExerciseJoinReportServiceImpl
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025/3/28 18:02
  */
@@ -55,7 +55,7 @@ public class ExerciseJoinReportServiceImpl extends ServiceImpl<ExerciseJoinRepor
 
     /**
      * 编辑
-     * @author Juci
+     * @author anonymous
      * @param exerciseJoinReportDto
      */
     @Override
@@ -81,7 +81,7 @@ public class ExerciseJoinReportServiceImpl extends ServiceImpl<ExerciseJoinRepor
 
     /**
      * 相关报告
-     * @author Juci
+     * @author anonymous
      * @param exerciseId 实验编号
      * @return
      */
@@ -95,7 +95,7 @@ public class ExerciseJoinReportServiceImpl extends ServiceImpl<ExerciseJoinRepor
     }
     /**
      * 通过条件查询
-     * @author Juci
+     * @author anonymous
      * @param wrapper
      * @return
      */
@@ -107,7 +107,7 @@ public class ExerciseJoinReportServiceImpl extends ServiceImpl<ExerciseJoinRepor
 
     /**
      * 更新浏览量
-     * @author Juci
+     * @author anonymous
      * @param id
      */
     @Override
@@ -117,7 +117,7 @@ public class ExerciseJoinReportServiceImpl extends ServiceImpl<ExerciseJoinRepor
 
     /**
      * 通过实验编号获取当前用户报告
-     * @author Juci
+     * @author anonymous
      * @param userId 用户编号
      * @param id 实验编号
      * @return

@@ -15,7 +15,7 @@ import lombok.experimental.Accessors;
 * FileName: CourseJoin
 * 课程参与详情实体类
 *
-* @author 张浩杰
+* @author anonymous
 * @date   2019/3/12 16:20
 * @version 1.0
 */

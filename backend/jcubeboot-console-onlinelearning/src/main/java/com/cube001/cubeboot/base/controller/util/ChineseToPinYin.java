@@ -12,7 +12,7 @@ import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombi
 * FileName: ChineseToPinYin.java
 * 类的详细说明
 *
-* @author 马勇超
+* @author anonymous
 * @date 2025/3/13 15:27
 * @version 1.0
 */

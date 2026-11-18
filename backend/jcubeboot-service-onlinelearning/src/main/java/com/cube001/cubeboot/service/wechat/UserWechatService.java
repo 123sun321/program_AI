@@ -9,7 +9,7 @@ import me.chanjar.weixin.mp.bean.result.WxMpUser;
  * FileName: UserWechatService
  * 微信用户Service
  *
- * @author Juci
+ * @author anonymous
  * @date 2025/01/09 09:49
  * @version 1.0
  */

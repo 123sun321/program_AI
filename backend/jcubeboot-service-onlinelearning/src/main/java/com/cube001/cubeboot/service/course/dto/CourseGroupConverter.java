@@ -11,7 +11,7 @@ import java.util.List;
  * FileName: CourseGroupConverter
  * CourseGroupConverter
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025/7/5 13:32
  */

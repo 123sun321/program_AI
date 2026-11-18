@@ -17,14 +17,14 @@ import java.util.List;
  * FileName: ExerciseService
  * 实验练习Service
  *
- * @author Juci
+ * @author anonymous
  * @date 2025/03/11 15:05
  * @version 1.0
  */
 public interface ExerciseService extends IService<Exercise> {
     /**
      * 创建练习
-     * @author Juci
+     * @author anonymous
      * @param exerciseDto
      * @return
      */
@@ -32,14 +32,14 @@ public interface ExerciseService extends IService<Exercise> {
 
     /**
      * 更新练习
-     * @author Juci
+     * @author anonymous
      * @param exerciseDto
      */
     void update(ExerciseDto exerciseDto);
 
     /**
      * 获取实验信息
-     * @author Juci
+     * @author anonymous
      * @param exerciseId
      * @return
      */
@@ -64,14 +64,14 @@ public interface ExerciseService extends IService<Exercise> {
     ExerciseDto getExerciseInfo(Long userId,Long exerciseId,Integer type);
     /**
      * 批量删除
-     * @author Juci
+     * @author anonymous
      * @param ids
      */
     void delete(List<Long> ids);
 
     /**
      * 分页获取实验列表
-     * @author Juci
+     * @author anonymous
      * @param page
      * @param wrapper
      * @return
@@ -80,7 +80,7 @@ public interface ExerciseService extends IService<Exercise> {
 
     /**
      * @description  获取实验列表
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/4/9 15:40
      * @param   wrapper
      * @return   list

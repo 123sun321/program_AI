@@ -18,7 +18,7 @@ import java.util.Date;
  * FileName: $FILENAME
  * 练习表的 实体类
  *
- * @author 宋泽山
+ * @author anonymous
  * @version 1.0
  * @date 2025/3/13 17:50
  */

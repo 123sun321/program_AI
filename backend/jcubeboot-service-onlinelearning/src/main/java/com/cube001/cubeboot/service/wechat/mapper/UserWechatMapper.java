@@ -7,7 +7,7 @@ import com.cube001.cubeboot.wechat.entity.UserWechat;
  * Copyright (C), 2018-2019, ZhengZhouChuangZhi. Co., Ltd.
  * UserWechatMapper
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025/01/09 09:50
  */

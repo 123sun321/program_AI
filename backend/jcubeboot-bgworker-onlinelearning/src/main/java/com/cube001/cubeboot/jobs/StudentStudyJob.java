@@ -19,7 +19,7 @@ import java.util.List;
  * FileName: StudentStudyJob
  * 学生学习记录
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025/4/11 13:50
  */

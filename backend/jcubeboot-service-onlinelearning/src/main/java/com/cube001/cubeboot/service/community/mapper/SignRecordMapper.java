@@ -17,7 +17,7 @@ import java.util.List;
  * 签到记录Mapper接口
  * </p>
  *
- * @author qw
+ * @author anonymous
  * @since 2019-03-21
  */
 public interface SignRecordMapper extends BaseMapper<SignRecord> {
@@ -25,7 +25,7 @@ public interface SignRecordMapper extends BaseMapper<SignRecord> {
 
     /**
      * @description 分页展示带搜索
-     * @author qw
+     * @author anonymous
      * @date 2025/3/21 13:40
      * @param page,wrapper
      * @return java.util.List<com.cube001.cubeboot.service.course.dto.JoinCoursePathDto>
@@ -34,7 +34,7 @@ public interface SignRecordMapper extends BaseMapper<SignRecord> {
 
     /**
      * @description 根据时间条件搜索 签到班级TOP10
-     * @author qw
+     * @author anonymous
      * @date 2025/3/22 9:45
      * @param startTime,endTime
      * @return java.util.List<com.cube001.cubeboot.community.entity.SignRecord>
@@ -42,7 +42,7 @@ public interface SignRecordMapper extends BaseMapper<SignRecord> {
     List<SignRecord> showAllGrade(String startTime,String endTime);
     /**
      * @description 根据时间条件搜索签到学生TOP10
-     * @author qw
+     * @author anonymous
      * @date 2025/3/22 14:27
      * @param startTime,endTime
      * @return java.util.List<com.cube001.cubeboot.community.entity.SignRecord>
@@ -51,7 +51,7 @@ public interface SignRecordMapper extends BaseMapper<SignRecord> {
 
     /**
      * @description 根据时间条件搜索 总签到次数
-     * @author qw
+     * @author anonymous
      * @date 2025/3/22 14:28
      * @param startTime,endTime
      * @return java.util.List<com.cube001.cubeboot.community.entity.SignRecord>

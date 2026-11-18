@@ -56,7 +56,7 @@ public class TeachersServiceImpl extends ServiceImpl<TeacherMapper, Teachers> im
      * @param page：当前页面；size：页面显示数目； name搜索的字段
      * @return 分页后的数据
      * @description 分页/搜索
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/12/4 14:16
      */
     @Override
@@ -71,7 +71,7 @@ public class TeachersServiceImpl extends ServiceImpl<TeacherMapper, Teachers> im
      * @param importData 数据
      * @return list
      * @description 解析Excel，并查询Excel表中是否存在重复的或者数据库已存在的
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/12/4 14:24
      */
     @Override
@@ -143,7 +143,7 @@ public class TeachersServiceImpl extends ServiceImpl<TeacherMapper, Teachers> im
      * @param teachers
      * @return Boolean
      * @description 新建教师的实现方法，同时创建新的user用户
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/12/4 14:21
      */
     @Override
@@ -190,7 +190,7 @@ public class TeachersServiceImpl extends ServiceImpl<TeacherMapper, Teachers> im
      * @param
      * @return
      * @description 获取当前教师信息和相关院系信息
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/1/4 17:01
      */
     @Override
@@ -208,7 +208,7 @@ public class TeachersServiceImpl extends ServiceImpl<TeacherMapper, Teachers> im
      * @param
      * @return
      * @description 创建通过反射
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/11/28 9:46
      */
     private List<String> createByReflect(ImportTeacherDto teacherDto, Field[] fields, Map<String, Object> data) {
@@ -248,7 +248,7 @@ public class TeachersServiceImpl extends ServiceImpl<TeacherMapper, Teachers> im
     }
     /**
      * @description  教师首页统计
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/4/8 16:49
      * @param   id
      * @return   dashboardCount
@@ -264,7 +264,7 @@ public class TeachersServiceImpl extends ServiceImpl<TeacherMapper, Teachers> im
     CommunityThemeService communityThemeService;
     /**
     * @description  教师首页统计
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/5/14 8:41
     * @param   id
     * @return
@@ -285,7 +285,7 @@ public class TeachersServiceImpl extends ServiceImpl<TeacherMapper, Teachers> im
 
     /**
     * @description  学校管理端首页统计
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/5/14 8:41
     * @param
     * @return

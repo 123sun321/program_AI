@@ -26,7 +26,7 @@ import java.util.List;
  * FileName: ExerciseJoinReportController
  * 实验练习报告控制器
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025/3/28 18:09
  */
@@ -45,7 +45,7 @@ public class ExerciseJoinReportController implements IApplicationService {
 
     /**
      * 添加实验练习
-     * @author Juci
+     * @author anonymous
      * @param exerciseJoinReportDto
      */
     @ApiOperation(value = "添加实验练习")
@@ -65,7 +65,7 @@ public class ExerciseJoinReportController implements IApplicationService {
 
     /**
      * 修改实验练习
-     * @author Juci
+     * @author anonymous
      * @param exerciseJoinReportDto
      */
     @ApiOperation(value = "修改实验练习")
@@ -94,7 +94,7 @@ public class ExerciseJoinReportController implements IApplicationService {
     }
     /**
      * 通过参与实验编号获取报告详情
-     * @author Juci
+     * @author anonymous
      * @param id
      * @return
      */
@@ -127,7 +127,7 @@ public class ExerciseJoinReportController implements IApplicationService {
     }
     /**
      * 根据用户编号获取报告分页
-     * @author Juci
+     * @author anonymous
      * @param commonSearchExtendUserIdVo
      * @return
      */
@@ -150,7 +150,7 @@ public class ExerciseJoinReportController implements IApplicationService {
     }
     /**
      * 获取所有公开报告
-     * @author Juci
+     * @author anonymous
      * @param commonSearchDto
      * @return
      */
@@ -166,7 +166,7 @@ public class ExerciseJoinReportController implements IApplicationService {
     }
     /**
      * 相关报告
-     * @author Juci
+     * @author anonymous
      * @param exerciseId
      * @return
      */

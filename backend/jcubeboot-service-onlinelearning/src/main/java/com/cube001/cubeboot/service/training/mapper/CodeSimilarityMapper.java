@@ -15,7 +15,7 @@ import java.util.List;
 * FileName: CodeSimilarityMapper.java
 * 类的详细说明
 *
-* @author 张人杰
+* @author anonymous
 * @date 2025/6/26 14:04
 * @version 1.0
 */

@@ -17,7 +17,7 @@ import lombok.experimental.Accessors;
  *      作业提交详情实体类
  * </p>
  *
- * @author renjie
+ * @author anonymous
  * @since 2019-03-22
  */
 @Data

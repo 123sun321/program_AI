@@ -10,7 +10,7 @@ import java.util.Date;
  * FileName: CourseCollectDto
  * CourseCollectDto
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025/3/28 10:25
  */

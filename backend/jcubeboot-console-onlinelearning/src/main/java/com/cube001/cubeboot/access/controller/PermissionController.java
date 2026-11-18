@@ -25,7 +25,7 @@ import java.util.stream.Collectors;
  * FileName: com.cube001.cubeboot.authration
  * 权限转换dto
  *
- * @author 陈乐乐
+ * @author anonymous
  * @version 1.0
  * @date 2025/12/26 14:12
  */
@@ -121,7 +121,7 @@ public class PermissionController implements IApplicationService {
      * @param permissionListDto
      * @return void
      * @description
-     * @author 陈乐乐
+     * @author anonymous
      * @date 2025/12/28 13:29
      */
     @PostMapping(value = "batchInsert")

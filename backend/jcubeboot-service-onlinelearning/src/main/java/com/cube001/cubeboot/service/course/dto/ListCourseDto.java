@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * CourseDto List
  * 此类无其他作用 只为用来验证List<CourseDto>
- * @author 陈乐乐
+ * @author anonymous
  * @since 2018-11-26
  */
 @Data

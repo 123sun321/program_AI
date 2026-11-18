@@ -11,7 +11,7 @@ import lombok.experimental.Accessors;
  * FileName: Schedule
  * 用户微信信息实体
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025/01/09 09:35
  */

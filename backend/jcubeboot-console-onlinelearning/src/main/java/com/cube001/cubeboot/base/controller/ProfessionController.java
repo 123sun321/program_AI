@@ -44,7 +44,7 @@ import java.util.*;
 * FileName: ProfessionController.java
 * 专业的控制接口页面
 *
-* @author 马勇超
+* @author anonymous
 * @date 2025/11/27 15:41
 * @version 1.0
 */
@@ -66,7 +66,7 @@ public class ProfessionController implements IApplicationService {
 
     /**
     * @description  根据id查询单条专业内容
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/11/27 15:52
     * @param id
     * @return 返回一条专业信息
@@ -83,7 +83,7 @@ public class ProfessionController implements IApplicationService {
 
     /**
      * @description  查询所有专业内容的id与name
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/11/27 15:52
      * @return 返回一个只包含所有专业的id与name的数组
      */
@@ -97,7 +97,7 @@ public class ProfessionController implements IApplicationService {
 
     /**
      * @description  查询所有专业内容信息
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/11/27 15:52
      * @return 返回一个包含所有专业信息的数组
      */
@@ -111,7 +111,7 @@ public class ProfessionController implements IApplicationService {
 
     /**
      * @description  创建单个专业信息
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/11/27 15:52
      * @return 返回一个Boolean值
      */
@@ -127,7 +127,7 @@ public class ProfessionController implements IApplicationService {
 
     /**
      * @description  修改某条专业内容
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/11/27 15:52
      * @return 返回一个boolean值
      */
@@ -151,7 +151,7 @@ public class ProfessionController implements IApplicationService {
 
     /**
      * @description  根据id删除单条专业信息(如果该专业下面已创建班级信息则删除失败)
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/11/27 15:52
      * @param id
      * @return 返回一个Boolean值
@@ -167,7 +167,7 @@ public class ProfessionController implements IApplicationService {
 
     /**
      * @description  根据id数组删除多条专业信息(如果某条专业下面已创建班级信息则全部删除失败)
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/11/27 15:52
      * @param ids
      * @return  Boolean
@@ -187,7 +187,7 @@ public class ProfessionController implements IApplicationService {
     }
     /**
      * @description  Excel解析出数据时调用接口实现批量导入数据
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/11/27 15:52
      * @return
      */
@@ -202,7 +202,7 @@ public class ProfessionController implements IApplicationService {
 
     /**
      * @description  搜索/分页接口：用以分页数据和根据专业name实现模糊查询
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/11/27 15:52
      * @return page //返回一个page对象
      */
@@ -220,7 +220,7 @@ public class ProfessionController implements IApplicationService {
 
     /**
      * @description  Excel解析：返回一组包含专业名字，院系id,success，tips 的数组数据
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/11/27 15:52
      * @param file
      * @return
@@ -251,7 +251,7 @@ public class ProfessionController implements IApplicationService {
 
     /**
      * @description  实现前端的远端验证：尝试修改数据时，实时更新提示信息
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/11/27 15:52
      * @return  Boolean
      */
@@ -282,7 +282,7 @@ public class ProfessionController implements IApplicationService {
 
     /**
     * @description  根据选中的id数组导出数据
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/11/28 8:53
     * @return
     */
@@ -329,7 +329,7 @@ HSSFWorkbook wb = ExportExcel.getHSSFWorkbook(sheetName, title, content, null);
 
     /**
     * @description  发送响应流方法
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/11/28 8:55
     * @return
     */

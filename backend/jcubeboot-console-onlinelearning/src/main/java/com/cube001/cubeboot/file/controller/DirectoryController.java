@@ -27,7 +27,7 @@ import java.util.List;
 * FileName: DirectoryController.java
 * 类的详细说明 文件夹管理控制类
 *
-* @author 马勇超
+* @author anonymous
 * @date 2025/3/14 15:20
 * @version 1.0
 */
@@ -48,7 +48,7 @@ public class DirectoryController implements IApplicationService {
 
     /**
     * @description  新建文件夹
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/3/15 15:48
     * @param directoryDto
     * @return Boolean
@@ -83,7 +83,7 @@ public class DirectoryController implements IApplicationService {
 
     /**
     * @description  文件重命名
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/4/1 17:38
     * @param   id,reName
     */
@@ -106,7 +106,7 @@ public class DirectoryController implements IApplicationService {
 
     /**
     * @description  删除文件夹及资源
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/3/20 10:41
     * @param   ids
     * @return   Boolean
@@ -134,7 +134,7 @@ public class DirectoryController implements IApplicationService {
 
     /**  
     * @description  获取文件夹列表
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/3/20 10:39
     * @param   parentId
     * @return   List<DirectoryWithFileResourceDto>
@@ -149,7 +149,7 @@ public class DirectoryController implements IApplicationService {
 
     /**
     * @description  获取树形列表
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/3/19 16:05
     * @return list
     */
@@ -165,7 +165,7 @@ public class DirectoryController implements IApplicationService {
 
     /**
     * @description  文件夹的移动
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/3/20 10:38
     * @param   removeFile
     * @return   Boolean

@@ -10,7 +10,7 @@ import java.util.List;
 * FileName: ListTeacherDto.java
 * 教师Dto：只为用来批量导入时验证List<TeachersDto>
  *
-* @author 马勇超
+* @author anonymous
 * @date 2025/11/28 10:39
 * @version 1.0
 */

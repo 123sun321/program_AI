@@ -16,14 +16,14 @@ import java.util.List;
  *  路径详情服务类
  * </p>
  *
- * @author qw
+ * @author anonymous
  * @since 2019-03-14
  */
 public interface JoinCoursePathService extends IService<JoinCoursePath> {
 
     /**
      * 分页展示查询
-     * @author qw
+     * @author anonymous
      * @date 2025/3/19 10:19
      */
     Page<JoinCoursePathDto> page(Page<JoinCoursePathDto> page, Wrapper<JoinCoursePathDto> formToEntityWrapperWithSearch);

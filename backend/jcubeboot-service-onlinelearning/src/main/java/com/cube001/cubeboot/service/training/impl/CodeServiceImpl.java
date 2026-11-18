@@ -17,7 +17,7 @@ import org.springframework.transaction.annotation.Transactional;
  * FileName: CodeServiceImpl
  * 代码Service实现类
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025/3/11 16:56
  */
@@ -53,7 +53,7 @@ public class CodeServiceImpl extends ServiceImpl<CodeMapper, Code> implements Co
 
     /**
      * 更新实验代码
-     * @author Juci
+     * @author anonymous
      * @param userId
      * @param codeDto
      */

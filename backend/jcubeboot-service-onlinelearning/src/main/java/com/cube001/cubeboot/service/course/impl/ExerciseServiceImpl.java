@@ -47,7 +47,7 @@ import java.util.stream.Collectors;
  * FileName: ExerciseServiceImpl
  * 实验练习Service实现类
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025/3/11 13:56
  */
@@ -178,7 +178,7 @@ public class ExerciseServiceImpl extends ServiceImpl<ExerciseMapper, Exercise> i
 
     /**
      * 开始实验
-     * @author Juci
+     * @author anonymous
      * @param exerciseJoinId
      * @param userId
      * @param exerciseId
@@ -210,7 +210,7 @@ public class ExerciseServiceImpl extends ServiceImpl<ExerciseMapper, Exercise> i
 
     /**
      * 获取实验信息
-     * @author Juci
+     * @author anonymous
      * @param userId
      * @param exerciseId
      * @param type
@@ -294,7 +294,7 @@ public class ExerciseServiceImpl extends ServiceImpl<ExerciseMapper, Exercise> i
     }
     /**
      * 保存实验资源
-     * @author Juci
+     * @author anonymous
      * @param exerciseDto
      */
     private void SaveExerciseResource(ExerciseDto exerciseDto){
@@ -349,7 +349,7 @@ public class ExerciseServiceImpl extends ServiceImpl<ExerciseMapper, Exercise> i
     }
     /**
      * 分页获取实验列表
-     * @author Juci
+     * @author anonymous
      * @param page
      * @param wrapper
      * @return
@@ -364,7 +364,7 @@ public class ExerciseServiceImpl extends ServiceImpl<ExerciseMapper, Exercise> i
 
     /**
      * @description  获取实验列表
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/4/9 15:40
      * @param   wrapper
      * @return   list

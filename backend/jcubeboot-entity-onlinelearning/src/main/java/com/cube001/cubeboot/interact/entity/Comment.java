@@ -23,7 +23,7 @@ import java.util.Date;
  * 路径评论实体类
  * </p>
  *
- * @author qw
+ * @author anonymous
  * @since 2019-03-12
  */
 @Data

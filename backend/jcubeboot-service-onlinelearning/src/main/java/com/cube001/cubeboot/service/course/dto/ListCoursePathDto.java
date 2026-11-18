@@ -10,7 +10,7 @@ import java.util.List;
  * FileName: [文件名]
  * 类的详细说明
  *此类无其他作用 只为用来验证List<CoursePathDto>
- * @author qianwei
+ * @author anonymous
  * @version 1.0
  * @date 2025/3/14 11:21
  */

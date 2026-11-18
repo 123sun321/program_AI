@@ -26,7 +26,7 @@ import java.util.Map;
 * FileName: CommunityPlateServiceImpl
 * 社区板块service实现类
 *
-* @author 张浩杰
+* @author anonymous
 * @date   2019/3/19 16:18
 * @version 1.0
 */
@@ -40,7 +40,7 @@ public class CommunityPlateServiceImpl extends ServiceImpl<CommunityPlateMapper,
 
     /**
      * @description 删除/批量删除社区板块
-     * @author 张浩杰
+     * @author anonymous
      * @date  2019年3月19日 17:36:08
      * @param  ids
      * @return
@@ -58,7 +58,7 @@ public class CommunityPlateServiceImpl extends ServiceImpl<CommunityPlateMapper,
     }
     /**
      * @description 编辑修改社区板块
-     * @author 张浩杰
+     * @author anonymous
      * @date  2019年3月19日 17:50:41
      * @param  communityPlateDto
      * @return
@@ -88,7 +88,7 @@ public class CommunityPlateServiceImpl extends ServiceImpl<CommunityPlateMapper,
     }
     /**
      * @description 添加社区模块
-     * @author 张浩杰
+     * @author anonymous
      * @date  2019年3月20日 15:17:52
      * @param  communityPlateDto
      * @return
@@ -108,7 +108,7 @@ public class CommunityPlateServiceImpl extends ServiceImpl<CommunityPlateMapper,
     }
     /**
      * @description 通过角色获取权限社区板块
-     * @author 张浩杰
+     * @author anonymous
      * @date 2025年3月22日 13:45:31
      * @param
      * @return communityPlateList
@@ -136,7 +136,7 @@ public class CommunityPlateServiceImpl extends ServiceImpl<CommunityPlateMapper,
     }
     /**
      * @description 验证排序是否重复
-     * @author 张浩杰
+     * @author anonymous
      * @date 2025/3/22 16:21
      * @param  col,value
      * @return

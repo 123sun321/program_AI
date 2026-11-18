@@ -5,7 +5,7 @@ package com.cube001.cubeboot.constant;
  * FileName: com.cube001.cubeboot.constant
  * 类的详细说明
  *
- * @author 陈乐乐
+ * @author anonymous
  * @version 1.0
  * @date 2025/12/25 9:54
  */

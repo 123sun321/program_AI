@@ -26,7 +26,7 @@ import java.util.Map;
  * FileName: com.cube001.cubeboot.weChat
  * 微信菜单
  *
- * @author 陈乐乐
+ * @author anonymous
  * @version 1.0
  * @date 2025/12/24 14:10
  */

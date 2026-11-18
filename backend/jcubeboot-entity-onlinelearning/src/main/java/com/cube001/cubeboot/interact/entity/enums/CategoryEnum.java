@@ -10,7 +10,7 @@ import java.io.Serializable;
  * FileName: com.cube001.cubeboot.base.entity.enums
  * 能力要项分类枚举
  *
- * @author 陈乐乐
+ * @author anonymous
  * @version 1.0
  * @date 2025/11/29 15:13
  */

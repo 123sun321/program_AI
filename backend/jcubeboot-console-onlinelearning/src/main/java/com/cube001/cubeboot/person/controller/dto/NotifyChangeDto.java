@@ -7,7 +7,7 @@ import lombok.Data;
  * FileName: NotifyChangeDto.java
  * 消息通知开启关闭状态dto
  *
- * @author 张向宇
+ * @author anonymous
  * @version 1.0
  * @date 2025/01/07 16:08
  */

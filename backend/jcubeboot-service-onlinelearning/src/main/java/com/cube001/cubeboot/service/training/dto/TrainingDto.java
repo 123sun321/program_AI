@@ -18,7 +18,7 @@ import java.util.Date;
  * FileName: TrainingDto.java
  * 练习表类的详细说明
  *
- * @author 宋泽山
+ * @author anonymous
  * @version 1.0
  * @date 2025/3/16 14:41
  */

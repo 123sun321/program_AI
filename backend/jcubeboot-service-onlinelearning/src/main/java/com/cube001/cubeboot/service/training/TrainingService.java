@@ -21,7 +21,7 @@ import java.util.List;
 * FileName: TrainingService.java
 * TrainingService类的详细说明
 *
-* @author 宋泽山
+* @author anonymous
 * @date 2025/3/15 18:04
 * @version 1.0
 */
@@ -31,7 +31,7 @@ public interface TrainingService extends IService<Training> {
      * @return 分页查询对应的实体wrapper
      * @throws ParseException 处理日期转换发生的异常
      * @description 根据模糊查询的条件设置wrapper
-     * @author 宋泽山
+     * @author anonymous
      * @date 2025/3/29 19:48
      */
     EntityWrapper<Training> setWrapper(CommonSearchDto<Training> searchDto) throws ParseException;
@@ -42,7 +42,7 @@ public interface TrainingService extends IService<Training> {
      * @param userId  当前用户id
      * @return 所有人的分页详情
      * @description 功能#792: 实现分页查询所有人的练习表
-     * @author 宋泽山
+     * @author anonymous
      * @date 2025/3/27 14:18
      */
     Page<Training> pageAllSelf(Page<Training> page, Wrapper<Training> wrapper, Long userId);
@@ -53,7 +53,7 @@ public interface TrainingService extends IService<Training> {
      * @param studentId 学生id
      * @return 单人分页详情
      * @description 功能2: 实现个人练习表的分页
-     * @author 宋泽山
+     * @author anonymous
      * @date 2025/3/27 14:18
      */
     Page<Training> pageOneself(Page<Training> plusPage, Wrapper<Training> wrapper, Long studentId);
@@ -62,7 +62,7 @@ public interface TrainingService extends IService<Training> {
      * @param studentId: 学生id
      * @return 练习列表
      * @description 全部显示作业功能
-     * @author 宋泽山
+     * @author anonymous
      * @date 2025/3/16 14:19
      */
     List<Training> showAll(Long studentId);
@@ -72,7 +72,7 @@ public interface TrainingService extends IService<Training> {
      * @param dbId      文件夹的id
      * @return 练习列表
      * @description 根据文件夹的id 得到对应的文件夹下 的所有练习 以及 练习目录
-     * @author 宋泽山
+     * @author anonymous
      * @date 2025/3/18 10:16
      */
 
@@ -81,7 +81,7 @@ public interface TrainingService extends IService<Training> {
 
     /**
      * @description
-     * @author 张人杰
+     * @author anonymous
      * @date 2025/4/12 17:03
      * @Param Long id练习ID
      * @return Training 联系内容和练习代码
@@ -90,7 +90,7 @@ public interface TrainingService extends IService<Training> {
 
     /**
      * 创建实验练习
-     * @author Juci
+     * @author anonymous
      * @param exerciseJoin 参与实验
      * @param codeDto 代码
      * @param type 类型 0-创建新练习 1-修改已有练习
@@ -98,7 +98,7 @@ public interface TrainingService extends IService<Training> {
     void createExerciseTraing(ExerciseJoin exerciseJoin, CodeDto codeDto, Integer type);
     /**
       * @description
-      * @author 张人杰
+      * @author anonymous
       * @date 2025/4/29 15:57
       * @Param
       * @return
@@ -107,7 +107,7 @@ public interface TrainingService extends IService<Training> {
 
     /**
      * 将优秀作品Fork成自己的作品
-     * @author Juci
+     * @author anonymous
      * @date 2025/5/10
      * @param recommendWorkDto
      * @param userId
@@ -116,7 +116,7 @@ public interface TrainingService extends IService<Training> {
 
     /**
      * 保存代码
-     * @author Juci
+     * @author anonymous
      * @date 2025/5/13
      * @param trainingDto
      */
@@ -124,7 +124,7 @@ public interface TrainingService extends IService<Training> {
 
     /**
      * 保存实验代码
-     * @author Juci
+     * @author anonymous
      * @param userId
      * @param trainingDto
      */

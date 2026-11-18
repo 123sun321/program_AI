@@ -9,7 +9,7 @@ import java.util.Date;
  * FileName: SignRecordDto
  * 签到记录Dto
  *
- * @author qw
+ * @author anonymous
  * @version 1.0
  * @date 2025/3/21 11:15
  */

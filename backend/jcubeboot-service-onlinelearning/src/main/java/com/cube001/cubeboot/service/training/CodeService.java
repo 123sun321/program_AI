@@ -7,7 +7,7 @@ import com.cube001.cubeboot.training.entity.Code;
 public interface CodeService extends IService<Code> {
     /**
      * 创建代码
-     * @author Juci
+     * @author anonymous
      * @param codeDto
      * @return
      */
@@ -15,7 +15,7 @@ public interface CodeService extends IService<Code> {
 
     /**
      * 更新代码
-     * @author Juci
+     * @author anonymous
      * @param codeDto
      * @return
      */
@@ -23,7 +23,7 @@ public interface CodeService extends IService<Code> {
 
     /**
      * 获取实验数据
-     * @author Juci
+     * @author anonymous
      * @param id
      * @return
      */
@@ -31,14 +31,14 @@ public interface CodeService extends IService<Code> {
 
     /**
      * 更新实验代码
-     * @author Juci
+     * @author anonymous
      * @param codeDto
      */
     void updateCodeDto(Long userId,CodeDto codeDto);
 
     /**
       * @description
-      * @author 马勇超
+      * @author anonymous
       * @date 2025/7/4 14:57
       * @param
       * @return

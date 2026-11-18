@@ -28,7 +28,7 @@ import java.util.Map;
 * FileName: CourseParticipationDetailsController
 * 课程参与详情controller
 *
-* @author 张浩杰
+* @author anonymous
 * @date   2019/3/12 16:36
 * @version 1.0
 */
@@ -43,7 +43,7 @@ public class CourseJoinController implements IApplicationService {
     
     /**  
      * @description 搜索/分页接口：用已分页数据和根据学生姓名实现模糊查询
-     * @author 张浩杰 
+     * @author anonymous 
      * @date   2019年3月13日 11:15:35
      * @param  
      * @return page
@@ -65,7 +65,7 @@ public class CourseJoinController implements IApplicationService {
 
     /**
      * 获取学生参与的课程分页
-     * @author Juci
+     * @author anonymous
      * @param commonSearchExtendUserIdVo
      * @return
      */
@@ -85,7 +85,7 @@ public class CourseJoinController implements IApplicationService {
 
     /**
      * @description  学生参与私有课程无分页
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/4/23 9:51
      * @param   commonSearchExtendUserIdVo
      * @return
@@ -107,7 +107,7 @@ public class CourseJoinController implements IApplicationService {
 
     /**
     * @description  学生参与私有课程的作业分页
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/4/23 9:51
     * @param   commonSearchExtendUserIdVo
     * @return
@@ -132,7 +132,7 @@ public class CourseJoinController implements IApplicationService {
 
     /**
      * 通过邀请码加入私有课程
-     * @author Juci
+     * @author anonymous
      * @param code 邀请码
      */
     @ApiOperation(value = "通过邀请码加入私有课程")
@@ -144,7 +144,7 @@ public class CourseJoinController implements IApplicationService {
 
     /**
      * 批量添加课程小组学生
-     * @Author Juci
+     * @Author anonymous
      * @param ids
      * @param groupid
      */

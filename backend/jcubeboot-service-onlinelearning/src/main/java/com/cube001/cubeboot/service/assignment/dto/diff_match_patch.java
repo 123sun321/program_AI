@@ -30,7 +30,7 @@ import java.util.regex.Pattern;
  * Computes the difference between two texts to create a patch.
  * Applies the patch onto another text, allowing for errors.
  *
- * @author fraser@google.com (Neil Fraser)
+ * @author anonymous@google.com (Neil Fraser)
  */
 
 /**
@@ -577,7 +577,7 @@ public  class diff_match_patch {
      * @return The number of characters common to the start of each string.
      */
     public int diff_commonPrefix(String text1, String text2) {
-        // Performance analysis: http://neil.fraser.name/news/2007/10/09/
+        // Performance analysis: http://neil.anonymous.name/news/2007/10/09/
         int n = Math.min(text1.length(), text2.length());
         for (int i = 0; i < n; i++) {
             if (text1.charAt(i) != text2.charAt(i)) {
@@ -594,7 +594,7 @@ public  class diff_match_patch {
      * @return The number of characters common to the end of each string.
      */
     public int diff_commonSuffix(String text1, String text2) {
-        // Performance analysis: http://neil.fraser.name/news/2007/10/09/
+        // Performance analysis: http://neil.anonymous.name/news/2007/10/09/
         int text1_length = text1.length();
         int text2_length = text2.length();
         int n = Math.min(text1_length, text2_length);
@@ -635,7 +635,7 @@ public  class diff_match_patch {
 
         // Start by looking for a single character match
         // and increase length until no match is found.
-        // Performance analysis: http://neil.fraser.name/news/2010/11/04/
+        // Performance analysis: http://neil.anonymous.name/news/2010/11/04/
         int best = 0;
         int length = 1;
         while (true) {

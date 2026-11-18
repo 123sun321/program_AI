@@ -7,7 +7,7 @@ import lombok.Data;
  * FileName: 点赞Dto
  * 类的详细说明
  *
- * @author HuangPengju
+ * @author anonymous
  * @version 1.0
  * @date 2025/3/21 9:53
  */

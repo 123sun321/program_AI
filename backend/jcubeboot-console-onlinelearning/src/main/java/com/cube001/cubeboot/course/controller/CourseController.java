@@ -60,7 +60,7 @@ import org.apache.tools.zip.ZipOutputStream;
 * FileName:  CourseController
 * 课程controller
 *
-* @author 张浩杰
+* @author anonymous
 * @date   2019/3/11 15:28
 * @version 1.0
 */
@@ -88,7 +88,7 @@ public class CourseController implements IApplicationService {
 
     /**
      * @description 学校课程添加
-     * @author 张浩杰
+     * @author anonymous
      * @date   2019年3月13日 11:00:21
      * @param courseDto
      * @return res
@@ -103,7 +103,7 @@ public class CourseController implements IApplicationService {
     }
     /**
      * @description 课程批量添加
-     * @author 张浩杰
+     * @author anonymous
      * @date   2019年3月13日 11:01:21
      * @param
      * @return res
@@ -118,7 +118,7 @@ public class CourseController implements IApplicationService {
     }
     /**
      * @description 学校端课程分页
-     * @author 张浩杰
+     * @author anonymous
      * @date   2019年3月13日 11:01:21
      * @param
      * @return page
@@ -135,7 +135,7 @@ public class CourseController implements IApplicationService {
 
     /**
      * @description 获取当前用户下的课程信息
-     * @author 张浩杰
+     * @author anonymous
      * @date   2019年3月14日 11:06:50
      * @param
      * @return
@@ -150,7 +150,7 @@ public class CourseController implements IApplicationService {
     }
     /**
      * @description 获取课程类别列表
-     * @author 张浩杰
+     * @author anonymous
      * @date   2019年3月15日 11:28:27
      * @param
      * @return List<CourseDto>
@@ -164,7 +164,7 @@ public class CourseController implements IApplicationService {
    }
    /**
     * @description 获取课程难易程度列表
-    * @author 张浩杰
+    * @author anonymous
     * @date 2025年3月15日 13:43:01
     * @param
     * @return
@@ -179,7 +179,7 @@ public class CourseController implements IApplicationService {
 
     /**
      * @description 获取课程列表
-     * @author 张浩杰
+     * @author anonymous
      * @date 2025年3月15日 13:43:01
      * @param
      * @return
@@ -197,7 +197,7 @@ public class CourseController implements IApplicationService {
     }
     /**
      * @description 编辑/修改课程
-     * @author 张浩杰
+     * @author anonymous
      * @date 2025年3月15日 13:43:01
      * @param
      * @return
@@ -211,7 +211,7 @@ public class CourseController implements IApplicationService {
     }
     /*
     * @description  教师编辑课程
-    * @author 张人杰
+    * @author anonymous
     * @date 2025/8/6 14:59
     * @param [courseDto]
     * @return java.lang.Boolean
@@ -247,7 +247,7 @@ public class CourseController implements IApplicationService {
 
     /**
       * @description 单个删除和批量删除课程
-      * @author 张人杰
+      * @author anonymous
       * @date 2025/4/15 10:13
       * @Param List<Long> ids
       * @return Boolean true false
@@ -262,7 +262,7 @@ public class CourseController implements IApplicationService {
     }
     /**
      * @description 导入数据
-     * @author 张浩杰
+     * @author anonymous
      * @date 2025年3月15日 13:43:01
      * @param file
      * @return List<ImportCourseDto>
@@ -355,7 +355,7 @@ public class CourseController implements IApplicationService {
     }
     /**
       * @description分页获取以及模糊搜寻获取当前用户下的课程信息
-      * @author 张人杰
+      * @author anonymous
       * @date 2025/4/8 9:14
       * @Param
       * @return
@@ -375,7 +375,7 @@ public class CourseController implements IApplicationService {
     }
     /**
       * @description批量导入学校的课程
-      * @author 张人杰
+      * @author anonymous
       * @date 2025/4/8 16:48
       * @Param List<Long> ids
       * @return
@@ -390,7 +390,7 @@ public class CourseController implements IApplicationService {
         return batchImport;
     }/**
       * @description教师端添加课程
-      * @author 张人杰
+      * @author anonymous
       * @date 2025/4/10 9:25
       * @Param CourseDto
       * @return Boolean
@@ -407,7 +407,7 @@ public class CourseController implements IApplicationService {
     }
     /**
       * @description 获取公开课程
-      * @author 张人杰
+      * @author anonymous
       * @date 2025/4/10 10:09
       * @Param
       * @return
@@ -424,7 +424,7 @@ public class CourseController implements IApplicationService {
     }
     /**
       * @description 获取课程类型
-      * @author 张人杰
+      * @author anonymous
       * @date 2025/4/10 14:08
       * @Param
       * @return List<Course>
@@ -437,7 +437,7 @@ public class CourseController implements IApplicationService {
     }
     /**
      * @description
-     * @author 张人杰
+     * @author anonymous
      * @date 2025/4/8 17:59
      * @Param
      * @return 整形六位数
@@ -474,7 +474,7 @@ public class CourseController implements IApplicationService {
 
     /**
      * @description 学生端课程分页
-     * @author 宋泽山
+     * @author anonymous
      * @date   2019年4月19日 09:27:00
      * @param  searchDto 查询页dto
      * @return page
@@ -495,7 +495,7 @@ public class CourseController implements IApplicationService {
     }
     /**
      * @description  判断当前课程是否被收藏了
-     * @author SongZeShan
+     * @author anonymous
      * @date 2025/7/5 9:51
      * @param
      * @return
@@ -508,7 +508,7 @@ public class CourseController implements IApplicationService {
     }
     /**
      * @description 学生端课程 相关课程推荐
-     * @author 宋泽山
+     * @author anonymous
      * @date   2019年4月19日 09:27:00
      * @param  courseId 课程id
      * @return List<Course>
@@ -527,7 +527,7 @@ public class CourseController implements IApplicationService {
 
     /**
      * @description 实现学生端课程的公共标签对应相应课程的缓存功能,默认为
-     * @author 宋泽山
+     * @author anonymous
      * @date 2025/4/24 14:22
      * @param
      * @return List<Course>
@@ -552,7 +552,7 @@ public class CourseController implements IApplicationService {
 
     /**
       * @description 初始化数据测试
-      * @author 马勇超
+      * @author anonymous
       * @date 2025/8/8 11:17
       * @return
      */
@@ -564,7 +564,7 @@ public class CourseController implements IApplicationService {
     }
     /**
       * @description 生成.json格式文件
-      * @author 马勇超
+      * @author anonymous
       * @date 2025/8/9 11:17
       * @param
       * @return
@@ -632,7 +632,7 @@ public class CourseController implements IApplicationService {
 
     /**
       * @description 资源图片下载打包
-      * @author 马勇超
+      * @author anonymous
       * @date 2025/8/9 11:20
       * @return
      */
@@ -678,7 +678,7 @@ public class CourseController implements IApplicationService {
 
     /**
       * @description 初始化数据上传
-      * @author 马勇超
+      * @author anonymous
       * @date 2025/8/9 11:20
       * @param initialization
       * @return
@@ -693,7 +693,7 @@ public class CourseController implements IApplicationService {
 
     /**
       * @description 资源压缩包解压
-      * @author 马勇超
+      * @author anonymous
       * @date 2025/8/13 12:50
       * @param zipFilePath
       * @return

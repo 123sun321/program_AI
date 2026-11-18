@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
  * FileName: CourseGroupServiceImpl
  * CourseGroupServiceImpl
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025/7/5 13:22
  */

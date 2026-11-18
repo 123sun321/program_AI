@@ -19,7 +19,7 @@ import lombok.experimental.Accessors;
 * FileName: Approve.java
 *  点赞实体类
 *
-* @author 宋泽山
+* @author anonymous
 * @date 2025/4/2 15:28
 * @version 1.0
 */

@@ -26,7 +26,7 @@ import java.util.concurrent.ExecutionException;
  *  路径设置服务实现类
  * </p>
  *
- * @author qw
+ * @author anonymous
  * @since 2019-03-11
  */
 @Service
@@ -42,7 +42,7 @@ public class CoursePathServiceImpl extends ServiceImpl<CoursePathMapper, CourseP
 
     /**
      * 展示所有添加的课程
-     * @author qw
+     * @author anonymous
      * @date 2025年3月15日 10:06:10
      */
     @Override
@@ -53,7 +53,7 @@ public class CoursePathServiceImpl extends ServiceImpl<CoursePathMapper, CourseP
 
     /**
      * @description  路径的批量添加
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/4/3 16:07
      * @param   courseIds,category
      */
@@ -85,7 +85,7 @@ public class CoursePathServiceImpl extends ServiceImpl<CoursePathMapper, CourseP
 
     /**
      * @description  路径分页
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/4/8 9:19
      * @param   page,wrapper
      * @return   page
@@ -99,7 +99,7 @@ public class CoursePathServiceImpl extends ServiceImpl<CoursePathMapper, CourseP
 
     /**
      * @description  获取路径详情列表
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/4/8 10:14
      * @param   wrapper
      * @return   list
@@ -114,7 +114,7 @@ public class CoursePathServiceImpl extends ServiceImpl<CoursePathMapper, CourseP
 
     /**
      * @description  获取该学生路径课程的参与情况
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/5/14 14:57
      * @param   studentId
      * @return

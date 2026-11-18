@@ -13,7 +13,7 @@ import java.util.List;
  * FileName: MessageDtoConverter.java
  * 站内信dto 转换类
  *
- * @author 张向宇
+ * @author anonymous
  * @version 1.0
  * @date 2025/01/08 13:15
  */
@@ -22,7 +22,7 @@ public interface MessageDtoConverter {
     /**
      * NotificationMessage to MessageListDto
      * @description
-     * @author 张向宇
+     * @author anonymous
      * @date 2025/01/08 13:21
      * @param message
      * @return
@@ -38,7 +38,7 @@ public interface MessageDtoConverter {
     /**
      * messageList to MessageListDto
      * @description
-     * @author 张向宇
+     * @author anonymous
      * @date 2025/01/08 13:22
      * @param messageList
      * @return

@@ -10,7 +10,7 @@ import java.util.Date;
  * FileName: ExerciseJoinRecordDto
  * ExerciseJoinRecordDto
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025/4/8 13:41
  */

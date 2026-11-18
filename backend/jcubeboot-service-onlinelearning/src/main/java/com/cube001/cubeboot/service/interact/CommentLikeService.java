@@ -10,7 +10,7 @@ import com.cube001.cubeboot.interact.entity.CommentLike;
  *  CommentLikeService.java
  * </p>
  *
- * @author qw
+ * @author anonymous
  * @since 2019-03-20
  */
 public interface CommentLikeService extends IService<CommentLike> {

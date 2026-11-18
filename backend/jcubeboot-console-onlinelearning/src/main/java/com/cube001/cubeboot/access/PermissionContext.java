@@ -9,7 +9,7 @@ import java.util.List;
  * FileName: com.cube001.cubeboot.access
  * 权限上下文
  *
- * @author 陈乐乐
+ * @author anonymous
  * @version 1.0
  * @date 2025/12/27 15:28
  */
@@ -20,7 +20,7 @@ public class PermissionContext {
      * @param
      * @return java.util.List<java.lang.String>
      * @description
-     * @author 陈乐乐
+     * @author anonymous
      * @date 2025/12/27 15:32
      */
     private static PermissionContainer permissionContainer;

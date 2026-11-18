@@ -35,7 +35,7 @@ import java.util.Map;
  *  CoursePathController
  * </p>
  *
- * @author qw
+ * @author anonymous
  * @since 2019-03-11
  */
 @Api(value = "路径设置",produces = "路径设置")
@@ -56,7 +56,7 @@ public class CoursePathController implements IApplicationService {
 
     /**
      * 删除
-     * @author qw
+     * @author anonymous
      * @param id
      * @return res
     */
@@ -68,7 +68,7 @@ public class CoursePathController implements IApplicationService {
     }
     /**
     * @description  路径批量添加
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/4/3 16:10
     * @param   courseIds,category
     */
@@ -79,7 +79,7 @@ public class CoursePathController implements IApplicationService {
     }
     /**
      * 移位
-     * @author qw
+     * @author anonymous
      * @param id1,id2
     */
     @ApiOperation(value = "路径上下移位",notes = "路径上下移位")
@@ -96,7 +96,7 @@ public class CoursePathController implements IApplicationService {
     }
     /**
      * 展示所有
-     * @author qw
+     * @author anonymous
      * @return list
     */
     @PostMapping("/coursePathAll")
@@ -108,7 +108,7 @@ public class CoursePathController implements IApplicationService {
 
     /**
     * @description  获取该学生路径课程的参与情况
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/5/14 14:57
     * @return
     */
@@ -127,7 +127,7 @@ public class CoursePathController implements IApplicationService {
 
     /**
     * @description  路径详情分页
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/4/8 9:39
     * @param   searchDto
     * @return   pageDto

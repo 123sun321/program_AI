@@ -12,14 +12,14 @@ import java.util.Map;
  *  服务类
  * </p>   查询个人积分
  *
- * @author 赵金毅
+ * @author anonymous
  * @since 2019-03-18
  */
 public interface IntegralScoreService extends IService<IntegralScore> {
 
     /**
      *功能描述      返回 本周，本月，全部 个人积分
-     * @author     赵金毅
+     * @author     anonymous
      * @date       2019/3/23
      * @param
      * @return
@@ -28,7 +28,7 @@ public interface IntegralScoreService extends IService<IntegralScore> {
     /**
      *
      * @description 对某个学生添加一条积分记录,然后同步添加积分到student表
-     * @author 宋泽山
+     * @author anonymous
      * @date 2025/4/17 17:18
      * @param userId 用户编号
      * @param name 积分类型

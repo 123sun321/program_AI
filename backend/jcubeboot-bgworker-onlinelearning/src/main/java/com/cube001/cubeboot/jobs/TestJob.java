@@ -10,7 +10,7 @@ import org.springframework.scheduling.quartz.QuartzJobBean;
  * FileName: com.cube001.cubeboot.jobs
  * 测试工作bean
  *
- * @author 陈乐乐
+ * @author anonymous
  * @version 1.0
  * @date 2025/1/10 11:25
  */

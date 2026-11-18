@@ -8,7 +8,7 @@ import com.cube001.cubeboot.course.entity.ExerciseResource;
  * FileName: ExerciseResourceMapper
  * 练习资源mapper
  *
- * @author Juci
+ * @author anonymous
  * @date 2025/03/11 16:52
  * @version 1.0
  */

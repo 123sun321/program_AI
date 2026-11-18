@@ -35,7 +35,7 @@ import java.util.List;
  *  服务实现类
  * </p>
  *
- * @author myc
+ * @author anonymous
  * @since 2019-03-12
  */
 @Service
@@ -57,7 +57,7 @@ public class ExerciseJoinServiceImpl extends ServiceImpl<ExerciseJoinMapper, Exe
     private IntegralScoreService integralScoreService;
     /**
      * @description 通过课程id查找相关的练习记录/参与记录
-     * @author 宋泽山
+     * @author anonymous
      * @date 2025/4/27 16:18
      * @param courseId 课程Id
      * @return
@@ -71,7 +71,7 @@ public class ExerciseJoinServiceImpl extends ServiceImpl<ExerciseJoinMapper, Exe
 
     /**
      * @description 搜索/分页查询参与课程的学生完成的实验
-     * @author 张浩杰
+     * @author anonymous
      * @date 2025年3月15日 10:06:10
      * @param
      * @return
@@ -84,7 +84,7 @@ public class ExerciseJoinServiceImpl extends ServiceImpl<ExerciseJoinMapper, Exe
     }
     /**
      * @description 删除/批量删除
-     * @author 张浩杰
+     * @author anonymous
      * @date 2025年3月15日 10:01:23
      * @param ids
      * @return
@@ -106,7 +106,7 @@ public class ExerciseJoinServiceImpl extends ServiceImpl<ExerciseJoinMapper, Exe
     }
     /**
      * 参与实验
-     * @author juci
+     * @author anonymous
      * @param userId 用户编号
      * @param exerciseId 实验编号
      */
@@ -167,7 +167,7 @@ public class ExerciseJoinServiceImpl extends ServiceImpl<ExerciseJoinMapper, Exe
 
     /**
      * @description  获取当前用户参与的实验---作品展示
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/4/9 15:45
      * @param   id,wrapper
      * @return   List
@@ -180,7 +180,7 @@ public class ExerciseJoinServiceImpl extends ServiceImpl<ExerciseJoinMapper, Exe
 
     /**
      * 结束实验
-     * @author Juci
+     * @author anonymous
      * @param userId
      * @param joinExerciseDto
      */

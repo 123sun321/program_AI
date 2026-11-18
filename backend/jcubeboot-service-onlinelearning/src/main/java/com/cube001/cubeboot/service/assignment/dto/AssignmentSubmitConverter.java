@@ -13,7 +13,7 @@ import java.util.List;
  * 类的详细说明
  * 作业提交的Converter
  *
- * @author 张人杰
+ * @author anonymous
  * @version 1.0
  * @date 2025/3/25 8:36
  */

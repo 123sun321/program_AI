@@ -47,7 +47,7 @@ import java.util.stream.Collectors;
  * FileName: CourseServiceImpl
  * 班课service实现类
  *
- * @author 陈乐乐
+ * @author anonymous
  * @date 2025/11/28 9:06
  * @version 1.0
  */
@@ -86,7 +86,7 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
     private CoursePathConverter coursePathConverter;
     /**
      * @description 根据课程id获取该课程总收藏数量
-     * @author SongZeShan
+     * @author anonymous
      * @date 2025/7/5 11:01
      * @param
      * @return
@@ -97,7 +97,7 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
     }
     /**
      * @description  判断当前课程是否被收藏了
-     * @author SongZeShan
+     * @author anonymous
      * @date 2025/7/5 9:51
      * @param
      * @return
@@ -109,7 +109,7 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
     }
     /**
      * @description  更新参与人数
-     * @author SongZeShan
+     * @author anonymous
      * @date 2025/7/5 9:51
      * @param
      * @return
@@ -121,7 +121,7 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
 
     /**
      * @description 学生端课程 相关课程推荐的相关处理及逻辑的实现类,同时对重名的课程去重
-     * @author 宋泽山
+     * @author anonymous
      * @date 2025/4/27 12:00
      * @param courseId 课程Id
      * @param labelList 标签列表
@@ -166,7 +166,7 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
 
     /**
      * @description 为每个课程实体添加标签列表
-     * @author 宋泽山
+     * @author anonymous
      * @date 2025/4/23 17:58
      * @param page 分页结果
      * @return
@@ -195,7 +195,7 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
 
     /**
      * @description 根据标签id,查询相关的课程的link_id,再查询出对应的course实体
-     * @author 宋泽山
+     * @author anonymous
      * @date 2025/4/22 16:08
      * @param
      * @return
@@ -207,7 +207,7 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
 
     /**
      * @description 设置学生端的课程页面的模糊查询的wrapper
-     * @author 宋泽山
+     * @author anonymous
      * @date 2025/4/22 9:28
      * @param searchDto
      * @return EntityWrapper<Course>
@@ -300,7 +300,7 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
 
     /**
      * @description 学生端设置课程查询的参数 的实现类
-     * @author 宋泽山
+     * @author anonymous
      * @date 2025/4/19 9:56
      * @param  plusPage 分页的实体
      * @return Page<PageDto>
@@ -334,7 +334,7 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
 
     /**
      * @description 根据id查询课程信息
-     * @author 张浩杰
+     * @author anonymous
      * @date  2019年3月18日 16:02:15
      * @param
      * @return
@@ -455,7 +455,7 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
 
     /**
      * @description 添加课程
-     * @author 张浩杰
+     * @author anonymous
      * @date 2025年3月15日 09:51:08
      * @param courseDto
      * @return
@@ -474,7 +474,7 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
     }
     /**
      * @description 修改课程
-     * @author 张浩杰
+     * @author anonymous
      * @date 2025年3月15日 09:51:08
      * @param courseDto
      * @return
@@ -516,7 +516,7 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
     }
     /**
      * @description 获取当前用户下的课程信息
-     * @author 张浩杰
+     * @author anonymous
      * @date   2019年3月14日 11:06:50
      * @param
      * @return
@@ -529,7 +529,7 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
     }
     /**
      * @description 获取所有课程类型列表
-     * @author 张浩杰
+     * @author anonymous
      * @date  2019年3月15日 11:28:11
      * @param
      * @return
@@ -541,7 +541,7 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
     }
     /**
      * @description 获取课程难易程度列表
-     * @author 张浩杰
+     * @author anonymous
      * @date 2025年3月15日 13:43:01
      * @param
      * @return
@@ -553,7 +553,7 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
     }
     /**
      * @description 批量导入课程
-     * @author 张人杰
+     * @author anonymous
      * @date 2025/4/8 16:49
      * @Param List<Long> ids Long userId
      * @return
@@ -753,7 +753,7 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
      * @param
      * @return void
      * @description
-     * @author 陈乐乐
+     * @author anonymous
      * @date 2025/12/26 10:07
      */
     private void buildAbility(List<Long> courseIds, String tenantId) {
@@ -785,7 +785,7 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
 
     /**
       * @description 初始化数据
-      * @author 马勇超
+      * @author anonymous
       * @date 2025/8/8 11:19
       * @return
      */
@@ -828,7 +828,7 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
 
     /**
       * @description 实验导出方式
-      * @author 马勇超
+      * @author anonymous
       * @date 2025/8/8 14:04
       * @param courseId
       * @return
@@ -872,7 +872,7 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
 
     /**
       * @description 初始化数据上传
-      * @author 马勇超
+      * @author anonymous
       * @date 2025/8/9 11:22
       * @param initialization
       * @return
@@ -925,7 +925,7 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
 
     /**
       * @description 实验保存
-      * @author 马勇超
+      * @author anonymous
       * @date 2025/8/9 13:46
       * @param initialExerciseList
       * @return
@@ -975,7 +975,7 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
 
     /**
       * @description 上传标签数据保存到数据库
-      * @author 马勇超
+      * @author anonymous
       * @date 2025/8/9 13:14
       * @param labels
       * @return
@@ -996,7 +996,7 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
 
     /**
       * @description 相关课程或试验保存到标签相关库内
-      * @author 马勇超
+      * @author anonymous
       * @date 2025/8/9 13:25
       * @param linkId,labelId
       * @return

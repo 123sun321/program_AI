@@ -12,7 +12,7 @@ import java.util.List;
  * FileName: [StudenthonorEditDto ]
  * 编辑学生奖惩Dto类
  *
- * @author HuangPengju
+ * @author anonymous
  * @version 1.0
  * @date 2025/11/30
  */

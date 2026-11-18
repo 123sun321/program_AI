@@ -8,7 +8,7 @@ import lombok.Getter;
  * FileName: com.cube001.cubeboot.service.base.event
  * 创建学习事件
  *
- * @author 陈乐乐
+ * @author anonymous
  * @version 1.0
  * @date 2025/2/18 13:47
  */

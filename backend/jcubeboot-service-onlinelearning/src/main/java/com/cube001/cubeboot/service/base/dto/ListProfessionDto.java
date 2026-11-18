@@ -10,7 +10,7 @@ import java.util.List;
 * FileName: ListProfessionDto.java
 * 专业dto： 只为用来批量导入时验证List<ProfessionDto>
 *
-* @author 马勇超
+* @author anonymous
 * @date 2025/12/4 14:51
 * @version 1.0
 */

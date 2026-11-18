@@ -13,7 +13,7 @@ import java.util.List;
 * FileName: LabelService.java
 * 类的详细说明
 *
-* @author 马勇超
+* @author anonymous
 * @date 2025/3/8 17:55
 * @version 1.0
 */
@@ -28,7 +28,7 @@ public interface LabelService extends IService<Label> {
     Label getByName(String name);
     /**
      * @description 根据课程ID来获取课程对应的所有标签列表
-     * @author 宋泽山
+     * @author anonymous
      * @date 2025/4/22 14:52
      * @param courseId 课程id
      * @return List<Label>
@@ -36,7 +36,7 @@ public interface LabelService extends IService<Label> {
     List<Label> selectListByCourseId(Long courseId);
     /**
      * @description 根据选择的技术类型来获取课程对应的所有标签列表
-     * @author 宋泽山
+     * @author anonymous
      * @date 2025/4/22 14:52
      * @param techType 技术类型
      * @return List<Label>
@@ -44,7 +44,7 @@ public interface LabelService extends IService<Label> {
     List<Label> selectListByTechType(String techType);
     /**
      * @description  学生端案例库标签缓存功能
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/5/6 9:22
      * @return
      */

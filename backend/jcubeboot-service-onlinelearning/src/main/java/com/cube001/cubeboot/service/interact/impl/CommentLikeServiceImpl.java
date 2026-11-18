@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
  *  CommentLikeServiceImpl
  * </p>
  *
- * @author qw
+ * @author anonymous
  * @since 2019-03-20
  */
 @Service

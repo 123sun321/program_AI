@@ -28,7 +28,7 @@ import java.util.Map;
 
 /**
  *功能描述    积分查询
- * @author     赵金毅
+ * @author     anonymous
  * @date       2019/3/23
  * @param
  * @return
@@ -47,7 +47,7 @@ public class IntegralScoreController implements IApplicationService {
     private StudentService studentService;
     /**
      * @description 系统管理员指定对某个学生添加一条积分记录,然后同步添加积分到student表
-     * @author 宋泽山
+     * @author anonymous
      * @date 2025/4/12 17:12
      * @param name 积分类型的说明
      * @param num 积分大小
@@ -65,7 +65,7 @@ public class IntegralScoreController implements IApplicationService {
     }
     /**
      * @description 每次自动完成相应任务后,自动添加一条积分记录,然后同步添加积分到student表
-     * @author 宋泽山
+     * @author anonymous
      * @date 2025/4/12 17:12
      * @param name 积分类型名称的说明
      * @param num 积分大小
@@ -81,7 +81,7 @@ public class IntegralScoreController implements IApplicationService {
     }
     /**
      *功能描述     获取当前用户id的所有积分列表
-     * @author     赵金毅
+     * @author     anonymous
      * @date       2019/3/22
     */
     @ApiOperation(value = "分页")
@@ -111,7 +111,7 @@ public class IntegralScoreController implements IApplicationService {
 
     /**
      *功能描述      获取 当前用户id的全部积分
-     * @author     赵金毅
+     * @author     anonymous
      * @date       2019/3/22
      * @param
      * @return
@@ -127,7 +127,7 @@ public class IntegralScoreController implements IApplicationService {
 
     /**
     * @description  通过用户id获取该学生的所有积分
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/5/8 17:30
     * @param   userId
     * @return

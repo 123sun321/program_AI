@@ -7,7 +7,7 @@ import lombok.Data;
  * FileName: ExerciseStatisticNumberDto
  * 实验数据统计
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025/4/8 14:41
  */

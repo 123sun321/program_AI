@@ -23,7 +23,7 @@ import lombok.experimental.Accessors;
 * FileName: CommunityTheme
 * 社区主题管理实体类
 *
-* @author 张浩杰
+* @author anonymous
 * @date   2019/3/21 15:01
 * @version 1.0
 */

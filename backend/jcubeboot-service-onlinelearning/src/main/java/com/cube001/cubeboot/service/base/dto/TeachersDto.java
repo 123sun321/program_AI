@@ -12,7 +12,7 @@ import javax.validation.constraints.NotNull;
 * FileName: TeachersDto.java
 * 教师dto：添加、修改、展示、删除
 *
-* @author 马勇超
+* @author anonymous
 * @date 2025/12/4 14:52
 * @version 1.0
 */

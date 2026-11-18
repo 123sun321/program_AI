@@ -13,13 +13,13 @@ import com.cube001.cubeboot.interact.entity.Comment;
  *  服务类
  * </p>
  *
- * @author qw
+ * @author anonymous
  * @since 2019-03-12
  */
 public interface CommentService extends IService<Comment> {
     /**
      * @description 学生端的 分页查询课程评价
-     * @author 宋泽山
+     * @author anonymous
      * @date   2019年3月19日 08:43:28
      * @param
      * @return
@@ -27,7 +27,7 @@ public interface CommentService extends IService<Comment> {
     Page<Comment> selStuCourseCommentPage(Page<Comment> plusPage, Wrapper<Comment> formToEntityWrapper);
     /**
      * @description 分页查询课程评价
-     * @author 张浩杰
+     * @author anonymous
      * @date   2019年3月19日 08:43:28
      * @param
      * @return
@@ -35,7 +35,7 @@ public interface CommentService extends IService<Comment> {
     Page<Comment> searchPage(Page<Comment> plusPage, Wrapper<Comment> formToEntityWrapper);
     /**
      * @description  分页查询帖子回复
-     * @author 张浩杰
+     * @author anonymous
      * @date 2025/3/28 18:21
      * @param
      * @return
@@ -44,21 +44,21 @@ public interface CommentService extends IService<Comment> {
 
     /**
      * 评价点赞
-     * @author Juci
+     * @author anonymous
      * @param id
      * @param userId
      */
     void recommend(Long id, Long userId);
     /**
      * 发表和回复评价
-     * @author Juci
+     * @author anonymous
      * @param commentDto 发表内容
      * @param userId 用户编号
      */
     void add(CommentDto commentDto, Long userId);
     /**
      * 获取评论分页并关联评价表
-     * @author Juci
+     * @author anonymous
      * @param page
      * @param userId
      * @param wrapper
@@ -67,7 +67,7 @@ public interface CommentService extends IService<Comment> {
     Page<CommentDto> selectPageAndLike(Page<CommentDto> page,Long userId,Wrapper<CommentDto> wrapper);
     /**
       * @description社区帖子对应评论回复分页
-      * @author 张人杰
+      * @author anonymous
       * @date 2025/4/2 17:33
       * @Param
       * @return
@@ -76,7 +76,7 @@ public interface CommentService extends IService<Comment> {
 
     /**
      * 删除评论
-     * @author Juci
+     * @author anonymous
      * @param id
      * @param userId
      */

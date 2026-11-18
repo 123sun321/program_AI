@@ -8,7 +8,7 @@ public interface ExerciseResourceService {
 
     /**
      * 保存课程资源
-     * @author Juci
+     * @author anonymous
      * @param exerciseResourceDto
      * @return
      */
@@ -16,7 +16,7 @@ public interface ExerciseResourceService {
 
     /**
      * 修改资源
-     * @author Juci
+     * @author anonymous
      * @param exerciseResourceDto
      * @return
      */
@@ -24,7 +24,7 @@ public interface ExerciseResourceService {
 
     /**
      * 根据实验编号获取实验资源
-     * @author Juci
+     * @author anonymous
      * @param exerciseId
      * @return
      */

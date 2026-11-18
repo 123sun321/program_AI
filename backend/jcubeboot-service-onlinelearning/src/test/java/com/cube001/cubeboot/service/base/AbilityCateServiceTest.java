@@ -18,7 +18,7 @@ import static org.easymock.EasyMock.createNiceMock;
  * FileName: AbilityCateServiceTest.java
  * 能力要项的单元测试
  *
- * @author 张向宇
+ * @author anonymous
  * @version 1.0
  * @date 2025/12/18 13:55
  */

@@ -26,7 +26,7 @@ import java.util.List;
  * 签到记录服务实现类
  * </p>
  *
- * @author qw
+ * @author anonymous
  * @since 2019-03-21
  */
 @Service
@@ -37,7 +37,7 @@ public class SignRecordServiceImpl extends ServiceImpl<SignRecordMapper, SignRec
 
     /**
      * @description 分页展示带查询
-     * @author qw
+     * @author anonymous
      * @date 2025/3/21 13:44
      * @param page,wrapper
      * @return com.baomidou.mybatisplus.plugins.Page<com.cube001.cubeboot.service.community.dto.SignRecordDto>
@@ -52,7 +52,7 @@ public class SignRecordServiceImpl extends ServiceImpl<SignRecordMapper, SignRec
 
     /**
      * @description  根据时间范围查询签到学生
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/3/25 15:03
      * @param   startTime,endTime
      * @return   List<SignRecordDto>
@@ -76,7 +76,7 @@ public class SignRecordServiceImpl extends ServiceImpl<SignRecordMapper, SignRec
 
     /**
      * @description  根据时间范围查询签到班级
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/3/25 15:03
      * @param   startTime,endTime
      * @return   List<SignRecordDto>
@@ -100,7 +100,7 @@ public class SignRecordServiceImpl extends ServiceImpl<SignRecordMapper, SignRec
 
     /**
      * @description  根据时间范围查询每日签到
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/3/25 15:03
      * @param   startTime,endTime
      * @return   List<SignRecordDto>

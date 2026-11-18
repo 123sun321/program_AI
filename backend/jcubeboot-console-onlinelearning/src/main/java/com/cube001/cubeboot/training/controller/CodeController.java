@@ -23,7 +23,7 @@ import javax.validation.groups.Default;
  * FileName: CodeController
  * CodeController
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025/6/18 13:35
  */
@@ -38,7 +38,7 @@ public class CodeController implements IApplicationService {
 
     /**
      * 根据CodeId查询代码
-     * @author Juci
+     * @author anonymous
      * @param id
      * @return
      */
@@ -51,7 +51,7 @@ public class CodeController implements IApplicationService {
 
     /**
      * 修改代码
-     * @author Juci
+     * @author anonymous
      * @param codeDto
      */
     @ApiOperation(value = "修改代码",notes = "修改代码")

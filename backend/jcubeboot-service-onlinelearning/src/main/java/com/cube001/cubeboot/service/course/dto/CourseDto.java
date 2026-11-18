@@ -16,7 +16,7 @@ import java.util.List;
 * FileName:  CourseDto
 * 课程dto
 *
-* @author 张浩杰
+* @author anonymous
 * @date   2019/3/11 15:25
 * @version 1.0
 */

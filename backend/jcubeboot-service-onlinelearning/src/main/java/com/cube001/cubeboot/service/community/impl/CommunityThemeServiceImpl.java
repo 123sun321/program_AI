@@ -23,7 +23,7 @@ import java.util.List;
  * FileName: CommunityThemeServiceImpl
  * 社区主题管理service实现类
  *
- * @author 张浩杰
+ * @author anonymous
  * @date   2019/3/21 15:06
  * @version 1.0
  */
@@ -35,7 +35,7 @@ public class CommunityThemeServiceImpl extends ServiceImpl<CommunityThemeMapper,
     CommentMapper  commentMapper;
     /**
      * @description 删除/批量删除社区主题管理
-     * @author 张浩杰
+     * @author anonymous
      * @date 2025/3/21 16:26
      * @param  ids
      * @return
@@ -52,7 +52,7 @@ public class CommunityThemeServiceImpl extends ServiceImpl<CommunityThemeMapper,
     }
    /**
      * @description 新增帖子
-     * @author 张人杰
+     * @author anonymous
      * @date 2025/4/16 17:43
      * @Param
      * @return
@@ -78,7 +78,7 @@ public class CommunityThemeServiceImpl extends ServiceImpl<CommunityThemeMapper,
     }
     /**
      * @description 修改帖子
-     * @author 张浩杰
+     * @author anonymous
      * @date 2025/3/29 10:43
      * @param  communityThemeDto
      * @return
@@ -90,7 +90,7 @@ public class CommunityThemeServiceImpl extends ServiceImpl<CommunityThemeMapper,
     }
     /**
      * @description 根据id查询帖子信息
-     * @author 张浩杰
+     * @author anonymous
      * @date 2025/3/29 14:22
      * @param id
      * @return CommunityThemeDto
@@ -107,7 +107,7 @@ public class CommunityThemeServiceImpl extends ServiceImpl<CommunityThemeMapper,
 
     /**
      * @description 查看增加浏览量
-     * @author 张浩杰
+     * @author anonymous
      * @date 2025/3/22 17:44
      * @param  communityThemeId
      * @return
@@ -123,7 +123,7 @@ public class CommunityThemeServiceImpl extends ServiceImpl<CommunityThemeMapper,
     }
     /**
      * @description 验证
-     * @author 张浩杰
+     * @author anonymous
      * @date 2025/3/29 15:28
      * @param col,value
      * @return Boolean
@@ -146,7 +146,7 @@ public class CommunityThemeServiceImpl extends ServiceImpl<CommunityThemeMapper,
 
     /**
      * @description  用户获取自己发的帖子
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/4/24 10:58
      * @param   page,wrapper
      * @return
@@ -160,7 +160,7 @@ public class CommunityThemeServiceImpl extends ServiceImpl<CommunityThemeMapper,
 
     /**
      * @description  获取所有帖子
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/4/24 17:40
      * @param   page,wrapper
      */
@@ -172,7 +172,7 @@ public class CommunityThemeServiceImpl extends ServiceImpl<CommunityThemeMapper,
     }
     /**
      * @description  获取用户个人的回复帖子主题和回复内容
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/4/24 15:00
      * @param   page,wrapper
      * @return

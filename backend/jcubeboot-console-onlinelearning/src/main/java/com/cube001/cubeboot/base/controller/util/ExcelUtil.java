@@ -29,14 +29,14 @@ import static org.apache.poi.ss.usermodel.Cell.*;
  * FileName: ExcelUtil.java
  * 读取Exccel中数据工具类
  *
- * @author 张志磊
+ * @author anonymous
  * @date   2018/11/19 10:10
  * @version 1.0
  */
 public class ExcelUtil {
     /**
      * @description  根据字段名读取Excel表中的内容
-     * @author 张志磊
+     * @author anonymous
      * @date 2025/11/19 10:10
      * @param sheets
      * @param fields
@@ -113,7 +113,7 @@ public class ExcelUtil {
 
     /**
      * @description 解析Excel
-     * @author 郭广明
+     * @author anonymous
      * @date 2025/11/28 10:33
      * @param sheets      表格
      * @param fieldSize   字段数目

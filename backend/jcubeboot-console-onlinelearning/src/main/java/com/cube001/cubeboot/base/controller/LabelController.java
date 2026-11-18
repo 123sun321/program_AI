@@ -29,7 +29,7 @@ import java.util.List;
 * FileName: LabelController.java
 * 类的详细说明 标签类控制类
 *
-* @author 马勇超
+* @author anonymous
 * @date 2025/3/8 17:51
 * @version 1.0
 */
@@ -47,7 +47,7 @@ public class LabelController implements IApplicationService {
 
     /**
     * @description  标签添加
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/3/20 10:45
     * @param   labelDto
     * @return   Boolean
@@ -86,7 +86,7 @@ public class LabelController implements IApplicationService {
 
     /**
     * @description  标签删除
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/3/20 10:46
     * @param   id
     * @return   Boolean
@@ -100,7 +100,7 @@ public class LabelController implements IApplicationService {
 
     /**
     * @description  批量标签删除
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/3/20 10:46
     * @param   ids
     * @return   Boolean
@@ -114,7 +114,7 @@ public class LabelController implements IApplicationService {
 
     /**
     * @description  修改标签
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/3/20 10:47
     * @param   labelDto
     * @return   Boolean
@@ -142,7 +142,7 @@ public class LabelController implements IApplicationService {
 
     /**
     * @description  查询单条标签
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/3/20 10:47
     * @param   id
     * @return   LabelDto
@@ -157,7 +157,7 @@ public class LabelController implements IApplicationService {
 
     /**
     * @description  查询标签列表
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/3/20 10:47
     * @return   List<LabelDto>
     */
@@ -172,7 +172,7 @@ public class LabelController implements IApplicationService {
 
     /**
     * @description  通过关键字查询标签列表
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/3/20 10:47
     * @param   str
     * @return   List<LabelDto>
@@ -187,7 +187,7 @@ public class LabelController implements IApplicationService {
 
     /**
     * @description  通过标签名字查询标签列表
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/3/20 10:48
     * @param   name
     * @return   List<LabelDto>
@@ -202,7 +202,7 @@ public class LabelController implements IApplicationService {
 
     /**
     * @description  标签分页
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/3/20 10:48
     * @param   searchDto
     * @return   page
@@ -217,7 +217,7 @@ public class LabelController implements IApplicationService {
 
     /**
     * @description  实现标签的远方校验
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/3/13 13:58
     * @param id,col,value
     * @return boolean

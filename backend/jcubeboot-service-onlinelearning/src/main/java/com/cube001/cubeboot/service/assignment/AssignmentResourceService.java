@@ -10,7 +10,7 @@ import com.cube001.cubeboot.service.assignment.dto.ListAssignmentResourceDto;
 * FileName:
 * 类的详细说明
 *
-* @author 张人杰
+* @author anonymous
 * @date   2019/4/24 10:35
 * @version 1.0
 */
@@ -19,7 +19,7 @@ import com.cube001.cubeboot.service.assignment.dto.ListAssignmentResourceDto;
 public interface AssignmentResourceService extends IService<AssignmentResource> {
    /*
      * @description 作业资源的保存
-     * @author 张人杰
+     * @author anonymous
      * @date 2025/4/24 17:08
      * @Param
      * @return

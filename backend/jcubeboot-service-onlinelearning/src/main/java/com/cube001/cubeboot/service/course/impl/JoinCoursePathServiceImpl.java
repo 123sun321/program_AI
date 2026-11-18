@@ -23,7 +23,7 @@ import java.util.stream.Collectors;
  *  路径详情服务实现类
  * </p>
  *
- * @author qw
+ * @author anonymous
  * @since 2019-03-14
  */
 @Service
@@ -41,7 +41,7 @@ public class JoinCoursePathServiceImpl extends ServiceImpl<JoinCoursePathMapper,
     private ExerciseJoinService exerciseJoinService;
     /**
      * 分页展示查询
-     * @author qw
+     * @author anonymous
      * @date 2025/3/19 10:19
      */
     @Override

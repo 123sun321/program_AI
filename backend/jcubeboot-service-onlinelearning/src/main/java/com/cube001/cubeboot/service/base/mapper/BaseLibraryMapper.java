@@ -8,7 +8,7 @@ import com.cube001.cubeboot.base.entity.BaseLibrary;
  * FileName: BaseLibraryMapper
  * BaseLibraryMapper
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025/7/29 16:30
  */

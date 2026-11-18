@@ -13,7 +13,7 @@ import lombok.experimental.Accessors;
  * FileName: [RewardPunishCategory]
  * 奖罚实体类
  *
- * @author HuangPengju
+ * @author anonymous
  * @Date 2018-11-27
  * @version 1.0
  */

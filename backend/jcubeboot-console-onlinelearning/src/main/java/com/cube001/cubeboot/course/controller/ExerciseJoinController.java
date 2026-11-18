@@ -28,7 +28,7 @@ import java.util.List;
  * FileName: 实验练习参与详情控制器
  * ExerciseJoinController
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025/3/11 13:30
  */
@@ -45,7 +45,7 @@ public class ExerciseJoinController implements IApplicationService {
     private ExerciseJoinConvter convter;
     /**
      * @description 学生端,通过课程id查找相关的练习记录/参与记录
-     * @author 宋泽山
+     * @author anonymous
      * @date 2025/4/27 15:35
      * @param
      * @return
@@ -60,7 +60,7 @@ public class ExerciseJoinController implements IApplicationService {
     }
     /**
      * @description 搜索/分页查询参与课程的学生完成的实验
-     * @author 张浩杰
+     * @author anonymous
      * @date 2025年3月15日 10:06:10
      * @param
      * @return
@@ -79,7 +79,7 @@ public class ExerciseJoinController implements IApplicationService {
 
     /**
      * 根据练习编号查询参与练习列表
-     * @author Juci
+     * @author anonymous
      * @param searchDto
      * @return
      */
@@ -98,7 +98,7 @@ public class ExerciseJoinController implements IApplicationService {
 
     /**
      * 获取用户参与的所有实验
-     * @author Juci
+     * @author anonymous
      * @param commonSearchExtendUserIdVo
      * @return
      */
@@ -121,7 +121,7 @@ public class ExerciseJoinController implements IApplicationService {
     }
     /**
      * 通过参与编号获取参与详情
-     * @author Juci
+     * @author anonymous
      * @param joinId
      * @return
      */
@@ -133,7 +133,7 @@ public class ExerciseJoinController implements IApplicationService {
     }
     /**
      * @description 删除/批量删除
-     * @author 张浩杰
+     * @author anonymous
      * @date 2025年3月15日 10:01:23
      * @param ids
      * @return
@@ -148,7 +148,7 @@ public class ExerciseJoinController implements IApplicationService {
 
     /**
      * 结束实验
-     * @author Juci
+     * @author anonymous
      * @param joinExerciseDto
      */
     @ApiOperation(value = "结束实验")

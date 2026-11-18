@@ -7,7 +7,7 @@ import org.mapstruct.Mapper;
 import java.util.List;
 
 /**
- * @Author:张向宇
+ * @Author:anonymous
  * @Description:
  * @Date:Create in 13:57 2018/07/10
  * @Modified By:

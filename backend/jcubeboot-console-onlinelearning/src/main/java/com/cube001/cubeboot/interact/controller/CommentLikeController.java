@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
  *  CommentLikeController
  * </p>
  *
- * @author qw
+ * @author anonymous
  * @since 2019-03-20
  */
 @RestController

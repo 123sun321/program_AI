@@ -8,7 +8,7 @@ import com.cube001.cubeboot.community.entity.IntegralScore;
  *  Mapper 接口
  * </p>
  *
- * @author 赵金毅
+ * @author anonymous
  * @since 2019-03-18
  */
 public interface IntegralScoreMapper extends BaseMapper<IntegralScore> {

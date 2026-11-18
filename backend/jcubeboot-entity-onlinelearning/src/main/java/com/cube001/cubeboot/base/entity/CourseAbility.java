@@ -14,7 +14,7 @@ import org.springframework.data.annotation.Id;
  * FileName: com.cube001.cubeboot.base.entity
  * 课程和评分项关联表
  *
- * @author 陈乐乐
+ * @author anonymous
  * @version 1.0
  * @date 2025/12/3 13:47
  */

@@ -8,7 +8,7 @@ import javax.validation.constraints.Size;
 
 /**
  * 前台用户注册dto
- * @Author:张向宇
+ * @Author:anonymous
  * @Description:
  * @Date:Create in 10:47 2018/06/05
  * @Modified By:

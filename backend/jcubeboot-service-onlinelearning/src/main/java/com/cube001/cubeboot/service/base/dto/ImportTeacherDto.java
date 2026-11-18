@@ -7,7 +7,7 @@ import lombok.Data;
 * FileName: ImportTeacherDto.java
 * 教师Dto：用以教师信息Excel表解析时的验证
 *
-* @author 马勇超
+* @author anonymous
 * @date 2025/12/4 14:54
 * @version 1.0
 */

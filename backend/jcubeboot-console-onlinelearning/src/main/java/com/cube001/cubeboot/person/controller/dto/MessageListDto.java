@@ -10,7 +10,7 @@ import java.util.Date;
  * FileName: MessageListDto.java
  * 站内信列表展示dto
  *
- * @author 张向宇
+ * @author anonymous
  * @version 1.0
  * @date 2025/01/08 13:07
  */

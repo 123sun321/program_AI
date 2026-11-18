@@ -14,13 +14,13 @@ import java.util.List;
  *  Mapper 接口
  * </p>
  *
- * @author qw
+ * @author anonymous
  * @since 2019-03-11
  */
 public interface CourseCollectMapper extends BaseMapper<CourseCollect>{
     /**
      * 分页获取收藏列表
-     * @author Juci
+     * @author anonymous
      * @param page
      * @param ew
      * @return

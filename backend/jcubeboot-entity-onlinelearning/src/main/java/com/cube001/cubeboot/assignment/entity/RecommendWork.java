@@ -22,7 +22,7 @@ import lombok.experimental.Accessors;
  * 
  * </p>
  *
- * @author SZS
+ * @author anonymous
  * @since 2019-04-19
  */
 @Data

@@ -14,14 +14,14 @@ import java.util.List;
  * FileName: ExerciseJoinRecordService
  * 实验练习参与记录Service
  *
- * @author Juci
+ * @author anonymous
  * @date 2025/04/08 13:33
  * @version 1.0
  */
 public interface ExerciseJoinRecordService extends IService<ExerciseJoinRecord> {
     /**
      * 创建实验参与记录
-     * @author Juci
+     * @author anonymous
      * @param exerciseJoinRecordDto
      * @param userId
      */
@@ -29,7 +29,7 @@ public interface ExerciseJoinRecordService extends IService<ExerciseJoinRecord> 
 
     /**
      * 学生参与练习次数相关统计
-     * @author juci
+     * @author anonymous
      * @param userId 用户编号
      * @return
      */
@@ -37,7 +37,7 @@ public interface ExerciseJoinRecordService extends IService<ExerciseJoinRecord> 
 
     /**
      * 学习记录统计
-     * @author Juci
+     * @author anonymous
      * @param userId 用户编号
      * @return
      */
@@ -45,7 +45,7 @@ public interface ExerciseJoinRecordService extends IService<ExerciseJoinRecord> 
 
     /**
      * 更新学生学习天数
-     * @author Juci
+     * @author anonymous
      * @param student
      */
     void updateContinuousDay(Student student);

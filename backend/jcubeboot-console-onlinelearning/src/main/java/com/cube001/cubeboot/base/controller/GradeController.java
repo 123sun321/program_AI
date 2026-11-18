@@ -58,7 +58,7 @@ import java.util.Map;
 * FileName: GradeController.java
 * 类的详细说明
 *
-* @author 马勇超
+* @author anonymous
 * @date 2025/3/8 9:21
 * @version 1.0
 */
@@ -87,7 +87,7 @@ public class GradeController implements IApplicationService {
     * FileName: GradeController.java
     * 类的详细说明
     *
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/3/8 9:22
     * @version 1.0
     */
@@ -106,7 +106,7 @@ public class GradeController implements IApplicationService {
 
     /**  
      * @description 
-     * @author 郭广明 
+     * @author anonymous 
      * @date 2025/11/27 17:13 
      * @param gradeDto   班级Dto
      * @return           修改状态
@@ -125,7 +125,7 @@ public class GradeController implements IApplicationService {
 
     /**  
      * @description 
-     * @author 郭广明 
+     * @author anonymous 
      * @date 2025/11/27 17:13 
      * @param id     班级id
      * @return       删除结果
@@ -146,7 +146,7 @@ public class GradeController implements IApplicationService {
 
     /**  
      * @description 
-     * @author 郭广明 
+     * @author anonymous 
      * @date 2025/11/27 17:14 
      * @param id     班级id
      * @return       班级Dto
@@ -173,7 +173,7 @@ public class GradeController implements IApplicationService {
 
     /**  
      * @description 
-     * @author 郭广明 
+     * @author anonymous 
      * @date 2025/11/27 17:14 
      * @param ids     班级id集合
      * @return java.lang.Boolean  
@@ -193,7 +193,7 @@ public class GradeController implements IApplicationService {
 
     /**  
      * @description 
-     * @author 郭广明 
+     * @author anonymous 
      * @date 2025/11/27 17:14 
      * @param commonSearchDto 分页查询Dto
      * @return                班级分页详情
@@ -226,7 +226,7 @@ public class GradeController implements IApplicationService {
 
     /**
      * @description
-     * @author 郭广明
+     * @author anonymous
      * @date 2025/11/27 17:14
      * @param listGradeDto 班级Dto集合
      * @return             批量上传结果
@@ -241,7 +241,7 @@ public class GradeController implements IApplicationService {
 
     /**
      * @description  根据选中的id数组导出数据
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/11/28 8:53
      * @return
      */
@@ -303,7 +303,7 @@ public class GradeController implements IApplicationService {
 
     /**
      * @description  发送响应流方法
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/11/28 8:55
      * @return
      */
@@ -325,7 +325,7 @@ public class GradeController implements IApplicationService {
 
     /**  
      * @description 
-     * @author 郭广明 
+     * @author anonymous 
      * @date 2025/11/27 17:15
      * @param gradeDto   班级Dto
      * @return           数据校验结果
@@ -349,7 +349,7 @@ public class GradeController implements IApplicationService {
 
     /**
     * @description 获取列表
-    * @author 陈乐乐
+    * @author anonymous
     * @date 2025/12/5 14:24
     * @param dto
     * @return java.util.List<com.cube001.cubeboot.service.base.dto.GradeDto>
@@ -363,7 +363,7 @@ public class GradeController implements IApplicationService {
     }
     /**
     * @description
-    * @author 郜强
+    * @author anonymous
     * @date 2025/1/10 10:10
     * @param ids ID集合
     * @return java.util.List<com.cube001.cubeboot.service.base.dto.GradeDto>

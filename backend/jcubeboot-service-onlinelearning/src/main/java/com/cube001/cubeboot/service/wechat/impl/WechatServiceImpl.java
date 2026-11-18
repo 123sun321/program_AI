@@ -27,7 +27,7 @@ import java.util.concurrent.TimeUnit;
  * FileName: WechatServiceImpl
  * 微信serviceImpl
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025 01/08 14:40
  */

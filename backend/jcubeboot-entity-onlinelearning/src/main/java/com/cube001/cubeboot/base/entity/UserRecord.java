@@ -12,7 +12,7 @@ import lombok.experimental.Accessors;
  * FileName: UserRecord
  * 用户浏览记录
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025/4/22 13:39
  */

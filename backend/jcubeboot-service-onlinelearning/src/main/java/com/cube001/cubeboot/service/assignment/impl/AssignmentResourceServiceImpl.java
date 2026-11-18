@@ -22,7 +22,7 @@ import java.util.stream.Collectors;
 * FileName:
 * 类的详细说明
 *
-* @author 张人杰
+* @author anonymous
 * @date   2019/4/23 14:50
 * @version 1.0
 */
@@ -33,7 +33,7 @@ public class AssignmentResourceServiceImpl extends ServiceImpl<AssignmentResourc
     private AssignmentResourceConverter assignmentResourceConverter;
     /*
       * @description 作业资源的保存
-      * @author 张人杰
+      * @author anonymous
       * @date 2025/4/24 17:08
       * @Param
       * @return

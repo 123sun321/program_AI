@@ -16,7 +16,7 @@ import java.util.List;
  * FileName: [ TrainingPathDto ]
  * 类的详细说明 : 练习目录的Dto
  *
- * @author 宋泽山
+ * @author anonymous
  * @version 1.0
  * @date 2025/3/17 14:19
  */

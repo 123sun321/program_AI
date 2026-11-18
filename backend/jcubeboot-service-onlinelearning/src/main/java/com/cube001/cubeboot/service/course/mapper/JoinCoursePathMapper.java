@@ -20,7 +20,7 @@ import java.util.List;
  * 路径详情Mapper 接口
  * </p>
  *
- * @author qw
+ * @author anonymous
  * @since 2019-03-14
  */
 public interface JoinCoursePathMapper extends BaseMapper<JoinCoursePath> {
@@ -28,7 +28,7 @@ public interface JoinCoursePathMapper extends BaseMapper<JoinCoursePath> {
 
     /**
      * 分页展示查询
-     * @author qw
+     * @author anonymous
      * @date 2025/3/19 10:19
     */
     List<JoinCoursePathDto> page(Pagination page, @Param("ew") Wrapper<JoinCoursePathDto> wrapper);

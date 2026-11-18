@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
 * @description 所有公开课程信息包含标签、课程实验
-* @author 马勇超
+* @author anonymous
 * @date 2025/8/8 10:59
 * @param
 * @return

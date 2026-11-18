@@ -7,7 +7,7 @@ import com.alibaba.fastjson.JSONObject;
  * FileName: com.cube001.cubeboot.service.wechat
  * 标签service
  *
- * @author 陈乐乐
+ * @author anonymous
  * @version 1.0
  * @date 2025/12/25 10:01
  */
@@ -18,7 +18,7 @@ public interface TagService {
      * @param tagName 标签名称
      * @return java.lang.Boolean
      * @description
-     * @author 陈乐乐
+     * @author anonymous
      * @date 2025/12/25 9:59
      */
     Boolean createTag(String tagName) throws Exception;

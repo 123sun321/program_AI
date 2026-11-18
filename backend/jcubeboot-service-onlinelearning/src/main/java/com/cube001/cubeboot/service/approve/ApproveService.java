@@ -9,7 +9,7 @@ import com.cube001.cubeboot.approve.entity.Approve;
 * FileName: ApproveService.java
 * 通用点赞service类的详细说明
 *
-* @author 宋泽山
+* @author anonymous
 * @date 2025/4/5 11:16
 * @version 1.0
 */

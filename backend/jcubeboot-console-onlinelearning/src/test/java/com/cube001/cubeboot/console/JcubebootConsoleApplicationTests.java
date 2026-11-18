@@ -22,7 +22,7 @@ public class JcubebootConsoleApplicationTests {
 	public  void  TestUserLombok()
 	{
 		/*User u1=new User();
-		u1.setName("张向宇");
+		u1.setName("anonymous");
 		System.out.println(u1.toString());*/
 	}
 	//@Test

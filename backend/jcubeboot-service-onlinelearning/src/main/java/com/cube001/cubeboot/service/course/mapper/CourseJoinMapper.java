@@ -15,7 +15,7 @@ import java.util.List;
  * FileName: CourseJoinMapper
  * 类的详细说明
  *
- * @author 张浩杰
+ * @author anonymous
  * @version 1.0
  * @date 2025/3/12 17:52
  */
@@ -30,7 +30,7 @@ public interface CourseJoinMapper extends BaseMapper<CourseJoin> {
 
     /**
      * 获取学生参与的课程分页
-     * @author Juci
+     * @author anonymous
      * @param page
      * @param ew
      * @return
@@ -39,7 +39,7 @@ public interface CourseJoinMapper extends BaseMapper<CourseJoin> {
 
     /**
      * @description  学生参与私有课程的作业分页
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/4/23 9:51
      * @param   page,wrapper
      * @return
@@ -48,7 +48,7 @@ public interface CourseJoinMapper extends BaseMapper<CourseJoin> {
 
     /**
      * @description  学生参与私有课程无分页
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/4/23 9:51
      * @param   eq
      * @return

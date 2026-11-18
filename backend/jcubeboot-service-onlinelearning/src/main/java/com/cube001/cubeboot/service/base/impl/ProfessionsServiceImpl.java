@@ -29,7 +29,7 @@ import java.util.stream.Collectors;
 * FileName: ProfessionsServiceImpl.java
 * 类的详细说明 用来实现Controller需要的接口方法
 *
-* @author 马勇超
+* @author anonymous
 * @date 2025/11/27 17:03
 * @version 1.0
 */
@@ -47,7 +47,7 @@ public class ProfessionsServiceImpl extends ServiceImpl<ProfessionsMapper, Profe
 
     /*
      * @description  查询所有专业内容的id与name
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/11/27 15:52
      * @param 参数无
      * @return 返回一个只包含所有专业的id与name的数组
@@ -59,7 +59,7 @@ public class ProfessionsServiceImpl extends ServiceImpl<ProfessionsMapper, Profe
 
     /**
      * @description  专业分页
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/3/8 8:51
      * @param
      * @return
@@ -84,7 +84,7 @@ public class ProfessionsServiceImpl extends ServiceImpl<ProfessionsMapper, Profe
 
     /**
      * @description  删除判断专业下面是否存在班级
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/12/4 14:34
      * @param  id
      * @return   Boolean
@@ -101,7 +101,7 @@ public class ProfessionsServiceImpl extends ServiceImpl<ProfessionsMapper, Profe
 
     /**
      * @description  解析Excel并验证Excel是否存在错误字段
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/12/4 14:35
      * @param   importData:Excel数据
      * @return   List

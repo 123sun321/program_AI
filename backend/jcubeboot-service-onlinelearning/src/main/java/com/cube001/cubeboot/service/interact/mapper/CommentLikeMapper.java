@@ -10,7 +10,7 @@ import com.cube001.cubeboot.interact.entity.CommentLike;
  * 点赞Mapper 接口
  * </p>
  *
- * @author qw
+ * @author anonymous
  * @since 2019-03-20
  */
 public interface CommentLikeMapper extends BaseMapper<CommentLike> {

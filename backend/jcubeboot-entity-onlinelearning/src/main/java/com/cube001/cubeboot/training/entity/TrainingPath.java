@@ -13,7 +13,7 @@ import lombok.experimental.Accessors;
  * FileName: TrainingPaths.java
  * 练习目录的完整实体类
  *
- * @author 宋泽山
+ * @author anonymous
  * @version 1.0
  * @date 2025/3/13 15:26
  */

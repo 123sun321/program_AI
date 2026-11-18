@@ -27,7 +27,7 @@ import java.util.Map;
 * FileName: CommunityPlateController
 * 社区板块controller
 *
-* @author 张浩杰
+* @author anonymous
 * @date   2019/3/19 16:15
 * @version 1.0
 */
@@ -42,7 +42,7 @@ public class CommunityPlateController implements IApplicationService {
     private CommunityPlateConverter communityPlateConverter;
     /**  
      * @description 社区板块通过name搜索/分页
-     * @author 张浩杰 
+     * @author anonymous 
      * @date 2025年3月19日 17:31:50
      * @param
      * @return  communityPlatePage
@@ -58,7 +58,7 @@ public class CommunityPlateController implements IApplicationService {
     }
     /**
      * @description 删除/批量删除社区板块
-     * @author 张浩杰
+     * @author anonymous
      * @date  2019年3月19日 17:36:08
      * @param  ids
      * @return  result
@@ -71,7 +71,7 @@ public class CommunityPlateController implements IApplicationService {
     }
     /**
      * @description 修改社区板块
-     * @author 张浩杰
+     * @author anonymous
      * @date  2019年3月19日 17:45:19
      * @param communityPlateDto
      * @return Boolean
@@ -84,7 +84,7 @@ public class CommunityPlateController implements IApplicationService {
     }
     /**
      * @description 添加社区板块
-     * @author 张浩杰
+     * @author anonymous
      * @date  2019年3月20日 15:12:20
      * @param  communityPlateDto
      * @return  Boolean
@@ -98,7 +98,7 @@ public class CommunityPlateController implements IApplicationService {
 
     /**
     * @description  获取所有社区板块
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/4/24 17:34
     * @return   list
     */
@@ -112,7 +112,7 @@ public class CommunityPlateController implements IApplicationService {
 
     /**
      * @description 通过角色获取权限社区板块
-     * @author 张浩杰
+     * @author anonymous
      * @date 2025年3月22日 13:45:31
      * @param
      * @return communityPlateList
@@ -129,7 +129,7 @@ public class CommunityPlateController implements IApplicationService {
 
     /**
      * @description 验证排序是否重复
-     * @author 张人杰
+     * @author anonymous
      * @date 2025/3/22 16:21
      * @param  id,col,value
      * @return Boolean
@@ -157,7 +157,7 @@ public class CommunityPlateController implements IApplicationService {
     }
    /**
      * @description通过ID查询数据
-     * @author 张人杰
+     * @author anonymous
      * @date 2025/3/28 14:33
      * @Param
      * @return

@@ -18,7 +18,7 @@ import java.util.List;
  * FileName: LabelServiceImpl.java
  * 类的详细说明
  *
- * @author 马勇超
+ * @author anonymous
  * @version 1.0
  * @date 2025/3/8 17:55
  */
@@ -26,7 +26,7 @@ import java.util.List;
 public class LabelServiceImpl extends ServiceImpl<LabelMapper, Label> implements LabelService {
     /**
      * @description 根据选择的技术类型来获取课程对应的所有标签列表
-     * @author 宋泽山
+     * @author anonymous
      * @date 2025/4/22 14:52
      * @param techType 技术类型
      * @return List<Label>
@@ -43,7 +43,7 @@ public class LabelServiceImpl extends ServiceImpl<LabelMapper, Label> implements
 
     /**
      * @description 根据课程ID来获取课程对应的所有标签列表: 仅公共的标签
-     * @author 宋泽山
+     * @author anonymous
      * @date 2025/4/22 14:52
      * @param courseId 课程id
      * @return List<Label>
@@ -58,7 +58,7 @@ public class LabelServiceImpl extends ServiceImpl<LabelMapper, Label> implements
     }
     /**
      * @description  学生端案例库标签缓存功能
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/5/6 9:22
      * @return
      */
@@ -71,7 +71,7 @@ public class LabelServiceImpl extends ServiceImpl<LabelMapper, Label> implements
      * @param plusPage
      * @return
      * @description 实现标签分页
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/3/13 10:42
      */
     @Override
@@ -85,7 +85,7 @@ public class LabelServiceImpl extends ServiceImpl<LabelMapper, Label> implements
      * @param str
      * @return List
      * @description 模糊查询
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/3/13 10:43
      */
     @Override
@@ -98,7 +98,7 @@ public class LabelServiceImpl extends ServiceImpl<LabelMapper, Label> implements
      * @param name
      * @return List
      * @description 通过名称精确查询
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/3/13 13:35
      */
     @Override

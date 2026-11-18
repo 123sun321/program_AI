@@ -14,14 +14,14 @@ import java.util.List;
  * FileName: ExerciseJoinReportMapper
  * 实验参与报告表
  *
- * @author Juci
+ * @author anonymous
  * @date 2025/3/28 18:05
  * @version 1.0
  */
 public interface ExerciseJoinReportMapper extends BaseMapper<ExerciseJoinReport> {
     /**
      * 分页获取实验报告
-     * @author Juci
+     * @author anonymous
      * @param page
      * @param ew
      * @return
@@ -37,7 +37,7 @@ public interface ExerciseJoinReportMapper extends BaseMapper<ExerciseJoinReport>
 
     /**
      * 更新浏览量
-     * @author Juci
+     * @author anonymous
      * @param id
      */
     void updateClick(@Param("id") Long id);
@@ -50,7 +50,7 @@ public interface ExerciseJoinReportMapper extends BaseMapper<ExerciseJoinReport>
 
     /**
      * 通过实验编号获取当前用户报告
-     * @author Juci
+     * @author anonymous
      * @param exerciseId
      * @param studentId
      * @return

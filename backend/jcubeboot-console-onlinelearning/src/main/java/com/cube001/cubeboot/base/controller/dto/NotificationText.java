@@ -14,7 +14,7 @@ import javax.validation.constraints.Size;
  * FileName: com.cube001.cubeboot.base.controller.dto
  * 消息
  *
- * @author 陈乐乐
+ * @author anonymous
  * @version 1.0
  * @date 2025/2/14 13:12
  */

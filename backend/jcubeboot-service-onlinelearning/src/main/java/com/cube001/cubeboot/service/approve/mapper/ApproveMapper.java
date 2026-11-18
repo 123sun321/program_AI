@@ -8,7 +8,7 @@ import com.baomidou.mybatisplus.mapper.BaseMapper;
 * FileName: ApproveMapper.java
 * 通用的点赞mapper类的详细说明
 *
-* @author 宋泽山
+* @author anonymous
 * @date 2025/4/5 11:14
 * @version 1.0
 */

@@ -14,7 +14,7 @@ import lombok.experimental.Accessors;
 * FileName: CommunityPlate
 * 社区板块实体类
 *
-* @author 张浩杰
+* @author anonymous
 * @date   2019/3/19 16:12
 * @version 1.0
 */

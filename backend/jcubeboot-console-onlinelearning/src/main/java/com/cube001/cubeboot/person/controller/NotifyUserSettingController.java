@@ -16,7 +16,7 @@ import java.util.List;
  * FileName: NotifyUserSettingController.java
  * 用户消息接收设置controller
  *
- * @author 张向宇
+ * @author anonymous
  * @version 1.0
  * @date 2025/01/06 16:09
  */
@@ -31,7 +31,7 @@ public class NotifyUserSettingController implements IApplicationService {
     /**
      * 获取当前登录用户的消息接收配置信息
      * @description
-     * @author 张向宇
+     * @author anonymous
      * @date 2025/01/06 16:12
      * @return
      */
@@ -46,7 +46,7 @@ public class NotifyUserSettingController implements IApplicationService {
     /**
      * 设置用户消息配置状态
      * @description
-     * @author 张向宇
+     * @author anonymous
      * @date 2025/01/07 16:09
      * @param notifiChangeDto 设置信息
      * @return

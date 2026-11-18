@@ -20,7 +20,7 @@ import java.util.stream.Collectors;
  * Copyright (C), 2018-2019, ZhengZhouChuangZhi. Co., Ltd.
  * FileName: UserWechatServiceImpl
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025/01/09 09:52
  */

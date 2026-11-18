@@ -4,7 +4,7 @@ import com.cube001.cubeboot.core.authorization.entity.Permission;
 import org.mapstruct.Mapper;
 
 /**
- * @Author:张向宇
+ * @Author:anonymous
  * @Description:
  * @Date:Create in 9:46 2018/07/13
  * @Modified By:

@@ -20,7 +20,7 @@ import org.springframework.stereotype.Controller;
 * FileName: ApproveController.java
 * 通用点赞类 的控制器
 *
-* @author 宋泽山
+* @author anonymous
 * @date 2025/4/3 16:31
 * @version 1.0
 */
@@ -36,7 +36,7 @@ public class ApproveController implements IApplicationService {
 
     /**
     * @description 点赞优秀作品
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/4/22 13:46
     * @param id
     */

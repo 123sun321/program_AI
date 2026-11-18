@@ -20,7 +20,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * FileName: DataWebSocket
  * DataWebSocket
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025/2/21 11:26
  */

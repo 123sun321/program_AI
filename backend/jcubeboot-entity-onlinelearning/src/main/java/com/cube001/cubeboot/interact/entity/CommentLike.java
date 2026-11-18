@@ -14,7 +14,7 @@ import lombok.experimental.Accessors;
  * 点赞实体类
  * </p>
  *
- * @author qw
+ * @author anonymous
  * @since 2019-03-20
  */
 @Data

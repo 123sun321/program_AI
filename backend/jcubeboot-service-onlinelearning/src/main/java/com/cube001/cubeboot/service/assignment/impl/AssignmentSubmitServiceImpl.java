@@ -45,7 +45,7 @@ import java.util.stream.Collectors;
  *  作业提交类服务实现类
  * </p>
  *
- * @author renjie
+ * @author anonymous
  * @since 2019-03-22
  */
 @Service
@@ -68,7 +68,7 @@ public class AssignmentSubmitServiceImpl extends ServiceImpl<AssignmentSubmitMap
 
     /**
       * @description分页/模糊查询
-      * @author 张人杰
+      * @author anonymous
       * @date 2025/3/28 9:05
       * @Param
       * @return
@@ -82,7 +82,7 @@ public class AssignmentSubmitServiceImpl extends ServiceImpl<AssignmentSubmitMap
     }
     /**
       * @description作业提交评分的设定以及作业中未评分人数的 减1
-      * @author 张人杰
+      * @author anonymous
       * @date 2025/3/28 9:06
       * @Param Long assignmentSubmitid作业提交Id Integer Score作业提交评分
       * @return
@@ -106,7 +106,7 @@ public class AssignmentSubmitServiceImpl extends ServiceImpl<AssignmentSubmitMap
     }
     /**
       * @description作业提交中 把学生的作业设置为推荐作品
-      * @author 张人杰
+      * @author anonymous
       * @date 2025/3/28 9:08
       * @Param Long assignmentSubmitid作业提交Id, int Recommend是否设为推荐
       * @return
@@ -137,7 +137,7 @@ public class AssignmentSubmitServiceImpl extends ServiceImpl<AssignmentSubmitMap
     }
     /**
       * @description 取消推荐
-      * @author 张人杰
+      * @author anonymous
       * @date 2025/5/15 14:34
       * @Param Long assignmentSubmitid
       * @return
@@ -174,7 +174,7 @@ public class AssignmentSubmitServiceImpl extends ServiceImpl<AssignmentSubmitMap
 
     /**
      * @description  获取所有为评分的作业列表
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/4/8 14:11
      * @return   list
      */
@@ -185,7 +185,7 @@ public class AssignmentSubmitServiceImpl extends ServiceImpl<AssignmentSubmitMap
     }
     /**
      * 通过编号获取作业提交详情及代码
-     * @author Juci
+     * @author anonymous
      * @param id
      * @return
      */
@@ -313,7 +313,7 @@ public class AssignmentSubmitServiceImpl extends ServiceImpl<AssignmentSubmitMap
 
     /**
       * @description 根据提交作业id获取作业和学生信息
-      * @author 马勇超
+      * @author anonymous
       * @date 2025/7/4 15:36
       * @param id
       * @return

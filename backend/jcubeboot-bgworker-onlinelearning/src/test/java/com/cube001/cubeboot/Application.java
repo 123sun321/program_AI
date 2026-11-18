@@ -10,7 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * FileName: com.cube001.cubeboot
  * 类的详细说明
  *
- * @author 陈乐乐
+ * @author anonymous
  * @version 1.0
  * @date 2025/1/24 10:59
  */

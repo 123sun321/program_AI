@@ -30,7 +30,7 @@ import java.util.*;
 /**
  * web 配置类
  *
- * @author fengshuonan
+ * @author anonymous
  * @date 2016年11月12日 下午5:03:32
  */
 @Configuration

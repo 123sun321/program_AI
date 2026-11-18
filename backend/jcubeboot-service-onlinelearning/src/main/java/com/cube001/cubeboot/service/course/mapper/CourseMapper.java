@@ -13,14 +13,14 @@ import java.util.List;
 * FileName: CourseMapper
 * 班课mapper
 *
-* @author 陈乐乐
+* @author anonymous
 * @date 2025/11/28 9:14
 * @version 1.0
 */
 public interface CourseMapper  extends BaseMapper<Course> {
     /**
      * @description 根据课程id获取该课程总收藏数量
-     * @author SongZeShan
+     * @author anonymous
      * @date 2025/7/5 11:01
      * @param courseId 课程id
      * @return
@@ -28,7 +28,7 @@ public interface CourseMapper  extends BaseMapper<Course> {
     Integer getCollectedNumberByCourseId(Long courseId);
     /**
      * @description 更新参与人数
-     * @author SongZeShan
+     * @author anonymous
      * @date 2025/7/5 9:51
      * @param id 课程id
      * @return
@@ -36,7 +36,7 @@ public interface CourseMapper  extends BaseMapper<Course> {
     Boolean updateJoinNumber(@Param("id") Long id);
     /**
      * @description 判断当前用户是否收藏该课程
-     * @author 宋泽山
+     * @author anonymous
      * @date 2025/4/27 12:20
      * @param userId 用户id
      * @param courseId 课程id
@@ -45,7 +45,7 @@ public interface CourseMapper  extends BaseMapper<Course> {
     Long judgeCourseIsCollected(@Param("userId")Long userId,@Param("courseId")Long courseId);
     /**
      * @description 根据标签id,查询相关的课程的link_id,再查询出对应的course实体
-     * @author 宋泽山
+     * @author anonymous
      * @date 2025/4/22 16:08
      * @param labelId 标签id
      * @return List<Course>
@@ -53,7 +53,7 @@ public interface CourseMapper  extends BaseMapper<Course> {
     List<Course> getCourseListByLabelId(@Param("labelId") Long labelId);
     /**
      * @description 查询到全部的符合要求的课程列表,不带标签
-     * @author 宋泽山
+     * @author anonymous
      * @date 2025/4/19 15:12
      * @param plusPage 分页
      * @param userId 用户id
@@ -66,7 +66,7 @@ public interface CourseMapper  extends BaseMapper<Course> {
                                @Param("studentId")Long studentId,@Param("joinCategory")Integer joinCategory);
     /**
      * @description 查询到全部的符合要求的课程列表,带标签
-     * @author 宋泽山
+     * @author anonymous
      * @date 2025/4/19 15:12
      * @param  plusPage 分页信息
      * @param wrapper 查询体
@@ -80,7 +80,7 @@ public interface CourseMapper  extends BaseMapper<Course> {
                                                 @Param("tagName")String tagName,@Param("studentId")Long studentId,@Param("joinCategory")Integer joinCategory);
     /**
      * @description 获取所有课程类型列表
-     * @author 张浩杰
+     * @author anonymous
      * @date  2019年3月15日 11:28:11
      * @param
      * @return
@@ -89,7 +89,7 @@ public interface CourseMapper  extends BaseMapper<Course> {
 
     /**
      * @description 获取课程难易程度列表
-     * @author 张浩杰
+     * @author anonymous
      * @date 2025年3月15日 13:43:01
      * @param
      * @return
@@ -101,7 +101,7 @@ public interface CourseMapper  extends BaseMapper<Course> {
 
     /**
      * 更新实验数
-     * @author Juci
+     * @author anonymous
      * @param id
      */
     void updateExerciseNumber(Long id);

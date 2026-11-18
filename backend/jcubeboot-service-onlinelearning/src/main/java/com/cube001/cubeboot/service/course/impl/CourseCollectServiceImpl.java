@@ -19,7 +19,7 @@ import java.util.List;
  *  服务实现类
  * </p>
  *
- * @author qw
+ * @author anonymous
  * @since 2019-03-11
  */
 @Service
@@ -27,7 +27,7 @@ public class CourseCollectServiceImpl extends ServiceImpl<CourseCollectMapper, C
 
     /**
      * 添加收藏
-     * @author Juci
+     * @author anonymous
      * @param userId 用户编号
      * @param courseId 课程编号
      */
@@ -61,7 +61,7 @@ public class CourseCollectServiceImpl extends ServiceImpl<CourseCollectMapper, C
 
     /**
      * 分页获取列表
-     * @author Juci
+     * @author anonymous
      * @param page
      * @param wrapper
      * @return

@@ -35,7 +35,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * FileName: AbilityCateControllerTest.java
  * 能力要项测试类
  *
- * @author 张向宇
+ * @author anonymous
  * @version 1.0
  * @date 2025/12/18 15:58
  */

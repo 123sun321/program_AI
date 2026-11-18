@@ -23,7 +23,7 @@ import java.util.*;
  *  服务实现类    计算积分
  * </p>
  *
- * @author ZJY
+ * @author anonymous
  * @since 2019-03-18
  */
 @Service
@@ -38,7 +38,7 @@ public class IntegralScoreServiceImpl extends ServiceImpl<IntegralScoreMapper, I
     /**
      *
      * @description 对某个学生添加一条积分记录,然后同步添加积分到student表
-     * @author 宋泽山
+     * @author anonymous
      * @date 2025/4/17 17:18
      * @param userId 用户编号
      * @param name 积分类型
@@ -82,7 +82,7 @@ public class IntegralScoreServiceImpl extends ServiceImpl<IntegralScoreMapper, I
 
     /**
      *功能描述     根据 用户id 查找用户的积分列表
-     * @author     赵金毅
+     * @author     anonymous
      * @date       2019/3/22
      * @param
      * @return  map存储本周积分，本月积分，所有积分
@@ -118,7 +118,7 @@ public class IntegralScoreServiceImpl extends ServiceImpl<IntegralScoreMapper, I
 
     /*
      *功能描述    计算出本周的开始时间
-     * @author     赵金毅
+     * @author     anonymous
      * @date       2019/3/23
      * @return
     */
@@ -145,7 +145,7 @@ public class IntegralScoreServiceImpl extends ServiceImpl<IntegralScoreMapper, I
 
     /*
      *功能描述     获取本月的开始时间
-     * @author     赵金毅
+     * @author     anonymous
      * @date       2019/3/23
      * @param
      * @return

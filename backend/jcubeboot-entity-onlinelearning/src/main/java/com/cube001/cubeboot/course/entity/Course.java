@@ -15,7 +15,7 @@ import java.util.List;
 * FileName:  Course
 * 课程实体类
 * 
-* @author 张浩杰 
+* @author anonymous 
 * @date   2019/3/11 15:17
 * @version 1.0 
 */

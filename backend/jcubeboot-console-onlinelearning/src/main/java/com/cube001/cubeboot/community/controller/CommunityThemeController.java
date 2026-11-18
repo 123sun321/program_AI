@@ -28,7 +28,7 @@ import java.util.List;
  * FileName: CommunityThemeController
  * 社区主题管理controller
  *
- * @author 张浩杰
+ * @author anonymous
  * @date   2019/3/21 15:26
  * @version 1.0
  */
@@ -47,7 +47,7 @@ public class CommunityThemeController implements IApplicationService {
 
     /**
      * @description 社区主题通过标题搜索/分页
-     * @author 张浩杰
+     * @author anonymous
      * @date 2025/3/21 15:29
      * @param commonSearchDto
      * @return Page<CommunityThemeDto>
@@ -63,7 +63,7 @@ public class CommunityThemeController implements IApplicationService {
 
     /**
     * @description  用户获取自己发的帖子
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/4/24 10:58
     * @param   commonSearchExtendUserIdVo
     * @return
@@ -84,7 +84,7 @@ public class CommunityThemeController implements IApplicationService {
 
     /**
     * @description  获取用户个人的回复帖子主题和回复内容
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/4/24 15:00
     * @param   searchExtendUserIdVo
     * @return
@@ -106,7 +106,7 @@ public class CommunityThemeController implements IApplicationService {
 
     /**
      * @description 帖子回复查看/分页
-     * @author 张浩杰
+     * @author anonymous
      * @date 2025/3/28 17:43
      * @param
      * @return
@@ -120,7 +120,7 @@ public class CommunityThemeController implements IApplicationService {
     }
     /**
      * @description 删除/批量删除社区主题管理
-     * @author 张浩杰
+     * @author anonymous
      * @date 2025/3/21 16:26
      * @param  ids
      * @return
@@ -133,7 +133,7 @@ public class CommunityThemeController implements IApplicationService {
 
     /**
      * @description 添加/新增帖子
-     * @author 张浩杰
+     * @author anonymous
      * @date 2025/3/22 13:47
      * @param communityThemeDto,userId
      * @return
@@ -147,7 +147,7 @@ public class CommunityThemeController implements IApplicationService {
     }
     /**
      * @description 修改帖子
-     * @author 张浩杰
+     * @author anonymous
      * @date 2025/3/29 10:41
      * @param
      * @return
@@ -159,7 +159,7 @@ public class CommunityThemeController implements IApplicationService {
     }
     /**
      * @description 根据id查询帖子信息
-     * @author 张浩杰
+     * @author anonymous
      * @date 2025/3/29 14:18
      * @param id
      * @return CommunityThemeDto
@@ -171,7 +171,7 @@ public class CommunityThemeController implements IApplicationService {
     }
     /**
      * @description 查看增加浏览量++
-     * @author 张浩杰
+     * @author anonymous
      * @date 2025/3/22 17:44
      * @param  communityThemeId
      * @return
@@ -184,7 +184,7 @@ public class CommunityThemeController implements IApplicationService {
 
    /**
     * @description 社区管理帖子验证
-    * @author 张人杰
+    * @author anonymous
     * @date 2025/4/19 17:43
     * @param id,col,value
     * @return Boolean

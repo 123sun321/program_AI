@@ -17,7 +17,7 @@ import java.util.List;
 * 类的详细说明
  * 作业的服务类
 *
-* @author 张人杰
+* @author anonymous
 * @date   2019/3/21 9:00
 * @version 1.0
 */
@@ -26,7 +26,7 @@ import java.util.List;
 public interface AssignmentService extends IService<Assignment> {
     /**
       * @description
-      * @author 张人杰
+      * @author anonymous
       * @date 2025/3/21 9:01
       * @Param 作业 assignmentid
       * @return
@@ -34,7 +34,7 @@ public interface AssignmentService extends IService<Assignment> {
     void delete(Long assignmentid);
     /**
      * @description批量删除作业标题
-     * @author 张人杰
+     * @author anonymous
      * @date 2025/3/28 9:00
      * @Param List<Long> ids
      * @return
@@ -42,7 +42,7 @@ public interface AssignmentService extends IService<Assignment> {
     Boolean deleteBatchids(List<Long> ids);
     /**
      * @description
-     * @author 张人杰
+     * @author anonymous
      * @date 2025/3/21 10:03
      * @Param 添加作业
      * @return 操作成功或者抛出友好异常
@@ -50,7 +50,7 @@ public interface AssignmentService extends IService<Assignment> {
     void add(AssignmentDto assignmentDto);
     /**
      * @description作业的更新
-     * @author 张人杰
+     * @author anonymous
      * @date 2025/3/28 9:04
      * @Param AssignmentDto
      * @return
@@ -58,7 +58,7 @@ public interface AssignmentService extends IService<Assignment> {
     void update(AssignmentDto assignmentDto);
     /**
      * @description字段校验
-     * @author 张人杰
+     * @author anonymous
      * @date 2025/3/28 9:02
      * @Param String col字段名，String value字段值
      * @return
@@ -66,7 +66,7 @@ public interface AssignmentService extends IService<Assignment> {
     int getAssignmentSort(String col,String value);
     /**
      * @description分页/模糊查询
-     * @author 张人杰
+     * @author anonymous
      * @date 2025/3/28 9:03
      * @Param Page<Assignment> page 分页 Wrapper<Assignment> formToEntityWrapperWithSearch查询条件
      * @return Page<Assignment>
@@ -91,7 +91,7 @@ public interface AssignmentService extends IService<Assignment> {
     Page<AssignmentDto> searchGroupPage(Page<AssignmentDto> page, Wrapper<AssignmentDto> wrapper,Long userId);
     /**
     * @description  提交作业人数和未评分加一
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/5/14 13:40
     * @param
     * @return
@@ -100,7 +100,7 @@ public interface AssignmentService extends IService<Assignment> {
 
     /**
      * 获取当前用户该作业的提交详情
-     * @author Juci
+     * @author anonymous
      * @param userId
      * @param id
      * @return

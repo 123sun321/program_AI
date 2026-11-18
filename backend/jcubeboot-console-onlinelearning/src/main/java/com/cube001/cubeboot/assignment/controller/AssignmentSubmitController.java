@@ -47,7 +47,7 @@ import java.util.Map;
  * 类的详细说明
  * 提交作业详情
  *
- * @author 张人杰
+ * @author anonymous
  * @version 1.0
  * @date 2025/3/22 13:14
  */
@@ -148,7 +148,7 @@ public class AssignmentSubmitController implements IApplicationService {
 
     /**
      * 作业提交单个查询
-     * @author Juci
+     * @author anonymous
      * @param assignmenSubmitId
      * @return
      */
@@ -162,7 +162,7 @@ public class AssignmentSubmitController implements IApplicationService {
     /**
      * @return list
      * @description 获取所有为评分的作业列表
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/4/8 14:11
      */
     @ApiOperation(value = "取为评分作业列表")
@@ -177,7 +177,7 @@ public class AssignmentSubmitController implements IApplicationService {
      * @param assignmentId
      * @return
      * @description 根据作业id获取代码详情
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/5/13 9:57
      */
     @ApiOperation(value = "根据作业id获取代码详情")
@@ -191,7 +191,7 @@ public class AssignmentSubmitController implements IApplicationService {
      * @param submitWithCode
      * @return
      * @description 提交作业
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/4/29 16:17
      */
     @ApiOperation(value = "提交作业")
@@ -240,7 +240,7 @@ public class AssignmentSubmitController implements IApplicationService {
      * @param submitWithCode
      * @return
      * @description 重新提交作业
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/4/29 16:17
      */
     @ApiOperation(value = "重新提交作业")
@@ -277,7 +277,7 @@ public class AssignmentSubmitController implements IApplicationService {
 
     /**
       * @description 根据提交作业id获取代码信息
-      * @author 马勇超
+      * @author anonymous
       * @date 2025/6/24 10:16
       * @param id
       * @return
@@ -298,7 +298,7 @@ public class AssignmentSubmitController implements IApplicationService {
 
     /**
       * @description 根据提交作业id获取作业和学生信息
-      * @author 马勇超
+      * @author anonymous
       * @date 2025/7/4 15:42
       * @param id
       * @return

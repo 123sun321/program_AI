@@ -15,7 +15,7 @@ import java.util.Date;
  * FileName: CourseJoinDto
  * 课程参与详情Dto
  *
- * @author 张浩杰
+ * @author anonymous
  * @version 1.0
  * @date 2025/3/13 10:44
  */

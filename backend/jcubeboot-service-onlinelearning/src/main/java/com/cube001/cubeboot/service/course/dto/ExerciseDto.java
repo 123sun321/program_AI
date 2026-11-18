@@ -16,7 +16,7 @@ import java.util.List;
  * FileName: ExerciseDto
  * 实验练习业务逻辑数据交互类
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025/3/11 15:07
  */

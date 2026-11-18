@@ -14,7 +14,7 @@ import java.util.List;
  * FileName: CommunityPlateDto
  * 社区板块dto
  *
- * @author 张浩杰
+ * @author anonymous
  * @version 1.0
  * @date 2025/3/19 16:40
  */

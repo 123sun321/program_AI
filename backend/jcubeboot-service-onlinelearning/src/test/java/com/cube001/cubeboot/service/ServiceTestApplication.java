@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * FileName: ServiceTestApplication.java
  * 测试项目启动类
  *
- * @author 张向宇
+ * @author anonymous
  * @version 1.0
  * @date 2025/12/06 10:48
  */

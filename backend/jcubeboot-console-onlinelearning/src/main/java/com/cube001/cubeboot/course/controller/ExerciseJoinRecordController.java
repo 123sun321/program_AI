@@ -22,7 +22,7 @@ import java.util.List;
  * FileName: ExerciseJoinRecordController
  * 实验参与记录控制器
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025/4/8 13:37
  */
@@ -38,7 +38,7 @@ public class ExerciseJoinRecordController implements IApplicationService {
     private StudentService studentService;
     /**
      * 添加实验练习
-     * @author Juci
+     * @author anonymous
      * @param exerciseJoinRecordDto
      * @return
      */
@@ -65,7 +65,7 @@ public class ExerciseJoinRecordController implements IApplicationService {
     }
     /**
      * 统计学生一年的学习情况
-     * @author Juci
+     * @author anonymous
      * @param userId 用户编号
      * @return
      */
@@ -78,7 +78,7 @@ public class ExerciseJoinRecordController implements IApplicationService {
     }
     /**
      * @description  学生参与练习次数相关统计根据学生Id
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/4/29 9:13
      * @param   studentId
      * @return
@@ -92,7 +92,7 @@ public class ExerciseJoinRecordController implements IApplicationService {
     }
     /**
     * @description  统计学生一年的学习情况通过学生Id
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/4/29 9:23
     * @param   studentId
     * @return

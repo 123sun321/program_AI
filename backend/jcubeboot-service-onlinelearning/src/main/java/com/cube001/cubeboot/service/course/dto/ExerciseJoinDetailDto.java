@@ -10,7 +10,7 @@ import java.util.Date;
  * FileName: ExerciseJoinDetailDto
  * 实验练习参与详情业务逻辑详情类
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025/3/18 17:31
  */

@@ -7,7 +7,7 @@ import lombok.Data;
  * FileName: BaseLibraryDto
  * BaseLibraryDto
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025/7/29 16:35
  */

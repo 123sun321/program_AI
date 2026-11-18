@@ -28,7 +28,7 @@ import java.util.Map;
 * FileName: RecommendWorkController.java
 * 优秀作品展示控制类
 *
-* @author 马勇超
+* @author anonymous
 * @date 2025/4/29 18:08
 * @version 1.0
 */
@@ -48,7 +48,7 @@ public class RecommendWorkController implements IApplicationService {
 
     /**
      * @description 添加推荐优秀作品
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/4/22 11:16
      * @param recommendWorkDto
      */
@@ -60,7 +60,7 @@ public class RecommendWorkController implements IApplicationService {
     }
     /**
      * @description  通过学生id和作业标题取消推荐
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/4/22 10:49
      * @param   studentId,title
      */
@@ -73,7 +73,7 @@ public class RecommendWorkController implements IApplicationService {
 
     /**
     * @description  优秀作品分页展示
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/4/22 11:26
     * @param   searchDto
     * @return   recommendWorkDto
@@ -93,7 +93,7 @@ public class RecommendWorkController implements IApplicationService {
 
     /**
      * @description  删除
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/5/14 9:41
      * @param   id
      * @return
@@ -119,7 +119,7 @@ public class RecommendWorkController implements IApplicationService {
 
     /**
     * @description  批量删除
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/5/14 9:41
     * @param   ids
     * @return
@@ -135,7 +135,7 @@ public class RecommendWorkController implements IApplicationService {
 
     /**
      * 通过编号查询优秀作品
-     * @author Juci
+     * @author anonymous
      * @param id
      * @return
      */

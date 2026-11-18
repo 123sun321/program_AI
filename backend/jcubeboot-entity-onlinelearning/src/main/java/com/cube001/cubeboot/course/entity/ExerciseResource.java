@@ -11,7 +11,7 @@ import lombok.experimental.Accessors;
  * FileName: ExerciseResource
  * ExerciseResource
  *
- * @author Administrator
+ * @author anonymous
  * @version 1.0
  * @date 2025/3/11 16:13
  */

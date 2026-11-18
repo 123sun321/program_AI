@@ -18,7 +18,7 @@ import java.util.List;
  * FileName: ExerciseResourceServiceImpl
  * 实验资源Service实现类
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025/3/11 16:56
  */

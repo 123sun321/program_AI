@@ -16,7 +16,7 @@ import lombok.experimental.Accessors;
  * 路径详情实体类
  * </p>
  *
- * @author qw
+ * @author anonymous
  * @since 2019-03-14
  */
 @Data

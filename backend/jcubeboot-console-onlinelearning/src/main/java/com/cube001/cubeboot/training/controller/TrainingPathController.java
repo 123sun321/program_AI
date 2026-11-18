@@ -30,7 +30,7 @@ import java.util.List;
 /**
 * Copyright (C), 2018-2019, ZhengZhouChuangZhi. Co., Ltd.* FileName: TrainingPathController.java
 * 练习目录的controller,全部功能
-* @author 宋泽山
+* @author anonymous
 * @date 2025/3/14 17:27
 * @version 1.0
 */
@@ -54,7 +54,7 @@ public class TrainingPathController implements IApplicationService {
 
     /**
      * @description 1 得到某个学生对应的文件夹下的所有练习以及文件夹
-     * @author 宋泽山
+     * @author anonymous
      * @date 2025/3/18 13:13
      * @param id 文件夹id
      * @return 文件+文件夹列表
@@ -80,7 +80,7 @@ public class TrainingPathController implements IApplicationService {
 
     /**
      * @description 2 在某个文件夹下添加一个新的文件夹
-     * @author 宋泽山
+     * @author anonymous
      * @date 2025/3/18 13:14
      * @param parentId 文件夹id
      * @param folderName 文件夹名字
@@ -126,7 +126,7 @@ public class TrainingPathController implements IApplicationService {
     }
     /**
      * @description 3: 在某个文件夹下删除一个或者多个文件夹
-     * @author 宋泽山
+     * @author anonymous
      * @date 2025/4/5 11:04
      * @param dataList id列表
      * @return 删除结果,true或者false
@@ -171,7 +171,7 @@ public class TrainingPathController implements IApplicationService {
     }
     /**
      * @description 5: 重命名某个文件夹
-     * @author 宋泽山
+     * @author anonymous
      * @date 2025/4/5 11:04
      * @param folderId 文件id
      * @param folderName 文件夹名称
@@ -203,7 +203,7 @@ public class TrainingPathController implements IApplicationService {
     }
     /**
      * @description 6: 批量移动一批文件夹或者文件
-     * @author 宋泽山
+     * @author anonymous
      * @date 2025/4/29 11:04
      * @return 修改结果,true或者false
      */
@@ -215,7 +215,7 @@ public class TrainingPathController implements IApplicationService {
     }
     /**
      * @description 7: 返回练习目录的文件夹的树形图
-     * @author 宋泽山
+     * @author anonymous
      * @date 2025/4/30 11:04
      * @return List<TrainingPathDto>
      */

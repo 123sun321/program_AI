@@ -13,7 +13,7 @@ import lombok.experimental.Accessors;
  * FileName: ExerciseJoinReport
  * 实验参与报告
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025/3/28 17:45
  */

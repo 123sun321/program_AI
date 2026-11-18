@@ -9,7 +9,7 @@ import lombok.Data;
  * FileName: JoinExerciseDto
  * 结束实验实体
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025/7/29 10:55
  */

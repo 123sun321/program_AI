@@ -9,7 +9,7 @@ import javax.validation.constraints.NotEmpty;
  * FileName: BindUserDto
  * 绑定用户Dto
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025/01/16 13:37
  */

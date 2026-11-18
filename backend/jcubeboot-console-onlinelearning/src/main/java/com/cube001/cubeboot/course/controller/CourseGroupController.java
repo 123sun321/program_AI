@@ -29,7 +29,7 @@ import java.util.List;
  * FileName: CourseGroupController
  * CourseGroupController
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025/7/5 13:34edit
  */
@@ -46,7 +46,7 @@ public class CourseGroupController implements IApplicationService {
     private CourseJoinService courseJoinService;
     /**
      * 根据id查询课程小组
-     * @author Juci
+     * @author anonymous
      * @date 2025/7/5 13:38
      * @param id
      * @return
@@ -60,7 +60,7 @@ public class CourseGroupController implements IApplicationService {
 
     /**
      * 创建课程小组
-     * @Author Juci
+     * @Author anonymous
      * @param courseGroupDto
      */
     @ApiOperation(value="创建课程小组", notes="创建课程小组")
@@ -73,7 +73,7 @@ public class CourseGroupController implements IApplicationService {
 
     /**
      * 创建课程小组
-     * @Author Juci
+     * @Author anonymous
      * @param courseGroupDto
      */
     @ApiOperation(value="修改课程小组", notes="修改课程小组")
@@ -85,7 +85,7 @@ public class CourseGroupController implements IApplicationService {
     }
     /**
      * 课程小组
-     * @Author Juci
+     * @Author anonymous
      * @date 2025/7/5 13:41
      * @param id
      * @return
@@ -103,7 +103,7 @@ public class CourseGroupController implements IApplicationService {
 
     /**
      * 课程小组分页
-     * @Author Juci
+     * @Author anonymous
      * @date 2025/7/5 13:44
      * @param searchDto
      * @return
@@ -118,7 +118,7 @@ public class CourseGroupController implements IApplicationService {
 
     /**
      * 根据课程编号获取小组信息
-     * @Author Juci
+     * @Author anonymous
      * @param courseId
      * @return
      */

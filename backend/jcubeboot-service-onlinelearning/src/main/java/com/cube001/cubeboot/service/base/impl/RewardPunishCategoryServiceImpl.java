@@ -16,7 +16,7 @@ import java.util.List;
  * FileName: [RewardPunishCategoryServiceImpl]
  * RewardPunishCategoryServiceImpl是服务层接口实现类
  *
- * @author HuangPengju
+ * @author anonymous
  * @Date 2018-11-27
  * @version 1.0
  */
@@ -26,7 +26,7 @@ public class RewardPunishCategoryServiceImpl extends ServiceImpl<RewardPunishCat
     private RewardPunishCategoryService rewardPunishCategoryService;
     /**
      * @description  获取全部没有删除的奖惩信息
-     * @author HuangPengju
+     * @author anonymous
      * @date 2025/12/6 10:20
      * @param
      * @return java.util.List<com.cube001.cubeboot.base.entity.RewardPunishCategory>  奖惩信息列表

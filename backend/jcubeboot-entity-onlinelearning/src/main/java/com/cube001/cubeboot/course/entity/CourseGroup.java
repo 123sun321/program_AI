@@ -12,7 +12,7 @@ import lombok.experimental.Accessors;
  * FileName: CourseGroup
  * CourseGroup
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025/7/4 14:22
  */

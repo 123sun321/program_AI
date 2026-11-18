@@ -17,7 +17,7 @@ import java.util.List;
  *  Mapper 接口
  * </p>
  *
- * @author renjie
+ * @author anonymous
  * @since 2019-03-18
  */
 public interface AssignmentMapper extends BaseMapper<Assignment> {
@@ -26,7 +26,7 @@ public interface AssignmentMapper extends BaseMapper<Assignment> {
     void editeNoScore(Long id);
     /**
      * @description  提交作业人数和未评分加一
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/5/14 13:40
      * @param
      * @return
@@ -35,7 +35,7 @@ public interface AssignmentMapper extends BaseMapper<Assignment> {
 
     /**
      * 获取当前用户该作业的提交详情
-     * @author Juci
+     * @author anonymous
      * @param studentId
      * @param id
      * @return

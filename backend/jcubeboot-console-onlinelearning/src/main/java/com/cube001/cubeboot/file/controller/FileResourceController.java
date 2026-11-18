@@ -34,7 +34,7 @@ import java.util.List;
 * FileName: FileResourceController.java
 * 类的详细说明 资源列表控制类
 *
-* @author 马勇超
+* @author anonymous
 * @date 2025/3/14 9:50
 * @version 1.0
 */
@@ -57,7 +57,7 @@ public class FileResourceController implements IApplicationService {
 
     /**
     * @description
-    * @author 马勇超 资源列表添加
+    * @author anonymous 资源列表添加
     * @date 2025/3/20 10:36
     * @param   resourceDto
     * @return   Boolean
@@ -80,7 +80,7 @@ public class FileResourceController implements IApplicationService {
 
     /**
     * @description  文件上传
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/3/20 10:37
     * @param   file
     * @return   FileResourceDto
@@ -159,7 +159,7 @@ public class FileResourceController implements IApplicationService {
 
     /**
     * @description  文件的下载
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/3/20 10:37
     * @param   id
     * @return   String

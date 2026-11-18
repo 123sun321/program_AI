@@ -39,7 +39,7 @@ import java.util.List;
  *  CommentServiceimpl.java
  * </p>
  *
- * @author qw
+ * @author anonymous
  * @since 2019-03-12
  */
 @Service
@@ -65,7 +65,7 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment> impl
 
     /**
      * @description 学生端的 分页查询课程评价
-     * @author 宋泽山
+     * @author anonymous
      * @date   2019年3月19日 08:43:28
      * @param
      * @return
@@ -92,7 +92,7 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment> impl
 
     /**
      * @description 分页查询课程评价
-     * @author 张浩杰
+     * @author anonymous
      * @date   2019年3月19日 08:43:28
      * @param
      * @return
@@ -105,7 +105,7 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment> impl
     }
     /**
      * @description  分页查询帖子回复
-     * @author 张浩杰
+     * @author anonymous
      * @date 2025/3/28 18:21
      * @param
      * @return
@@ -120,7 +120,7 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment> impl
 
     /**
      * 发表和回复评价
-     * @author Juci
+     * @author anonymous
      * @param commentDto 发表内容
      * @param userId 用户编号
      */
@@ -173,7 +173,7 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment> impl
 
     /**
      * @description 点赞
-     * @author qw
+     * @author anonymous
      * @date 2025/3/21 9:29
      * @param id,userId
      * @return void
@@ -195,7 +195,7 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment> impl
 
     /**
      * 分页获取评价列表
-     * @author Juci
+     * @author anonymous
      * @param page
      * @param userId
      * @param wrapper

@@ -15,21 +15,21 @@ import java.util.List;
  * FileName: ExerciseJoinReportService
  * 实验参与报告Service
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025/3/28 18:02
  */
 public interface ExerciseJoinReportService extends IService<ExerciseJoinReport> {
     /**
      * 创建实验报告
-     * @author Juci
+     * @author anonymous
      * @param exerciseJoinReport
      */
     void create(ExerciseJoinReport exerciseJoinReport);
 
     /**
      * 编辑
-     * @author Juci
+     * @author anonymous
      * @param userId
      * @param exerciseJoinReportDto
      */
@@ -37,7 +37,7 @@ public interface ExerciseJoinReportService extends IService<ExerciseJoinReport> 
 
     /**
      * 分页获取报告
-     * @author Juci
+     * @author anonymous
      * @param plusPage
      * @param wrapper
      * @return
@@ -53,14 +53,14 @@ public interface ExerciseJoinReportService extends IService<ExerciseJoinReport> 
 
     /**
      * 更新浏览量
-     * @author Juci
+     * @author anonymous
      * @param id
      */
     void updateClick(Long id);
 
     /**
      * 相关报告
-     * @author Juci
+     * @author anonymous
      * @param exerciseId 实验编号
      * @return
      */
@@ -68,7 +68,7 @@ public interface ExerciseJoinReportService extends IService<ExerciseJoinReport> 
 
     /**
      * 通过实验编号获取当前用户的实验报告
-     * @author Juci
+     * @author anonymous
      * @param userId
      * @param id
      * @return

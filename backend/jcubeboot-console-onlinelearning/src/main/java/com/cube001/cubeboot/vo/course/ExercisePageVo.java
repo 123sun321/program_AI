@@ -9,7 +9,7 @@ import lombok.Data;
  * FileName: ExercisePageVo
  * 练习参与分页接收Vo
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025/3/15 14:16
  */

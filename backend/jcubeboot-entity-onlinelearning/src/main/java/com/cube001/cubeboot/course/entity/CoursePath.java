@@ -17,7 +17,7 @@ import java.util.List;
  * 路径设置实体类
  * </p>
  *
- * @author qw
+ * @author anonymous
  * @since 2019-03-11
  */
 @Data

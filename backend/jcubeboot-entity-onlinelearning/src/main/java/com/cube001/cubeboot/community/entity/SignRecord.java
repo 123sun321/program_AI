@@ -16,7 +16,7 @@ import java.util.Date;
  * 签到记录实体类
  * </p>
  *
- * @author qw
+ * @author anonymous
  * @since 2019-03-21
  */
 @Data

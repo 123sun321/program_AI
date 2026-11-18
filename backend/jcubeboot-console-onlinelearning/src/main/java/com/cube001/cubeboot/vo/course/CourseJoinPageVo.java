@@ -9,7 +9,7 @@ import lombok.Data;
  * FileName: CourseJoinPageVo
  * CourseJoinPageVo
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025/7/5 17:52
  */

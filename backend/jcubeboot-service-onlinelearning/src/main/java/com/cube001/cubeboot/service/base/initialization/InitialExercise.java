@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
 * @description 所有实验信息包含标签、实验资源、代码
-* @author 马勇超
+* @author anonymous
 * @date 2025/8/8 10:59
 * @param
 * @return

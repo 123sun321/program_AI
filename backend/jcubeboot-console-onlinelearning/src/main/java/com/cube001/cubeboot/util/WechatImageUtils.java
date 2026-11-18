@@ -19,7 +19,7 @@ import java.util.UUID;
  * FileName: [文件名]
  * 类的详细说明
  *
- * @author 郜强
+ * @author anonymous
  * @version 1.0
  * @date 2025/2/22 14:06
  */

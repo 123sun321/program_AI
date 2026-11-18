@@ -39,7 +39,7 @@ import java.util.List;
 * FileName: TrainingServiceImpl.java
 * 全部显示作业功能TrainingServiceImpl的详细说明 :
 *
-* @author 宋泽山
+* @author anonymous
 * @date 2025/3/15 17:35
 * @version 1.0
 */
@@ -60,7 +60,7 @@ public class TrainingServiceImpl extends ServiceImpl<TrainingMapper, Training> i
     private StudentMapper studentMapper;
     /**
      * @description  根据模糊查询的条件设置wrapper
-     * @author 宋泽山
+     * @author anonymous
      * @date 2025/3/29 19:48
      * @param searchDto 分页查询
      * @return 分页查询对应的实体wrapper
@@ -108,7 +108,7 @@ public class TrainingServiceImpl extends ServiceImpl<TrainingMapper, Training> i
 
     /**
      * @description 功能#792: 实现分页查询所有人的练习表
-     * @author 宋泽山
+     * @author anonymous
      * @date 2025/3/27 14:18
      * @param  plusPage 分页
      * @param  wrapper 条件构造器
@@ -124,7 +124,7 @@ public class TrainingServiceImpl extends ServiceImpl<TrainingMapper, Training> i
 
     /**
      * @description 功能2: 实现个人练习表的分页
-     * @author 宋泽山
+     * @author anonymous
      * @date 2025/3/27 14:18
      * @param plusPage 初始的分页结果
      * @param wrapper 条件构造器
@@ -141,7 +141,7 @@ public class TrainingServiceImpl extends ServiceImpl<TrainingMapper, Training> i
 
     /**
      * @description 全部显示作业功能
-     * @author 宋泽山
+     * @author anonymous
      * @date 2025/3/16 14:19
      * @param stuID: 学生id
      * @return 练习列表
@@ -152,7 +152,7 @@ public class TrainingServiceImpl extends ServiceImpl<TrainingMapper, Training> i
     }
     /**
      * @description 根据文件夹的id 得到某个学生对应的文件夹下 的所有练习 以及 练习目录
-     * @author 宋泽山
+     * @author anonymous
      * @date 2025/3/18 10:16
      * @param studentId 用户ID
      * @param dbId 文件夹的id
@@ -169,7 +169,7 @@ public class TrainingServiceImpl extends ServiceImpl<TrainingMapper, Training> i
     }
     /**
      * @description
-     * @author 张人杰
+     * @author anonymous
      * @date 2025/4/12 17:03
      * @Param Long id练习ID
      * @return Training 联系内容和练习代码
@@ -183,7 +183,7 @@ public class TrainingServiceImpl extends ServiceImpl<TrainingMapper, Training> i
 
 //    /**
 //     * 创建实验练习
-//     * @author Juci
+//     * @author anonymous
 //     * @param exerciseJoinId 参与实验编号
 //     * @param codeDto 代码
 //     */
@@ -213,7 +213,7 @@ public class TrainingServiceImpl extends ServiceImpl<TrainingMapper, Training> i
 //    }
     /**
      * 创建实验练习
-     * @author Juci
+     * @author anonymous
      * @param exerciseJoin 参与实验
      * @param codeDto 代码
      * @param type 类型 0-创建新练习 1-修改已有练习
@@ -272,7 +272,7 @@ public class TrainingServiceImpl extends ServiceImpl<TrainingMapper, Training> i
     }
     /**
      * 将优秀作品Fork成自己的作品
-     * @author Juci
+     * @author anonymous
      * @date 2025/5/10
      * @param recommendWorkDto
      * @param userId
@@ -299,7 +299,7 @@ public class TrainingServiceImpl extends ServiceImpl<TrainingMapper, Training> i
 
     /**
      * 保存代码
-     * @author Juci
+     * @author anonymous
      * @date 2025/5/13
      * @param trainingDto
      */
@@ -318,7 +318,7 @@ public class TrainingServiceImpl extends ServiceImpl<TrainingMapper, Training> i
 
     /**
      * 保存实验代码
-     * @author Juci
+     * @author anonymous
      * @param userId
      * @param trainingDto
      */

@@ -20,7 +20,7 @@ import java.util.List;
  * FileName: BaseLibraryController
  * BaseLibraryController
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025/7/29 16:40
  */
@@ -36,7 +36,7 @@ public class BaseLibraryController implements IApplicationService {
 
     /**
      * 添加资源库
-     * @author Juci
+     * @author anonymous
      * @param baseLibraryDto
      */
     @ApiOperation(value = "添加资源库")
@@ -49,7 +49,7 @@ public class BaseLibraryController implements IApplicationService {
 
     /**
      * 获取资源库
-     * @author Juci
+     * @author anonymous
      * @param id
      * @return
      */
@@ -60,7 +60,7 @@ public class BaseLibraryController implements IApplicationService {
     }
     /**
      * 获取资源库列表
-     * @author Juci
+     * @author anonymous
      * @return
      */
     @ApiOperation(value = "获取列表")
@@ -73,7 +73,7 @@ public class BaseLibraryController implements IApplicationService {
 
     /**
      * 删除资源库
-     * @author Juci
+     * @author anonymous
      * @param id
      * @return
      */

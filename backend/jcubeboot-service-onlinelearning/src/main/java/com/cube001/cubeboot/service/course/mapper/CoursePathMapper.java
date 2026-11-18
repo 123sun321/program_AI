@@ -19,20 +19,20 @@ import java.util.List;
  * 路径设置Mapper 接口
  * </p>
  *
- * @author qw
+ * @author anonymous
  * @since 2019-03-11
  */
 public interface CoursePathMapper extends BaseMapper<CoursePath> {
 
     /**
      * 查询所有
-     * @author qw
+     * @author anonymous
     */
     List<T> findAll();
 
     /**
      * @description  路径分页
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/4/8 9:19
      * @param   page,wrapper
      * @return   page
@@ -41,7 +41,7 @@ public interface CoursePathMapper extends BaseMapper<CoursePath> {
 
     /**
      * @description  获取路径详情列表
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/4/8 10:14
      * @param   wrapper
      * @return   list
@@ -50,7 +50,7 @@ public interface CoursePathMapper extends BaseMapper<CoursePath> {
 
     /**
      * @description  获取该学生路径课程的参与情况
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/5/14 14:57
      * @param   studentId
      * @return
@@ -59,7 +59,7 @@ public interface CoursePathMapper extends BaseMapper<CoursePath> {
 
     /**
       * @description 获取课程路径信息和课程名称
-      * @author 马勇超
+      * @author anonymous
       * @date 2025/8/8 14:23
       * @param
       * @return

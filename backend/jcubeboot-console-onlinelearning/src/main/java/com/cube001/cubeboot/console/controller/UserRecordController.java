@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.*;
  * FileName: UserRecordController
  * 用户浏览记录控制器
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025/4/22 14:09
  */
@@ -36,7 +36,7 @@ public class UserRecordController implements IApplicationService {
 
     /**
      * 用户浏览记录分页
-     * @author Juci
+     * @author anonymous
      * @param searchDto
      * @return
      */
@@ -53,7 +53,7 @@ public class UserRecordController implements IApplicationService {
     }
     /**
     * @description  用户浏览记录分页通过学生Id
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/4/29 9:28
     * @param   searchDto
     * @return

@@ -5,7 +5,7 @@ package com.cube001.cubeboot.base.controller.util;
  * FileName: [ 文件名 ]
  * 类的详细说明
  *
- * @author 马勇超
+ * @author anonymous
  * @version 1.0
  * @ D a t e   $ D A T E $ { T I M E }
  */
@@ -38,7 +38,7 @@ import javax.servlet.http.HttpServletResponse;
  * 依赖：ant-1.7.1.jar
  * </p>
  *
- * @author IceWee
+ * @author anonymous
  * @date 2012-5-26
  * @version 1.0
  */

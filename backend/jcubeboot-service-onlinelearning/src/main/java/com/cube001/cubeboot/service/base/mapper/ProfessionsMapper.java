@@ -14,7 +14,7 @@ import java.util.List;
  *  Mapper 接口
  * </p>
  *
- * @author 马勇超
+ * @author anonymous
  * @since 2018-11-16
  */
 public interface ProfessionsMapper extends BaseMapper<Profession> {

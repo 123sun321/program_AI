@@ -7,7 +7,7 @@ import lombok.Data;
  * FileName: [ 文件名 ]
  * 类的详细说明 资源列表dto
  *
- * @author 马勇超
+ * @author anonymous
  * @version 1.0
  * @date 2025/3/14$ 9:48$
  */

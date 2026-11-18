@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 * FileName: ApproveServiceImpl.java
 * 通用点赞服务实现类的详细说明
 *
-* @author 宋泽山
+* @author anonymous
 * @date 2025/4/5 11:17
 * @version 1.0
 */

@@ -28,7 +28,7 @@ import java.util.List;
 
 /**
 * @description  签到记录控制类
-* @author 马勇超
+* @author anonymous
 * @date 2025/3/26 9:16
 * @param
 * @return
@@ -48,7 +48,7 @@ public class SignRecordController  implements IApplicationService {
     private SignRecordConverter signRecordConverter;
     /**
      * @description 分页展示签到记录搜索
-     * @author qw
+     * @author anonymous
      * @date 2025/3/21 11:14
      * @param searchDto
      * @return com.baomidou.mybatisplus.plugins.Page<com.cube001.cubeboot.service.course.dto.JoinCoursePathDto>
@@ -67,7 +67,7 @@ public class SignRecordController  implements IApplicationService {
 
     /**
     * @description  增加签到记录
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/4/25 10:59
     * @param
     * @return
@@ -92,7 +92,7 @@ public class SignRecordController  implements IApplicationService {
 
     /**
     * @description  判断该用户今天是否签到
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/4/25 11:08
     * @return
     */
@@ -114,7 +114,7 @@ public class SignRecordController  implements IApplicationService {
 
     /**
     * @description  签到记录删除
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/3/25 11:19
     * @param   id
     */

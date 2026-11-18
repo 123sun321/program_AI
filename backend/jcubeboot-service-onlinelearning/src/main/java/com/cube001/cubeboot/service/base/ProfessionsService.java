@@ -14,14 +14,14 @@ import java.util.Map;
  *  服务类
  * </p>
  *
- * @author 马勇超
+ * @author anonymous
  * @since 2018-11-16
  */
 public interface ProfessionsService extends IService<Profession> {
 
     /**
     * @description  获取专业id和name
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/12/4 14:27
     * @return   list数据
     */
@@ -29,7 +29,7 @@ public interface ProfessionsService extends IService<Profession> {
 
     /**
     * @description  删除判断专业下面是否存在班级
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/12/4 14:34
     * @param  ID
     * @return   Boolean
@@ -38,7 +38,7 @@ public interface ProfessionsService extends IService<Profession> {
 
     /**
     * @description  解析Excel并验证Excel是否存在错误字段
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/12/4 14:35
     * @param   MapList:Excel数据
     * @return   List 验证结果
@@ -47,7 +47,7 @@ public interface ProfessionsService extends IService<Profession> {
 
     /**
     * @description  专业的列表分页
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/3/8 8:50
     * @param
     * @return
@@ -56,7 +56,7 @@ public interface ProfessionsService extends IService<Profession> {
 
     /**
     * @description  专业列表包含班级
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/3/8 15:14
     * @param
     * @return

@@ -24,7 +24,7 @@ import java.util.Map;
 * FileName: CodeSimilarityController.java
 * 类的详细说明
 *
-* @author 张人杰
+* @author anonymous
 * @date 2025/6/25 18:22
 * @version 1.0
 */

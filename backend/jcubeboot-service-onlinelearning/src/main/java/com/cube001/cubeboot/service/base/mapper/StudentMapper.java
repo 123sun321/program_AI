@@ -20,7 +20,7 @@ import java.util.List;
 * FileName: StudentMapper
 * 类的详细说明 
 * 
-* @author 郭广明 
+* @author anonymous 
 * @date   2018/11/28 13:34
 * @version 1.0 
 */
@@ -29,7 +29,7 @@ public interface StudentMapper extends BaseMapper<Student> {
 
     /**
      * @description 自定义sql查询
-     * @author 郭广明
+     * @author anonymous
      * @date 2025/11/28 16:01
      * @param wrapper   条件构造器
      * @return          学生
@@ -39,7 +39,7 @@ public interface StudentMapper extends BaseMapper<Student> {
     /**
      * 根据用户id获取学生信息(带专业名称和班级名称)
      * @description
-     * @author 张向宇
+     * @author anonymous
      * @date 2025/01/10 14:38
      * @param userId
      * @return
@@ -48,7 +48,7 @@ public interface StudentMapper extends BaseMapper<Student> {
 
     /**
      * @description 分页查询学生
-     * @author 郭广明
+     * @author anonymous
      * @date 2025/11/28 16:54
      * @param page       分页
      * @param wrapper    条件构造器
@@ -58,7 +58,7 @@ public interface StudentMapper extends BaseMapper<Student> {
 
     /**
      * @description 自定义sql查询集合
-     * @author 郭广明
+     * @author anonymous
      * @date 2025/11/28 17:21
      * @param wrapper    条件构造器
      * @return           学生集合
@@ -67,7 +67,7 @@ public interface StudentMapper extends BaseMapper<Student> {
 
     /**
      * 功能：根据学生姓名、学号、证件号码查询学生
-     * @author HuangPengju
+     * @author anonymous
      * @date 2025/12/3
      * @param name 学生姓名
      * @param code 学生学号

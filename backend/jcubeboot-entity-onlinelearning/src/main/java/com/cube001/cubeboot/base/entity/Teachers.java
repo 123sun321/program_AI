@@ -17,7 +17,7 @@ import java.io.Serializable;
 * FileName: Teachers.java
 * 教师管理的实体类
 *
-* @author 马勇超
+* @author anonymous
 * @date 2025/12/4 15:00
 * @version 1.0
 */

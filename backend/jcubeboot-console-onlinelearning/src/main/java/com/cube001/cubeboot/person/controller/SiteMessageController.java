@@ -21,7 +21,7 @@ import java.util.List;
  * FileName: SiteMessageController.java
  * 站内信管理controller
  *
- * @author 张向宇
+ * @author anonymous
  * @version 1.0
  * @date 2025/01/08 11:12
  */
@@ -39,7 +39,7 @@ public class SiteMessageController implements IApplicationService {
     /**
      * 获取个人的站内信列表(分页)
      * @description
-     * @author 张向宇
+     * @author anonymous
      * @date 2025/01/08 13:14
      * @param searchDto 查询条件
      * @return
@@ -59,7 +59,7 @@ public class SiteMessageController implements IApplicationService {
     /**
      * 标记站内信已读状态
      * @description
-     * @author 张向宇
+     * @author anonymous
      * @date 2025/01/08 14:54
      * @param messageId 站内信id
      * @return 返回最新的未读消息数
@@ -83,7 +83,7 @@ public class SiteMessageController implements IApplicationService {
     /**
      * 获取未读消息数
      * @description
-     * @author 张向宇
+     * @author anonymous
      * @date 2025/01/08 15:41
      * @return
      */

@@ -14,7 +14,7 @@ import java.util.List;
  * FileName: CommunityThemeMapper
  * 社区主题管理mapper
  *
- * @author 张浩杰
+ * @author anonymous
  * @date   2019/3/21 15:08
  * @version 1.0
  */
@@ -22,7 +22,7 @@ public interface CommunityThemeMapper extends BaseMapper<CommunityTheme> {
 
     /**
     * @description  增加帖子浏览量
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/4/26 8:34
     * @param   communityThemeId
     * @return
@@ -32,7 +32,7 @@ public interface CommunityThemeMapper extends BaseMapper<CommunityTheme> {
 
     /**
      * @description  用户获取自己发的帖子
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/4/24 10:58
      * @param   page,wrapper
      * @return
@@ -40,7 +40,7 @@ public interface CommunityThemeMapper extends BaseMapper<CommunityTheme> {
     List<CommunityTheme> selectPageByStudent(Page page,@Param("ew") Wrapper<CommunityTheme> wrapper);
     /**
      * @description  获取所有帖子
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/4/24 17:40
      * @param   page,wrapper
      */
@@ -48,7 +48,7 @@ public interface CommunityThemeMapper extends BaseMapper<CommunityTheme> {
 
     /**
     * @description  根据帖子id查询信息
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/4/25 10:41
     * @param   id
     * @return
@@ -57,14 +57,14 @@ public interface CommunityThemeMapper extends BaseMapper<CommunityTheme> {
 
     /**
     * @description  增加帖子评论数
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/4/26 8:39
     * @param
     */
     void addComment(@Param("id") Long id,@Param("count") Integer count);
     /**
      * @description  获取用户个人的回复帖子主题和回复内容
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/4/24 15:00
      * @param   page,wrapper
      * @return

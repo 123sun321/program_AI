@@ -14,7 +14,7 @@ import lombok.experimental.Accessors;
 * FileName: AssignmentResource
 * 类的详细说明
 *   作业资源实体类
-* @author 张人杰
+* @author anonymous
 * @date   2019/4/23 14:35
 * @version 1.0
 */

@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
  * FileName: WechatMpConfig
  * 定义WxMpService的依赖
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025/01/02 10:16
  */

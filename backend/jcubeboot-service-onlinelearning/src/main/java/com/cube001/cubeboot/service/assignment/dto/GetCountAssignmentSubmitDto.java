@@ -8,7 +8,7 @@ import lombok.Data;
  * 用于作业提交接口的函数计算
  * 总提交人数 最高分 最低分
  *
- * @author 张人杰
+ * @author anonymous
  * @version 1.0
  * @date 2025/3/25 15:10
  */

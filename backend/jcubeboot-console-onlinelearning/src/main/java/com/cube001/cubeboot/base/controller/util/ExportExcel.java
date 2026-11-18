@@ -14,7 +14,7 @@ public class ExportExcel {
          * @param title 标题
          * @param values 内容
          * @param wb HSSFWorkbook对象
-         * @Author 马勇超
+         * @Author anonymous
          * @return
          */
         public static HSSFWorkbook getHSSFWorkbook(String sheetName, String []title, String [][]values, HSSFWorkbook wb){

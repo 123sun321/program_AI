@@ -14,7 +14,7 @@ import java.util.List;
  * FileName: com.cube001.cubeboot.access
  * 类的详细说明
  *
- * @author 陈乐乐
+ * @author anonymous
  * @version 1.0
  * @date 2025/12/27 14:36
  */
@@ -25,7 +25,7 @@ public class ClassNameUtil {
      * @param packagePath
      * @return java.util.List<java.lang.String>
      * @description
-     * @author 陈乐乐
+     * @author anonymous
      * @date 2025/12/27 14:37
      */
     public static List<String> getClassName(String packagePath) throws IOException {
@@ -53,7 +53,7 @@ public class ClassNameUtil {
      * @param filePath 文件路径
      * @return java.util.List<java.lang.String>
      * @description
-     * @author 陈乐乐
+     * @author anonymous
      * @date 2025/12/27 14:29
      */
     private static List<String> getClassNameByFile(String filePath) throws UnsupportedEncodingException {

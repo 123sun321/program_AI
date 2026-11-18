@@ -11,7 +11,7 @@ import java.util.List;
  * FileName: [SchoolhonorConverter]
  * SchoolhonorConverter双向转换类接口
  *
- * @author HuangPengju
+ * @author anonymous
  * @Date 2018-11-27
  * @version 1.0
  */

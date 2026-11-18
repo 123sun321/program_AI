@@ -44,7 +44,7 @@ import java.util.concurrent.TimeUnit;
  * FileName: WechatController
  * 微信授权
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025/12/29 14:58
  */
@@ -296,7 +296,7 @@ public class WechatController extends BaseController {
     }
     /**
     * @description 获取JSSDK签名
-    * @author 郜强
+    * @author anonymous
     * @date 2025/1/18 13:56
     * @param []
     * @return 签名相关数据

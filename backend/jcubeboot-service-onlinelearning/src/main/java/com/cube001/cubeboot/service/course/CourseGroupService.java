@@ -8,7 +8,7 @@ import com.cube001.cubeboot.course.entity.CourseGroup;
  * FileName: CourseGroupService
  * CourseGroupService
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025/7/5 13:18
  */

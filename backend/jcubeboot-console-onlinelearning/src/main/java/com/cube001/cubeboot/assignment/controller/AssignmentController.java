@@ -41,7 +41,7 @@ import java.util.Map;
  *
  *
 *
-* @author 张人杰
+* @author anonymous
 * @date   2019/3/21 8:52
 * @version 1.0
 */
@@ -59,7 +59,7 @@ public class AssignmentController implements  IApplicationService {
    private AssignmentConverter assignmentConverter;
    /*
      * @description
-     * @author 张人杰
+     * @author anonymous
      * @date 2025/3/21 8:49
      * @Param   assignmentid
      * @return 友好异常成功或者失败
@@ -173,7 +173,7 @@ public class AssignmentController implements  IApplicationService {
 
     /**
      * 查询学生作业详情getStudentAssignment
-     * @author Juci
+     * @author anonymous
      * @param id
      * @return
      */
@@ -186,7 +186,7 @@ public class AssignmentController implements  IApplicationService {
 
     /**
      * 分页获取学生班级作业
-     * @Author Juci
+     * @Author anonymous
      * @param searchDto
      * @return
      */
@@ -211,7 +211,7 @@ public class AssignmentController implements  IApplicationService {
 
     /**
      * 分页获取学生小组作业
-     * @Author Juci
+     * @Author anonymous
      * @param searchDto
      * @return
      */

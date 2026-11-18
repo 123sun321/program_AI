@@ -12,7 +12,7 @@ import lombok.experimental.Accessors;
  * FileName: BaseLibrary
  * 资源库
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025/7/29 16:27
  */

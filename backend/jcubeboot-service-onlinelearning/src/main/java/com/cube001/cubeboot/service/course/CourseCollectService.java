@@ -15,14 +15,14 @@ import java.util.List;
  *  服务类
  * </p>
  *
- * @author qw
+ * @author anonymous
  * @since 2019-03-11
  */
 public interface CourseCollectService extends IService<CourseCollect> {
 
     /**
      * 添加收藏
-     * @author Juci
+     * @author anonymous
      * @param userId 用户编号
      * @param courseId 课程编号
      */
@@ -37,7 +37,7 @@ public interface CourseCollectService extends IService<CourseCollect> {
 
     /**
      * 分页获取列表
-     * @author Juci
+     * @author anonymous
      * @param page
      * @param wrapper
      * @return

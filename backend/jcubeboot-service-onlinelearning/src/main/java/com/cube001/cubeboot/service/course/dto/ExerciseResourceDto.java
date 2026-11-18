@@ -11,7 +11,7 @@ import java.util.Date;
  * FileName: ExerciseResourceDto
  * ExerciseResourceDto
  *
- * @author Administrator
+ * @author anonymous
  * @version 1.0
  * @date 2025/3/11 16:23
  */

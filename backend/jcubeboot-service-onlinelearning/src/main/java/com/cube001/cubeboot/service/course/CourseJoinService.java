@@ -15,7 +15,7 @@ import java.util.List;
  * FileName: CourseJoinService
  * 课程参与详情接口
  *
- * @author 张浩杰
+ * @author anonymous
  * @version 1.0
  * @date 2025/3/12 17:44
  */
@@ -23,7 +23,7 @@ public interface CourseJoinService extends IService<CourseJoin> {
 
     /**
      * @description 课程参与详情分页列表
-     * @author 张浩杰
+     * @author anonymous
      * @date 2025年3月13日 13:06:47
      * @param
      * @return
@@ -32,7 +32,7 @@ public interface CourseJoinService extends IService<CourseJoin> {
 
     /**
      * 获取学生参与的课程分页
-     * @author Juci
+     * @author anonymous
      * @param plusPage
      * @param wrapper
      * @return
@@ -41,7 +41,7 @@ public interface CourseJoinService extends IService<CourseJoin> {
 
     /**
      * 添加参与课程记录
-     * @author Juci
+     * @author anonymous
      * @param userId 用户编号
      * @param courseId 课程编号
      */
@@ -57,7 +57,7 @@ public interface CourseJoinService extends IService<CourseJoin> {
 
     /**
      * @description  学生参与私有课程的作业分页
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/4/23 9:51
      * @param   page,wrapper
      * @return
@@ -66,7 +66,7 @@ public interface CourseJoinService extends IService<CourseJoin> {
 
     /**
      * @description  学生参与私有课程无分页
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/4/23 9:51
      * @param   wrapper
      * @return

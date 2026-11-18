@@ -19,7 +19,7 @@ import java.util.List;
  * FileName: UserRecordServiceImpl
  * 用户浏览记录Service
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025/4/22 13:45
  */
@@ -28,7 +28,7 @@ public class UserRecordServiceImpl extends ServiceImpl<UserRecordMapper, UserRec
 
     /**
      * 添加访问记录
-     * @author Juci
+     * @author anonymous
      * @param visitor 访问者
      * @param areVisitor 被访问者
      */
@@ -55,7 +55,7 @@ public class UserRecordServiceImpl extends ServiceImpl<UserRecordMapper, UserRec
 
     /**
      * 分页获取浏览记录
-     * @author Juci
+     * @author anonymous
      * @param page
      * @param wrapper
      * @return

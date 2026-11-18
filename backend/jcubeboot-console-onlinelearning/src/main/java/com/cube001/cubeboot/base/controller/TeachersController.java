@@ -46,7 +46,7 @@ import java.util.Map;
  * FileName: TeachersController.java
  * 教师的控制器接口页面
  *
- * @author 马勇超
+ * @author anonymous
  * @version 1.0
  * @date 2025/11/28 8:38
  */
@@ -70,7 +70,7 @@ public class TeachersController implements IApplicationService {
      * @param id
      * @return teachersDto 单条教师信息
      * @description 根据id查询单条教师信息
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/11/28 11:10
      */
     @ApiOperation(value = "根据id获取教师信息", notes = "根据id获取教师信息")
@@ -94,7 +94,7 @@ public class TeachersController implements IApplicationService {
     /**
      * @return page
      * @description 搜索/分页接口：用以分页数据和根据教师name和工号实现模糊查询
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/11/28 8:50
      */
     @ApiOperation(value = "分页获取教师信息")
@@ -126,7 +126,7 @@ public class TeachersController implements IApplicationService {
     /**
      * @return Boolean
      * @description 创建单个的教师信息；拥有验证
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/11/28 9:02
      */
     @ApiOperation(value = "创建教师信息", notes = "创建教师信息")
@@ -143,7 +143,7 @@ public class TeachersController implements IApplicationService {
     /**
      * @return Boolean
      * @description 更新修改教师信息内容
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/11/28 9:05
      */
     @ApiOperation(value = "修改教师信息", notes = "注意参数")
@@ -179,7 +179,7 @@ public class TeachersController implements IApplicationService {
      * @param id
      * @return Boolean
      * @description 根据id删除单条教师信息
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/11/28 9:14
      */
     @ApiOperation(value = "根据id删除教师信息", notes = "根据id删除教师信息")
@@ -200,7 +200,7 @@ public class TeachersController implements IApplicationService {
      * @param ids
      * @return Boolean
      * @description 批量删除多条教师信息
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/11/28 9:15
      */
     @ApiOperation(value = "批量删除教师信息", notes = "批量删除教师信息")
@@ -221,7 +221,7 @@ public class TeachersController implements IApplicationService {
     /**
      * @param id
      * @description 初始化教师的密码
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/12/20 8:42
      */
     @ApiOperation(value = "重置密码", notes = "重置密码")
@@ -248,7 +248,7 @@ public class TeachersController implements IApplicationService {
 
     /**
      * @description  解绑手机
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/4/12 16:09
      * @param
      * @return
@@ -272,7 +272,7 @@ public class TeachersController implements IApplicationService {
      * @return
      * @description Excel解析：返回一组包含专业名字，院系id，
      * success，tips 的数组数据
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/11/27 15:52
      */
     @ApiOperation(value = "解析Excel文件", notes = "解析Excel文件")
@@ -302,7 +302,7 @@ public class TeachersController implements IApplicationService {
     /**
      * @return Boolean
      * @description Excel解析出数据时调用接口实现批量导入数据
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/11/28 11:03
      */
     @ApiOperation(value = "批量导入", notes = "批量导入")
@@ -325,7 +325,7 @@ public class TeachersController implements IApplicationService {
     /**
      * @return Boolean
      * @description 实现前端的远端验证：尝试修改数据时，实时更新提示信息
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/11/28 10:47
      */
     @ApiOperation(value = "验证数据重复")
@@ -371,7 +371,7 @@ public class TeachersController implements IApplicationService {
     /**
      * @return
      * @description 根据选中的id数组导出数据
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/11/28 8:53
      */
     @ApiOperation(value = "导出", notes = "导出")
@@ -425,7 +425,7 @@ public class TeachersController implements IApplicationService {
      * @param
      * @return
      * @description 发送响应流方法
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/11/28 10:59
      */
     public void setResponseHeader(HttpServletResponse response, String fileName) {
@@ -449,7 +449,7 @@ public class TeachersController implements IApplicationService {
 
     /**
     * @description  教师首页统计
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/5/14 8:38
     * @param
     * @return
@@ -465,7 +465,7 @@ public class TeachersController implements IApplicationService {
 
     /**
     * @description  学校管理端首页统计
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/5/14 8:40
     * @param
     * @return

@@ -14,7 +14,7 @@ import java.util.EnumSet;
 
 /**
  * 用户编辑传输实体
- * @Author:张向宇
+ * @Author:anonymous
  * @Description:
  * @Date:Create in 11:53 2018/07/11
  * @Modified By:

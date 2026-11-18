@@ -17,7 +17,7 @@ import lombok.experimental.Accessors;
 * FileName: FileResource.java
 * 类的详细说明 资源列表实体类
 *
-* @author 马勇超
+* @author anonymous
 * @date 2025/3/14 9:49
 * @version 1.0
 */

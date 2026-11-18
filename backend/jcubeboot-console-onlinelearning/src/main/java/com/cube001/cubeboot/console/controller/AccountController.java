@@ -77,7 +77,7 @@ import java.util.stream.Collectors;
  * FileName: AccountController.java
  * 用户登录控制器
  *
- * @author 张向宇
+ * @author anonymous
  * @version 1.00
  * @Date 2018-11-27
  */
@@ -137,7 +137,7 @@ public class AccountController extends BaseController {
 
     /**
      * 单点登录
-     * @author Juci
+     * @author anonymous
      * @date 2025/5/6
      * @return
      */
@@ -154,7 +154,7 @@ public class AccountController extends BaseController {
 
     /**
      * 通过token获取用户信息
-     * @author Juci
+     * @author anonymous
      * @param token
      * @return
      */
@@ -262,7 +262,7 @@ public class AccountController extends BaseController {
 
     /**
      * 学生端登录
-     * @author Juci
+     * @author anonymous
      * @param jsonObject
      * @return
      */
@@ -589,7 +589,7 @@ public class AccountController extends BaseController {
      * @param passwordDto
      * @return
      * @description 登录用户修改密码
-     * @author 张向宇
+     * @author anonymous
      * @date 2025/12/25 10:27
      */
     @RequestMapping(value = "/changePassword", method = RequestMethod.POST)
@@ -632,7 +632,7 @@ public class AccountController extends BaseController {
      *
      * @return
      * @description
-     * @author 张向宇
+     * @author anonymous
      * @date 2025/01/10 13:33
      * @edit Juci:2019/04/22 11:25
      */
@@ -677,7 +677,7 @@ public class AccountController extends BaseController {
      * @param userPersonInfoDto
      * @return
      * @description
-     * @author 张向宇
+     * @author anonymous
      * @date 2025/01/10 16:08
      */
     @RequestMapping(value = "/updateUserInfo", method = RequestMethod.POST)
@@ -839,7 +839,7 @@ public class AccountController extends BaseController {
      * @param picCaptcha 图片验证码
      * @return
      * @description
-     * @author 张向宇
+     * @author anonymous
      * @date 2025/01/11 8:53
      */
     @RequestMapping(value = "/bindPhone/sendPhoneCaptcha", method = RequestMethod.POST)
@@ -865,7 +865,7 @@ public class AccountController extends BaseController {
      * @param code  短信验证码
      * @return
      * @description
-     * @author 张向宇
+     * @author anonymous
      * @date 2025/01/11 10:56
      */
     @RequestMapping(value = "/bindPhone/save", method = RequestMethod.POST)
@@ -887,7 +887,7 @@ public class AccountController extends BaseController {
      *
      * @return
      * @description
-     * @author 张向宇
+     * @author anonymous
      * @date 2025/01/14 14:36
      */
     @RequestMapping(value = "/bindPhone/unbind", method = RequestMethod.GET)
@@ -910,7 +910,7 @@ public class AccountController extends BaseController {
      * @param picCaptcha 图片验证码
      * @return
      * @description
-     * @author 张向宇
+     * @author anonymous
      * @date 2025/01/11 8:53
      */
     @RequestMapping(value = "/bindEmail/sendCaptcha", method = RequestMethod.POST)
@@ -936,7 +936,7 @@ public class AccountController extends BaseController {
      * @param code  短信验证码
      * @return
      * @description
-     * @author 张向宇
+     * @author anonymous
      * @date 2025/01/11 10:56
      */
     @RequestMapping(value = "/bindEmail/save", method = RequestMethod.POST)
@@ -959,7 +959,7 @@ public class AccountController extends BaseController {
      *
      * @return
      * @description
-     * @author 张向宇
+     * @author anonymous
      * @date 2025/01/14 14:36
      */
     @RequestMapping(value = "/bindEmail/unbind", method = RequestMethod.GET)

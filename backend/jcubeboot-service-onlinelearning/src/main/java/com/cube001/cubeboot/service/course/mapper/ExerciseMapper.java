@@ -15,14 +15,14 @@ import java.util.List;
  * FileName: ExerciseMapper
  * 实验练习mapper
  *
- * @author Juci
+ * @author anonymous
  * @date 2025/03/11 15:04
  * @version 1.0
  */
 public interface ExerciseMapper extends BaseMapper<Exercise> {
     /**
      * 分页获取实验列表
-     * @author Juci
+     * @author anonymous
      * @param page
      * @param wrapper
      * @return
@@ -31,7 +31,7 @@ public interface ExerciseMapper extends BaseMapper<Exercise> {
 
     /**
      * @description  获取实验列表
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/4/9 15:40
      * @param   wrapper
      * @return   list

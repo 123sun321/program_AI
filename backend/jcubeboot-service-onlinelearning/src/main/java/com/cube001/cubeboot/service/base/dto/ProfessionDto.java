@@ -15,7 +15,7 @@ import java.util.List;
 * FileName: ProfessionDto.java
 * 专业DTO：添加、修改、展示、删除
 *
-* @author 马勇超
+* @author anonymous
 * @date 2025/12/4 14:46
 * @version 1.0
 */

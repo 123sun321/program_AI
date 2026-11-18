@@ -34,7 +34,7 @@ import java.util.Map;
  *  JoinCoursePathController
  * </p>
  *
- * @author qw
+ * @author anonymous
  * @since 2019-03-14
  */
 @Api(value = "加入路径详情",produces = "加入路径详情")
@@ -55,7 +55,7 @@ public class JoinCoursePathController implements IApplicationService {
 
     /**
     * @description  总学习人数
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/4/18 8:48
     * @param
     * @return
@@ -70,7 +70,7 @@ public class JoinCoursePathController implements IApplicationService {
 
     /**
     * @description  加入学习路径
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/4/23 9:26
     */
     @ApiOperation(value = "加入学习路径")
@@ -96,7 +96,7 @@ public class JoinCoursePathController implements IApplicationService {
 
     /**
     * @description  判断该用户是否已加入路径
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/4/23 9:26
     * @return   Boolean
     */
@@ -120,7 +120,7 @@ public class JoinCoursePathController implements IApplicationService {
 
     /**
      * 分页展示搜索
-     * @author qw
+     * @author anonymous
      * @param searchDto
      * @return converter.pageEntityToDto(page)
      */
@@ -136,7 +136,7 @@ public class JoinCoursePathController implements IApplicationService {
     }
     /**
      * 学习进度
-     * @author qw
+     * @author anonymous
      * @return count;
     */
     @ApiOperation(value = "学习进度",notes = "学习进度")

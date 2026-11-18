@@ -33,7 +33,7 @@ import java.util.List;
 * Copyright (C), 2018-2019, ZhengZhouChuangZhi. Co., Ltd.* FileName: TrainingController.java
 * 类的详细说明 : TrainingController
 *
-* @author 宋泽山
+* @author anonymous
 * @date 2025/3/15 17:31
 * @version 1.0
 */
@@ -53,7 +53,7 @@ public class TrainingController  implements IApplicationService {
     private StudentService studentService;
     /**
      * @description 功能1: 根据练习表的id查询出对应的内容 #供他人调用的接口
-     * @author 宋泽山
+     * @author anonymous
      * @date 2025/3/26 15:48
      * @param id 练习表的id
      * @return 练习表的dto
@@ -68,7 +68,7 @@ public class TrainingController  implements IApplicationService {
 
     /**
      * 保持练习结果
-     * @author Juci
+     * @author anonymous
      * @param trainingDto
      */
     @ApiOperation(value = "保持练习结果", notes = "保持练习结果")
@@ -78,7 +78,7 @@ public class TrainingController  implements IApplicationService {
     }
     /**
      * @description 功能2: 实现个人练习表的分页 --功能#771
-     * @author 宋泽山
+     * @author anonymous
      * @date 2025/3/27 16:08
      * @param searchDto 分页查询
      * @return 分页结果
@@ -99,7 +99,7 @@ public class TrainingController  implements IApplicationService {
 
     /**
      * @description 功能3: 分页查询所有人的练习表的内容 --功能#792
-     * @author 宋泽山
+     * @author anonymous
      * @date 2025/3/26 15:49
      * @param  searchDto  传入的分页查询,同时组合了:学生编号-实验标题-学生姓名-提交时间段
      * @return 综合处理后的分页结果
@@ -121,7 +121,7 @@ public class TrainingController  implements IApplicationService {
     }
     /**
      * @description 功能4: 实现当前用户点赞一次别人的练习表
-     * @author 宋泽山
+     * @author anonymous
      * @date 2025/4/5 11:20
      * @param trainingId 练习表id
      * @return 点赞成功是否,true or false
@@ -177,7 +177,7 @@ public class TrainingController  implements IApplicationService {
 
     /**
      * 将优秀作品Fork成自己的作品
-     * @author Juci
+     * @author anonymous
      * @param recommendWorkDto
      */
     @ApiOperation(value = "将优秀作品Fork成自己的作品")

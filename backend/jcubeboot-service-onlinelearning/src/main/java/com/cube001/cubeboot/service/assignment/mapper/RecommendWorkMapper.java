@@ -15,14 +15,14 @@ import java.util.List;
  *  Mapper 接口
  * </p>
  *
- * @author SZS
+ * @author anonymous
  * @since 2019-04-19
  */
 public interface RecommendWorkMapper extends BaseMapper<RecommendWork> {
 
     /**
      * @description  通过学生id和作业标题取消推荐
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/4/22 10:49
      * @param   studentId,title
      */
@@ -30,7 +30,7 @@ public interface RecommendWorkMapper extends BaseMapper<RecommendWork> {
 
     /**
      * @description  优秀作品分页展示
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/4/22 11:26
      * @param   page,wrapper
      * @return   recommendWork
@@ -39,7 +39,7 @@ public interface RecommendWorkMapper extends BaseMapper<RecommendWork> {
 
     /**
      * 通过编号查询优秀作品信息
-     * @author Juci
+     * @author anonymous
      * @param id
      * @return
      */

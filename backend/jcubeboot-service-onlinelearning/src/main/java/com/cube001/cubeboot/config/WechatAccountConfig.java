@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
  * FileName: WechatAccountConfig
  * 读取微信配置类
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025/01/02 10:16
  */

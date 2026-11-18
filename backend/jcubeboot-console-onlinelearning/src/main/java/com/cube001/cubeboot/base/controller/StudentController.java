@@ -53,7 +53,7 @@ import java.util.List;
  * FileName: StudentController
  * 类的详细说明
  *
- * @author 郭广明
+ * @author anonymous
  * @version 1.0
  * @date 2025/11/28 13:28
  */
@@ -82,7 +82,7 @@ public class StudentController implements IApplicationService {
 
     /**
     * @description  添加学生
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/3/21 14:52
     * @param   studentDto
     */
@@ -108,7 +108,7 @@ public class StudentController implements IApplicationService {
      * @param studentDto 学生Dto
      * @return 修改结果
      * @description 修改学生
-     * @author 郭广明
+     * @author anonymous
      * @date 2025/11/28 15:36
      */
     @RequiresPermissions("student:edit")
@@ -148,7 +148,7 @@ public class StudentController implements IApplicationService {
      * @param value
      * @return 数据验证结果
      * @description 数据重复校验
-     * @author 郭广明
+     * @author anonymous
      * @date 2025/11/28 15:46
      */
     @ApiOperation(value = "验证数据重复")
@@ -199,7 +199,7 @@ public class StudentController implements IApplicationService {
      * @param id 学生id
      * @return 删除结果
      * @description 根据id删除学生
-     * @author 郭广明
+     * @author anonymous
      * @date 2025/11/28 15:49
      */
     @ApiOperation(value = "根据id删除学生", notes = "根据id删除学生")
@@ -216,7 +216,7 @@ public class StudentController implements IApplicationService {
      * @param ids 学生id集合
      * @return 批量删除结果
      * @description 批量删除学生
-     * @author 郭广明
+     * @author anonymous
      * @date 2025/11/28 15:53
      */
     @PostMapping("/deleteBatch")
@@ -231,7 +231,7 @@ public class StudentController implements IApplicationService {
      * @param id 学生id
      * @return 学生Dto
      * @description 根据id查看学生详情
-     * @author 郭广明
+     * @author anonymous
      * @date 2025/11/28 15:54
      */
     @ApiOperation(value = "根据id查看学生详情", notes = "根据id查看学生详情")
@@ -254,7 +254,7 @@ public class StudentController implements IApplicationService {
      * @param commonSearchDto 分页查询Dto
      * @return 分页结果详情
      * @description 模糊分页查询学生
-     * @author 郭广明
+     * @author anonymous
      * @date 2025/11/28 16:49
      */
     @ApiOperation(value = "模糊分页查询学生", notes = "模糊分页查询学生")
@@ -273,7 +273,7 @@ public class StudentController implements IApplicationService {
      * @param file Excel文件
      * @return 校验过的学生Dto集合
      * @description 解析导入Excel
-     * @author 郭广明
+     * @author anonymous
      * @date 2025/11/28 17:01
      */
     @ApiOperation(value = "解析导入Excel，返回学生List", notes = "解析导入Excel，返回学生List")
@@ -295,7 +295,7 @@ public class StudentController implements IApplicationService {
      * @param listStudentDto 学生dto集合
      * @return 批量上传结果
      * @description 批量上传
-     * @author 郭广明
+     * @author anonymous
      * @date 2025/11/28 17:07
      */
     @ApiOperation(value = "批量上传", notes = "批量上传")
@@ -308,7 +308,7 @@ public class StudentController implements IApplicationService {
 
     /**
      * @description  根据选中的id数组导出数据
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/11/28 8:53
      * @return
      */
@@ -380,7 +380,7 @@ public class StudentController implements IApplicationService {
 
     /**
      * @description  发送响应流方法
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/11/28 8:55
      * @return
      */
@@ -403,7 +403,7 @@ public class StudentController implements IApplicationService {
     /**
      * @return 模板地址
      * @description 学生模板下载
-     * @author 郭广明
+     * @author anonymous
      * @date 2025/11/28 17:36
      */
     @ApiOperation(value = "学生模板下载", notes = "学生模板下载")
@@ -415,7 +415,7 @@ public class StudentController implements IApplicationService {
 
     /**
     * @description  重置密码
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/4/12 9:05
     * @param   id
     * @return  boolean
@@ -442,7 +442,7 @@ public class StudentController implements IApplicationService {
 
     /**
     * @description  解绑手机
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/4/12 16:09
     * @param
     * @return
@@ -466,7 +466,7 @@ public class StudentController implements IApplicationService {
      * @param commonSearchDto
      * @return java.util.List<com.cube001.cubeboot.service.base.dto.StudentDto>
      * @description 取列表
-     * @author 陈乐乐
+     * @author anonymous
      * @date 2025/12/6 17:11
      */
 //    @ApiOperation(value = "取列表")
@@ -490,7 +490,7 @@ public class StudentController implements IApplicationService {
 //    }
     /**
     * @description
-    * @author 郜强
+    * @author anonymous
     * @date 2025/1/22 15:23
     * @return java.lang.Long
     */

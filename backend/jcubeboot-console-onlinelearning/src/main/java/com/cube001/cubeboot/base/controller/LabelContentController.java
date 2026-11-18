@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 * FileName: LabelContentController.java
 * 类的详细说明
 *
-* @author 马勇超
+* @author anonymous
 * @date 2025/3/12 9:30
 * @version 1.0
 */

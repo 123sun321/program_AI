@@ -11,7 +11,7 @@ import java.util.List;
  * FileName: ExerciseJoinRecordConverter
  * ExerciseJoinRecordConverter双向转换类接口
  *
- * @author Juci
+ * @author anonymous
  * @date 2025/04/08 13:43
  * @version 1.0
  */

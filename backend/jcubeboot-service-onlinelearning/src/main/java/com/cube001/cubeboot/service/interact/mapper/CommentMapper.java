@@ -17,13 +17,13 @@ import java.util.List;
  * 路径评论Mapper 接口
  * </p>
  *
- * @author qw
+ * @author anonymous
  * @since 2019-03-12
  */
 public interface CommentMapper extends BaseMapper<Comment> {
     /**
      * @description 学生端的 分页查询课程评价
-     * @author 宋泽山
+     * @author anonymous
      * @date   2019年3月19日 08:43:28
      * @param
      * @return
@@ -31,7 +31,7 @@ public interface CommentMapper extends BaseMapper<Comment> {
     List<Comment> selStuCourseCommentPage(Page<Comment> plusPage,@Param("ew")  Wrapper<Comment> formToEntityWrapper);
     /**
      * @description 分页查询课程评价
-     * @author 张浩杰
+     * @author anonymous
      * @date   2019年3月19日 08:43:28
      * @param
      * @return
@@ -39,7 +39,7 @@ public interface CommentMapper extends BaseMapper<Comment> {
     List<Comment> searchPage(Page<Comment> plusPage, @Param("ew") Wrapper<Comment> eq);
     /**
      * @description  分页查询帖子回复
-     * @author 张浩杰
+     * @author anonymous
      * @date 2025/3/28 18:21
      * @param
      * @return
@@ -47,14 +47,14 @@ public interface CommentMapper extends BaseMapper<Comment> {
     List<Comment> searchPageComment(Page<Comment> plusPage, @Param("ew") Wrapper<Comment> eq);
     /**
      * @description likeNumber值+1(点赞)
-     * @author qw
+     * @author anonymous
      * @date 2025/3/21 9:25
      * @param id
     */
     void updateLikeNumber(Long id);
     /**
       * @description
-      * @author 张人杰
+      * @author anonymous
       * @date 2025/4/1 16:38
       * @Param
       * @return

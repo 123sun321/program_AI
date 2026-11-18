@@ -31,7 +31,7 @@ import java.util.Map;
  * FileName: 实验练习控制器
  * ExerciseController
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025/3/11 13:50
  */
@@ -51,7 +51,7 @@ public class ExerciseController implements IApplicationService {
     private LabelService labelService;
     /**
      * 添加实验练习
-     * @author Juci
+     * @author anonymous
      * @param exerciseDto
      * @return
      */
@@ -77,7 +77,7 @@ public class ExerciseController implements IApplicationService {
     }
     /**
      * 修改实验练习
-     * @author Juci
+     * @author anonymous
      * @param exerciseDto
      */
     @ApiOperation(value = "修改实验练习")
@@ -88,7 +88,7 @@ public class ExerciseController implements IApplicationService {
     }
     /**
      * 批量删除
-     * @author Juci
+     * @author anonymous
      * @param ids
      */
     @ApiOperation(value = "批量删除")
@@ -100,7 +100,7 @@ public class ExerciseController implements IApplicationService {
 
     /**
      * 分页获取实验列表
-     * @author Juci
+     * @author anonymous
      * @param searchDto
      * @return
      */
@@ -120,7 +120,7 @@ public class ExerciseController implements IApplicationService {
 
     /**
      * 分页获取学校端实验列表
-     * @author Juci
+     * @author anonymous
      * @param searchDto
      * @return
      */
@@ -150,7 +150,7 @@ public class ExerciseController implements IApplicationService {
 
     /**
     * @description  获取实验列表-案例库
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/4/9 15:40
     * @param   searchDto
     * @return   list
@@ -175,7 +175,7 @@ public class ExerciseController implements IApplicationService {
 
     /**
     * @description  学生端案例库标签缓存功能
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/5/6 9:22
     * @return
     */
@@ -193,7 +193,7 @@ public class ExerciseController implements IApplicationService {
 
     /**
      * 实验上下移动
-     * @author Juci
+     * @author anonymous
      * @param id1
      * @param id2
      */

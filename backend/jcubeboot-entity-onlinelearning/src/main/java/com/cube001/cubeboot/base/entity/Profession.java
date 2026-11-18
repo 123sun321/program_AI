@@ -18,7 +18,7 @@ import java.util.List;
 * FileName: Profession.java
 * 专业管理实体类
 *
-* @author 马勇超
+* @author anonymous
 * @date 2025/12/4 15:00
 * @version 1.0
 */

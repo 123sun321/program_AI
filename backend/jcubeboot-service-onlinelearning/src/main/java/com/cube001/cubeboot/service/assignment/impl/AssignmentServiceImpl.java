@@ -36,7 +36,7 @@ import java.util.Map;
  *  服务实现类
  * </p>
  *
- * @author renjie
+ * @author anonymous
  * @since 2019-03-18
  */
 @Service
@@ -52,7 +52,7 @@ public class AssignmentServiceImpl extends ServiceImpl<AssignmentMapper, Assignm
     private StudentMapper studentMapper;
     /**
       * @description
-      * @author 张人杰
+      * @author anonymous
       * @date 2025/3/21 9:02
       * @Param 作业assignmentid
       * @return 操作成功或者抛出友好异常
@@ -73,7 +73,7 @@ public class AssignmentServiceImpl extends ServiceImpl<AssignmentMapper, Assignm
     }
     /**
       * @description批量删除作业标题
-      * @author 张人杰
+      * @author anonymous
       * @date 2025/3/28 9:00
       * @Param List<Long> ids
       * @return
@@ -98,7 +98,7 @@ public class AssignmentServiceImpl extends ServiceImpl<AssignmentMapper, Assignm
 
     /**
       * @description
-      * @author 张人杰
+      * @author anonymous
       * @date 2025/3/21 10:03
       * @Param 添加作业
       * @return 操作成功或者抛出友好异常
@@ -115,7 +115,7 @@ public class AssignmentServiceImpl extends ServiceImpl<AssignmentMapper, Assignm
     }
     /**
       * @description作业的更新
-      * @author 张人杰
+      * @author anonymous
       * @date 2025/3/28 9:04
       * @Param AssignmentDto
       * @return
@@ -133,7 +133,7 @@ public class AssignmentServiceImpl extends ServiceImpl<AssignmentMapper, Assignm
     }
     /**
       * @description字段校验
-      * @author 张人杰
+      * @author anonymous
       * @date 2025/3/28 9:02
       * @Param String col字段名，String value字段值
       * @return
@@ -149,7 +149,7 @@ public class AssignmentServiceImpl extends ServiceImpl<AssignmentMapper, Assignm
     }
     /**
       * @description分页/模糊查询
-      * @author 张人杰
+      * @author anonymous
       * @date 2025/3/28 9:03
       * @Param Page<Assignment> page 分页 Wrapper<Assignment> formToEntityWrapperWithSearch查询条件
       * @return Page<Assignment>
@@ -165,7 +165,7 @@ public class AssignmentServiceImpl extends ServiceImpl<AssignmentMapper, Assignm
 
     /**
      * 通过用户编号获取学生的班级作业
-     * @Author Juci
+     * @Author anonymous
      * @param page
      * @param wrapper
      * @param userId
@@ -184,7 +184,7 @@ public class AssignmentServiceImpl extends ServiceImpl<AssignmentMapper, Assignm
 
     /**
      * 通过用户编号获取学生的小组作业
-     * @Author Juci
+     * @Author anonymous
      * @param page
      * @param wrapper
      * @param userId
@@ -203,7 +203,7 @@ public class AssignmentServiceImpl extends ServiceImpl<AssignmentMapper, Assignm
 
     /**
      * @description  提交作业人数和未评分加一
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/5/14 13:40
      * @param
      * @return
@@ -215,7 +215,7 @@ public class AssignmentServiceImpl extends ServiceImpl<AssignmentMapper, Assignm
 
     /**
      * 获取当前用户该作业的提交详情
-     * @author Juci
+     * @author anonymous
      * @param userId
      * @param id
      * @return

@@ -24,7 +24,7 @@ import java.util.List;
  * FileName: [StudenthonorServiceImpl]
  * StudenthonorServiceImpl是服务层接口实现类
  *
- * @author HuangPengju
+ * @author anonymous
  * @Date 2018-11-30
  * @version 1.0
  */
@@ -60,7 +60,7 @@ public class StudenthonorServiceImpl extends ServiceImpl<StudenthonorMapper, Stu
 
     /**
      * @description 处理同时添加多个学生的奖惩信息
-     * @author HuangPengju
+     * @author anonymous
      * @date 2025/12/5 9:26
      * @param studenthonorDto  提交的数据
      * @return void
@@ -86,7 +86,7 @@ public class StudenthonorServiceImpl extends ServiceImpl<StudenthonorMapper, Stu
     }
     /**
      * @description 组合搜索处理
-     * @author HuangPengju
+     * @author anonymous
      * @date 2025/12/5 9:34
      * @param studenthonorPageDto 搜索分页、条件
      * @return com.baomidou.mybatisplus.mapper.EntityWrapper<com.cube001.cubeboot.base.entity.Studenthonor> 组合搜索处理sql

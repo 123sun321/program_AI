@@ -19,7 +19,7 @@ import lombok.experimental.Accessors;
 * FileName: Directory.java
 * 类的详细说明 文件夹实体类
 *
-* @author 马勇超
+* @author anonymous
 * @date 2025/3/14 15:21
 * @version 1.0
 */

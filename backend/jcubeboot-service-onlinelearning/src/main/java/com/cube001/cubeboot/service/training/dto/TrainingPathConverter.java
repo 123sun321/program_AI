@@ -10,7 +10,7 @@ import java.util.List;
  * FileName: ${FILENAME}
  * TrainingPath类的双向转换说明
  *
- * @author 宋泽山
+ * @author anonymous
  * @version 1.0
  * @date 2025/3/17 14:17
  */

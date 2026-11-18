@@ -6,7 +6,7 @@ package com.cube001.cubeboot.service.base;
  * FileName: [RoleExtendService]
  * 角色扩展接口
  *
- * @author Juci
+ * @author anonymous
  * @date 2025-01-17
  * @version 1.0
  */

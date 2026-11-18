@@ -27,7 +27,7 @@ import java.util.stream.Collectors;
 * FileName: GradeServiceImpl.java
 * 班级业务实现
 *
-* @author 郭广明
+* @author anonymous
 * @date   2018/11/28 8:55
 * @version 1.0
 */
@@ -46,7 +46,7 @@ public class GradeServiceImpl extends ServiceImpl<GradeMapper, Grade> implements
 
     /**
      * @description 通过id查询包括
-     * @author 郭广明
+     * @author anonymous
      * @date 2025/11/28 8:55
      * @param id     班级id
      * @return       班级
@@ -58,7 +58,7 @@ public class GradeServiceImpl extends ServiceImpl<GradeMapper, Grade> implements
 
     /**
      * @description 分页查询
-     * @author 郭广明
+     * @author anonymous
      * @date 2025/11/28 10:02
      * @param page      分页
      * @param wrapper   条件构造器
@@ -73,7 +73,7 @@ public class GradeServiceImpl extends ServiceImpl<GradeMapper, Grade> implements
 
     /**
      * @description 封装、校验导入所有实体
-     * @author 郭广明
+     * @author anonymous
      * @date 2025/11/28 10:03
      * @param list   Excel解析后的Object集合
      * @return       校验过的班级Dto集合
@@ -93,7 +93,7 @@ public class GradeServiceImpl extends ServiceImpl<GradeMapper, Grade> implements
 
     /**
      * @description 校验每个ImportGradeDto是否合法
-     * @author 郭广明
+     * @author anonymous
      * @date 2025/11/28 10:05
      * @param importGradeDto                  未校验的班级Dto
      * @param importGradeDtoList              已校验过的班级Dto集合
@@ -157,7 +157,7 @@ public class GradeServiceImpl extends ServiceImpl<GradeMapper, Grade> implements
 
     /**
      * @description 获取所有
-     * @author 郭广明
+     * @author anonymous
      * @date 2025/11/28 10:05
      * @param ids    班级id集合
      * @return       班级集合
@@ -172,7 +172,7 @@ public class GradeServiceImpl extends ServiceImpl<GradeMapper, Grade> implements
 
     /**
      * @description 批量导入
-     * @author 郭广明
+     * @author anonymous
      * @date 2025/11/28 10:05
      * @param data   班级dto集合
      * @return       批量添加结果
@@ -186,7 +186,7 @@ public class GradeServiceImpl extends ServiceImpl<GradeMapper, Grade> implements
 
     /**
     * @description  通过年级查询所有班级
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/3/15 10:45
     * @param
     * @return

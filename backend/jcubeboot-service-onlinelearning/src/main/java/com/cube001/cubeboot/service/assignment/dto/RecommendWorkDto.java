@@ -12,7 +12,7 @@ import java.util.Date;
  * FileName: [ 文件名 ] RecommendWorkDto
  * 优秀作品实体Dto
  *
- * @author 马勇超
+ * @author anonymous
  * @version 1.0
  * @date 2025/4/22$ 11:21$
  */

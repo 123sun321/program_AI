@@ -14,7 +14,7 @@ import org.apache.ibatis.annotations.Param;
  * FileName: [StudenthonorService]
  * StudenthonorService服务层接口
  *
- * @author HuangPengju
+ * @author anonymous
  * @Date 2018-11-30
  * @version 1.0
  */
@@ -34,7 +34,7 @@ public interface StudenthonorService extends IService<Studenthonor> {
     Studenthonor getStuRewardPunish(Long id);
     /**
      * @description 处理同时添加多个学生的奖惩信息
-     * @author HuangPengju
+     * @author anonymous
      * @date 2025/12/5 9:27
      * @param studenthonorDto 提交的数据
      * @return void
@@ -42,7 +42,7 @@ public interface StudenthonorService extends IService<Studenthonor> {
     Boolean getStudenthonorEntity(StudenthonorDto studenthonorDto);
     /**
      * @description 组合搜索处理
-     * @author HuangPengju
+     * @author anonymous
      * @date 2025/12/5 9:34
      * @param studenthonorPageDto 搜索、分页数据
      * @return com.baomidou.mybatisplus.mapper.EntityWrapper<com.cube001.cubeboot.base.entity.Studenthonor>

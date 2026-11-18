@@ -13,7 +13,7 @@ import java.util.List;
  * FileName: ExerciseMapper
  * 实验练习参与记录
  *
- * @author Juci
+ * @author anonymous
  * @date 2025/04/08 13:29
  * @version 1.0
  */
@@ -42,14 +42,14 @@ public interface ExerciseJoinRecordMapper extends BaseMapper<ExerciseJoinRecord>
 
     /**
      * 获取当前连续签到天数
-     * @author Juci
+     * @author anonymous
      * @param studentId
      * @return
      */
     Integer getContinuousDay(@Param("studentId") Long studentId);
     /**
      * 获取最大连续签到天数
-     * @author Juci
+     * @author anonymous
      * @param studentId
      * @return
      */

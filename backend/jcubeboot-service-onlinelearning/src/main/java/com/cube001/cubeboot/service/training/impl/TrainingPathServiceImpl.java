@@ -28,7 +28,7 @@ import java.util.List;
 * Copyright (C), 2018-2019, ZhengZhouChuangZhi. Co., Ltd.* FileName: TrainingPathServiceImpl.java
 * 练习目录实现类的详细说明
 *
-* @author 宋泽山
+* @author anonymous
 * @date 2025/3/14 17:31
 * @version 1.0
 */
@@ -44,7 +44,7 @@ public class TrainingPathServiceImpl extends ServiceImpl<TrainingPathMapper, Tra
     private TrainingPathConverter trainingPathConverter;
     /**
      * @description 7: 返回练习目录的文件夹的树形图
-     * @author 宋泽山
+     * @author anonymous
      * @date 2025/4/5 11:04
      * @return 修改结果,true或者false
      */
@@ -80,7 +80,7 @@ public class TrainingPathServiceImpl extends ServiceImpl<TrainingPathMapper, Tra
     }
     /**
      * @description 深度优先搜索算法处理树形文件夹目录
-     * @author 宋泽山
+     * @author anonymous
      * @date 2025/4/30 19:15
      * @param
      * @return
@@ -105,7 +105,7 @@ public class TrainingPathServiceImpl extends ServiceImpl<TrainingPathMapper, Tra
     }
     /**
      * @description 批量移动某个文件夹或者文件
-     * @author 宋泽山
+     * @author anonymous
      * @date 2025/4/30 14:16
      * @param folderIdList 文件或者文件夹的ID列表
      * @param targetId 目的地id
@@ -145,7 +145,7 @@ public class TrainingPathServiceImpl extends ServiceImpl<TrainingPathMapper, Tra
 
     /**
      * @description  功能2 根据dbId 得到某个学生对应的文件夹id 下的所有 练习目录
-     * @author 宋泽山
+     * @author anonymous
      * @date 2025/3/18 9:54
      * @param studentId 学生id
      * @param dbId 文件夹id
@@ -162,7 +162,7 @@ public class TrainingPathServiceImpl extends ServiceImpl<TrainingPathMapper, Tra
     }
     /**
      * @description 3.在某个文件夹下添加一个新的文件夹
-     * @author 宋泽山
+     * @author anonymous
      * @date 2025/3/17 17:09
      * @param dbId 文件夹id
      * @param folderName 文件夹名称

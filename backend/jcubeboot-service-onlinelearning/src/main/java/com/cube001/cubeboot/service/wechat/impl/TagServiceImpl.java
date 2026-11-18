@@ -19,7 +19,7 @@ import java.util.Map;
  * FileName: com.cube001.cubeboot.service.wechat.impl
  * 标签Service
  *
- * @author 陈乐乐
+ * @author anonymous
  * @version 1.0
  * @date 2025/12/25 10:02
  */

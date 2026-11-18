@@ -20,7 +20,7 @@ import java.util.List;
  *  作业提交详情mapper
  * </p>
  *
- * @author renjie
+ * @author anonymous
  * @since 2019-03-22
  */
 
@@ -31,7 +31,7 @@ public interface AssignmentSubmitMapper extends BaseMapper<AssignmentSubmit> {
 
     /**
      * @description  获取所有为评分的作业列表
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/4/8 14:11
      * @return   list
      */
@@ -39,7 +39,7 @@ public interface AssignmentSubmitMapper extends BaseMapper<AssignmentSubmit> {
 
     /**
      * 通过编号获取作业提交详情及代码
-     * @author Juci
+     * @author anonymous
      * @param id
      * @return
      */
@@ -47,7 +47,7 @@ public interface AssignmentSubmitMapper extends BaseMapper<AssignmentSubmit> {
 
     /**
      * @description 根据提交作业id获取作业和学生信息
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/7/4 15:36
      * @param id
      * @return

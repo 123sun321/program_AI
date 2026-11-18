@@ -25,7 +25,7 @@ import java.util.stream.Collectors;
  * FileName: com.cube001.cubeboot.access
  * 类的详细说明
  *
- * @author 陈乐乐
+ * @author anonymous
  * @version 1.0
  * @date 2025/12/27 11:07
  */
@@ -90,7 +90,7 @@ public class PermissionContainer {
      * @param annotation
      * @return java.util.List<java.lang.String>
      * @description
-     * @author 陈乐乐
+     * @author anonymous
      * @date 2025/12/27 15:18
      */
     private List<String> getRequiresPermissionsValues(Annotation annotation) {

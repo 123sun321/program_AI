@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.*;
  *  前端控制器
  * </p>
  *
- * @author qw
+ * @author anonymous
  * @since 2019-03-11
  */
 @RestController
@@ -33,7 +33,7 @@ public class CourseCollectController implements IApplicationService {
     private CourseCollectConverter courseCollectConverter;
     /**
      * @description
-     * @author 宋泽山
+     * @author anonymous
      * @date 2025/4/24 20:03
      * @param
      * @return
@@ -47,7 +47,7 @@ public class CourseCollectController implements IApplicationService {
 
     /**
      * 添加实验练习
-     * @author Juci
+     * @author anonymous
      * @param courseid 课程编号
      * @return
      */
@@ -60,7 +60,7 @@ public class CourseCollectController implements IApplicationService {
 
     /**
      * 删除收藏
-     * @author Juci
+     * @author anonymous
      * @param id
      */
     @ApiOperation(value = "删除收藏")
@@ -71,7 +71,7 @@ public class CourseCollectController implements IApplicationService {
     }
     /**
      * 分页获取实验列表
-     * @author Juci
+     * @author anonymous
      * @param searchDto
      * @return
      */

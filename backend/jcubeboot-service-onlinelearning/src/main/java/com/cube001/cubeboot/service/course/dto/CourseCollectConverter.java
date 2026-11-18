@@ -12,7 +12,7 @@ import java.util.List;
  * FileName: CourseCollectConverter
  * 课程收藏双向转换
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025/3/28 10:25
  */

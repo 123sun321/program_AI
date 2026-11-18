@@ -9,7 +9,7 @@ import java.io.Serializable;
  * FileName: ApproveEnum.java
  * 通用点赞的枚举类,用于枚举不同的点赞类型
  *
- * @author 宋泽山
+ * @author anonymous
  * @version 1.0
  * @date 2025/4/2 15:33
  */

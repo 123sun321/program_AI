@@ -34,7 +34,7 @@ import java.util.List;
  * FileName: CourseJoinServiceImpl
  * 课程参与详情service实现类
  *
- * @author 张浩杰
+ * @author anonymous
  * @version 1.0
  * @date 2025/3/12 17:50
  */
@@ -56,7 +56,7 @@ public class CourseJoinServiceImpl extends ServiceImpl<CourseJoinMapper, CourseJ
      * @param
      * @return
      * @description 课程参与详情分页
-     * @author 张浩杰
+     * @author anonymous
      * @date 2025年3月13日 13:09:05
      */
     @Override
@@ -72,7 +72,7 @@ public class CourseJoinServiceImpl extends ServiceImpl<CourseJoinMapper, CourseJ
      * @param plusPage
      * @param wrapper
      * @return
-     * @author Juci
+     * @author anonymous
      */
     @Override
     public Page<CourseJoinDto> studentJoinCourse(Page<CourseJoinDto> plusPage, Wrapper<CourseJoinDto> wrapper) {
@@ -121,7 +121,7 @@ public class CourseJoinServiceImpl extends ServiceImpl<CourseJoinMapper, CourseJ
 
     /**
      * 通过邀请码参与课程学习
-     * @author Juci
+     * @author anonymous
      * @param userid 用户编号
      * @param invitationCode 邀请码
      */
@@ -139,7 +139,7 @@ public class CourseJoinServiceImpl extends ServiceImpl<CourseJoinMapper, CourseJ
 
     /**
      * @description  学生参与私有课程的作业分页
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/4/23 9:51
      * @param   page,wrapper
      * @return
@@ -177,7 +177,7 @@ public class CourseJoinServiceImpl extends ServiceImpl<CourseJoinMapper, CourseJ
 
     /**
      * @description  学生参与私有课程无分页
-     * @author 马勇超
+     * @author anonymous
      * @date 2025/4/23 9:51
      * @param   wrapper
      * @return

@@ -20,7 +20,7 @@ import lombok.experimental.Accessors;
 * FileName: CodeSimilarity.java
 * 类的详细说明
 *
-* @author 张人杰
+* @author anonymous
 * @date 2025/6/25 18:28
 * @version 1.0
 */

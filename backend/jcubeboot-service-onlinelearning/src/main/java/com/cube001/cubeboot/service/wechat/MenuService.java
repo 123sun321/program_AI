@@ -9,7 +9,7 @@ import java.util.List;
  * FileName: com.cube001.cubeboot.service.wechat
  * 微信菜单service
  *
- * @author 陈乐乐
+ * @author anonymous
  * @version 1.0
  * @date 2025/12/25 9:49
  */
@@ -28,7 +28,7 @@ public interface MenuService {
      *
      * @return java.lang.Object
      * @description
-     * @author 陈乐乐
+     * @author anonymous
      * @date 2025/12/25 9:56
      */
     Object getMenu() throws Exception;

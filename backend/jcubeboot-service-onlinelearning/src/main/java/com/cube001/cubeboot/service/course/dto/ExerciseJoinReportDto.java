@@ -12,7 +12,7 @@ import java.util.Date;
  * FileName: ExerciseJoinReportDto
  * ExerciseJoinReportDto
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025/3/28 18:12
  */

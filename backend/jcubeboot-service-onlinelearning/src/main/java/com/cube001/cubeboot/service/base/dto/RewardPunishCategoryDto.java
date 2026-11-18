@@ -11,7 +11,7 @@ import javax.validation.constraints.NotEmpty;
  * FileName: [RewardPunishCategoryDto]
  * 奖惩Dto
  *
- * @author HuangPengju
+ * @author anonymous
  * @Date 2018-11-27
  * @version 1.0
  */

@@ -34,7 +34,7 @@ import java.time.Duration;
 /**
  * ehcache配置
  *
- * @author fengshuonan
+ * @author anonymous
  * @date 2017-05-20 23:11
  */
 @Configuration

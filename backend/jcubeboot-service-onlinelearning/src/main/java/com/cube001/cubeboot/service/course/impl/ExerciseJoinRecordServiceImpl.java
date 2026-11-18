@@ -29,7 +29,7 @@ import java.util.List;
  * FileName: ExerciseJoinRecordServiceImpl
  * 实验参与记录service实现类
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025/4/8 13:34
  */
@@ -44,7 +44,7 @@ public class ExerciseJoinRecordServiceImpl extends ServiceImpl<ExerciseJoinRecor
     private ExerciseJoinMapper exerciseJoinMapper;
     /**
      * 创建实验记录
-     * @author Juci
+     * @author anonymous
      * @param exerciseJoinRecordDto
      * @param userId 用户编号
      */
@@ -68,7 +68,7 @@ public class ExerciseJoinRecordServiceImpl extends ServiceImpl<ExerciseJoinRecor
     }
     /**
      * 学生参与练习次数相关统计
-     * @author juci
+     * @author anonymous
      * @param userId 用户编号
      * @return
      */
@@ -96,7 +96,7 @@ public class ExerciseJoinRecordServiceImpl extends ServiceImpl<ExerciseJoinRecor
 
     /**
      * 统计学生学习时间
-     * @author Juci
+     * @author anonymous
      * @param userId 用户编号
      * @return
      */
@@ -110,7 +110,7 @@ public class ExerciseJoinRecordServiceImpl extends ServiceImpl<ExerciseJoinRecor
     }
     /**
      * 更新学生学习天数XXLive
-     * @author Juci
+     * @author anonymous
      * @param student
      */
     @Override

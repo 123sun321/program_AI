@@ -11,14 +11,14 @@ import java.util.List;
 * FileName: LabelContentMapper.java
 * 类的详细说明
 *
-* @author 马勇超
+* @author anonymous
 * @date 2025/3/12 9:32
 * @version 1.0
 */
 public interface LabelContentMapper extends BaseMapper<LabelContent> {
     /**
      * 通过关联编号获取标签列表
-     * @author Juci
+     * @author anonymous
      * @param id
      * @return
      */

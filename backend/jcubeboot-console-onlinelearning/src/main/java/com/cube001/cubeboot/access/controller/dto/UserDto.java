@@ -3,7 +3,7 @@ package com.cube001.cubeboot.access.controller.dto;
 import lombok.Data;
 
 /**
- * @Author:张向宇
+ * @Author:anonymous
  * @Description:
  * @Date:Create in 15:58 2018/03/20
  * @Modified By:

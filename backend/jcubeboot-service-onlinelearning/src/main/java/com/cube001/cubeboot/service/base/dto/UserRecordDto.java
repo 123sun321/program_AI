@@ -10,7 +10,7 @@ import java.util.Date;
  * FileName: UserRecordDto
  * 用户浏览记录Dto
  *
- * @author Juci
+ * @author anonymous
  * @version 1.0
  * @date 2025/4/22 14:17
  */

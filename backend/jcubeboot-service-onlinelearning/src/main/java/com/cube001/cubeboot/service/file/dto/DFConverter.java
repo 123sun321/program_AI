@@ -12,7 +12,7 @@ import java.util.List;
  * FileName: [ 文件名 ]
  * 类的详细说明 文件夹与资源列表合并dto
  *
- * @author 马勇超
+ * @author anonymous
  * @version 1.0
  * @date 2025/3/16$ 16:48$
  */

@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  * course双向转换类
- * @author 陈乐乐
+ * @author anonymous
  * @since 2018-11-20
  */
 @Mapper(componentModel = "spring")

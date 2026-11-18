@@ -16,7 +16,7 @@ import java.util.List;
 * FileName: StudentService 
 * 学生业务接口
 * 
-* @author 郭广明 
+* @author anonymous 
 * @date   2018/11/28 13:31
 * @version 1.0 
 */ 
@@ -24,7 +24,7 @@ public interface StudentService extends IService<Student> {
 
     /**
      * @description 根据id获取学生详情包括专业、院系、班级
-     * @author 郭广明
+     * @author anonymous
      * @date 2025/11/28 15:54
      * @param id 学生id
      * @return   学生Dto
@@ -46,7 +46,7 @@ public interface StudentService extends IService<Student> {
 
     /**
      * @description 分页查询学生
-     * @author 郭广明
+     * @author anonymous
      * @date 2025/11/28 16:49
      * @param page                            分页
      * @param formToEntityWrapperWithSearch   条件构造器
@@ -56,7 +56,7 @@ public interface StudentService extends IService<Student> {
 
     /**
      * @description 校验Excel导入对象是否合法
-     * @author 郭广明
+     * @author anonymous
      * @date 2025/11/28 17:01
      * @param list 封装了Excel导入实体的Object 集合
      * @return     校验过的班级Dto集合
@@ -65,7 +65,7 @@ public interface StudentService extends IService<Student> {
 
     /**
      * @description 批量上传
-     * @author 郭广明
+     * @author anonymous
      * @date 2025/11/28 17:07
      * @param data 学生Dto集合
      * @return     批量上传成功失败状态值
@@ -74,7 +74,7 @@ public interface StudentService extends IService<Student> {
 
     /**
      * @description 导出所选数据
-     * @author 郭广明
+     * @author anonymous
      * @date 2025/11/28 17:16
      * @param ids 学生id集合
      * @return    Excel表格
@@ -82,7 +82,7 @@ public interface StudentService extends IService<Student> {
     HSSFWorkbook list(List<Long> ids);
     /**
      * 功能：根据学生姓名、学号、证件号码查询学生
-     * @author HuangPengju
+     * @author anonymous
      * @date 2025/12/3
      * @param name       学生姓名
      * @param code       学生学号
@@ -93,7 +93,7 @@ public interface StudentService extends IService<Student> {
 
     /**
      * @description 添加学生的同时添加用户
-     * @author 郭广明
+     * @author anonymous
      * @date 2025/12/3 17:30
      * @param student 学生实体
      * @return        添加结果
@@ -102,7 +102,7 @@ public interface StudentService extends IService<Student> {
 
     /**
     * @description 取数据
-    * @author 陈乐乐
+    * @author anonymous
     * @date 2025/12/6 17:02
     * @param wrapper
     * @return java.util.List<com.cube001.cubeboot.base.entity.Student>
@@ -112,7 +112,7 @@ public interface StudentService extends IService<Student> {
     /**
      * 根据用户id获取学生信息(带专业名称和班级名称)
      * @description
-     * @author 张向宇
+     * @author anonymous
      * @date 2025/01/10 14:38
      * @param userId
      * @return

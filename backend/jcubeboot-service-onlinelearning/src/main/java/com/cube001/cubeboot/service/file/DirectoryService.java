@@ -12,7 +12,7 @@ import java.util.List;
 * FileName: DirectoryService.java
 * 类的详细说明 文件夹service
 *
-* @author 马勇超
+* @author anonymous
 * @date 2025/3/14 15:23
 * @version 1.0
 */
@@ -20,7 +20,7 @@ public interface DirectoryService extends IService<Directory> {
 
     /**
     * @description  展示文件夹及资源
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/3/21 12:49
     * @param   parentId
     * @return   list
@@ -29,7 +29,7 @@ public interface DirectoryService extends IService<Directory> {
 
     /**
     * @description  树形列表
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/3/21 12:50
     * @param   directories
     * @return   List<DirectoryDto>

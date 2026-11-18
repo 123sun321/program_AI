@@ -38,7 +38,7 @@ import java.util.List;
  * FileName: [SchoolAdminController]
  * 用于学生奖惩记录功能实现数据交互的控制器
  *
- * @author HuangPengju
+ * @author anonymous
  * @Date 2018-11-27
  * @version 1.0
  */

@@ -18,7 +18,7 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 
 /**
- * @Author:张向宇
+ * @Author:anonymous
  * @Description:
  * @Date:Create in 11:50 2018/06/05
  * @Modified By:
@@ -93,7 +93,7 @@ public class KaptchaController {
     /**
      * 返回图片
      *
-     * @author 张向宇
+     * @author anonymous
      * @date 2025/5/24 23:00
      */
     @RequestMapping("/{pictureId}")

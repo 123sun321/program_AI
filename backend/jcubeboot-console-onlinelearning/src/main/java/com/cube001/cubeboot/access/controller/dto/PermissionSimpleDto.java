@@ -4,7 +4,7 @@ import lombok.Data;
 
 /**
  * 权限传输简易信息
- * @Author:张向宇
+ * @Author:anonymous
  * @Description:
  * @Date:Create in 17:57 2018/07/21
  * @Modified By:

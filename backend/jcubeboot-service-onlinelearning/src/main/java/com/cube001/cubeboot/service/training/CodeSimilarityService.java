@@ -12,7 +12,7 @@ import com.cube001.cubeboot.training.entity.CodeSimilarity;
 * FileName: CodeSimilarityService.java
 * 类的详细说明
 *
-* @author 张人杰
+* @author anonymous
 * @date 2025/6/25 18:20
 * @version 1.0
 */

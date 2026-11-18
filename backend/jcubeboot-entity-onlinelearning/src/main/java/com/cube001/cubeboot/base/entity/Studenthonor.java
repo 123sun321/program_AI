@@ -20,7 +20,7 @@ import lombok.experimental.Accessors;
  * FileName: [Studenthonor]
  * 学生奖惩实体类
  *
- * @author HuangPengju
+ * @author anonymous
  * @Date 2018-11-30
  * @version 1.0
  */

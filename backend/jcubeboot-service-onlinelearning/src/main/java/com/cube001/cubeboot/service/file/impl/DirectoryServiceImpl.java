@@ -23,7 +23,7 @@ import java.util.List;
 * FileName: DirectoryServiceImpl.java
 * 类的详细说明
 *
-* @author 马勇超
+* @author anonymous
 * @date 2025/3/14 15:23
 * @version 1.0
 */
@@ -44,7 +44,7 @@ public class DirectoryServiceImpl extends ServiceImpl<DirectoryMapper, Directory
 
     /**
     * @description  查询资源列表
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/3/16 16:10
     * @param
     * @return
@@ -92,7 +92,7 @@ public class DirectoryServiceImpl extends ServiceImpl<DirectoryMapper, Directory
 
     /**
     * @description  查询文件夹树形列表
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/3/20 13:09
     * @param
     * @return
@@ -111,7 +111,7 @@ public class DirectoryServiceImpl extends ServiceImpl<DirectoryMapper, Directory
 
     /**
     * @description  递归算法
-    * @author 马勇超
+    * @author anonymous
     * @date 2025/3/21 12:51
     * @param   pId
     * @return  DirectoryDto
