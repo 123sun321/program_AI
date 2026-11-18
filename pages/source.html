@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>源码结构 · 智训云枢</title>
+<meta name="description" content="智训云枢——从结果评价走向过程理解的 AI 编程实训平台">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head><body>
+<header class="hdr">
+  <button class="menu-btn" aria-label="菜单">☰</button>
+  <div class="logo"><a href="../index.html" style="color:inherit">智训<span>云枢</span></a></div>
+  <div class="hdr-link">
+    <a href="../pages/access.html">访问说明</a>
+    <a href="https://github.com/123sun321/program_AI" target="_blank">GitHub</a>
+  </div>
+</header>
+<aside class="sidebar"><div class="nav-group"><div class="nav-title">入门</div><a href="../index.html">首页</a><a href="../pages/overview.html">项目概述</a><a href="../pages/access.html">访问说明<span class="ind">NEW</span></a></div><div class="nav-group"><div class="nav-title">背景与问题</div><a href="../pages/background.html">现实痛点</a><a href="../pages/motivation.html">问题定义</a></div><div class="nav-group"><div class="nav-title">核心能力</div><a href="../pages/features.html">系统功能</a><a href="../pages/perception.html">过程感知</a><a href="../pages/trajectory.html">轨迹重构</a><a href="../pages/feedback.html">反馈与画像</a></div><div class="nav-group"><div class="nav-title">技术方案</div><a href="../pages/architecture.html">总体架构</a><a href="../pages/innovation.html">创新对比</a></div><div class="nav-group"><div class="nav-title">展示与成果</div><a href="../pages/gallery.html">界面展示</a><a href="../pages/achievements.html">成果与规划</a></div><div class="nav-group"><div class="nav-title">资源</div><a href="../pages/source.html" active>源码结构</a><a href="https://github.com/123sun321/program_AI" target="_blank" rel="noopener">GitHub 仓库<span class="ind">↗</span></a></div></aside>
+<div class="main"><div class="content">
+
+<h1 id="top">源码结构<span class="anchor">#</span></h1>
+<p class="lead">完整源码已公开在 GitHub，仓库包含脱敏后的前后端业务源码与说明文档。</p>
+<h2 id="repo">仓库信息</h2>
+<pre><code>仓库地址：https://github.com/123sun321/program_AI
+公开网址：https://123sun321.github.io/program_AI/
+分支：    main</code></pre>
+<p><a href="https://github.com/123sun321/program_AI" target="_blank">→ 打开 GitHub 仓库</a></p>
+<h2 id="tree">目录结构</h2>
+<pre><code>program_AI/
+├── index.html          # 本站首页（文档站入口）
+├── pages/              # 本站各章节页面
+├── assets/             # 样式、脚本与配图
+├── backend/            # 后端 Spring Boot 多模块源码（Java / 配置，已脱敏）
+├── frontend/
+│   ├── managerWeb/     # 教师端与管理端前端源码
+│   └── studentWeb/     # 学生端前端源码
+├── 访问说明.md          # 在线体验地址与测试账号
+└── 原始readme.txt      # 原始提交包说明</code></pre>
+<h2 id="note">说明</h2>
+<ul>
+<li>为减小体积，原始提交包中的编译产物（jar）、前端依赖（node_modules）与二进制素材未纳入。</li>
+<li>配置文件中的数据库地址、账号、密码、密钥等敏感字段已替换为占位符 <code>YOUR_VALUE_HERE</code>，本地运行时请自行填写。</li>
+<li>本站为纯静态文档，可直接浏览；真实平台的运行方式见 <a href="access.html">访问说明</a>。</li>
+</ul>
+
+<div class="pager"><a href="../pages/achievements.html"><small>← 上一篇</small>成果与规划</a></div>
+<div class="footer">© 2026 智训云枢 · 郑州师范学院 · 软件应用与开发 ｜ 看见过程，才能理解学习</div>
+</div></div>
+<div class="toc"><div class="toc-t">本页目录</div><a href="#repo">仓库信息</a><a href="#tree">目录结构</a><a href="#note">说明</a></div>
+<script src="../assets/js/main.js"></script>
+</body></html>

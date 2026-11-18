@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>总体架构 · 智训云枢</title>
+<meta name="description" content="智训云枢——从结果评价走向过程理解的 AI 编程实训平台">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head><body>
+<header class="hdr">
+  <button class="menu-btn" aria-label="菜单">☰</button>
+  <div class="logo"><a href="../index.html" style="color:inherit">智训<span>云枢</span></a></div>
+  <div class="hdr-link">
+    <a href="../pages/access.html">访问说明</a>
+    <a href="https://github.com/123sun321/program_AI" target="_blank">GitHub</a>
+  </div>
+</header>
+<aside class="sidebar"><div class="nav-group"><div class="nav-title">入门</div><a href="../index.html">首页</a><a href="../pages/overview.html">项目概述</a><a href="../pages/access.html">访问说明<span class="ind">NEW</span></a></div><div class="nav-group"><div class="nav-title">背景与问题</div><a href="../pages/background.html">现实痛点</a><a href="../pages/motivation.html">问题定义</a></div><div class="nav-group"><div class="nav-title">核心能力</div><a href="../pages/features.html">系统功能</a><a href="../pages/perception.html">过程感知</a><a href="../pages/trajectory.html">轨迹重构</a><a href="../pages/feedback.html">反馈与画像</a></div><div class="nav-group"><div class="nav-title">技术方案</div><a href="../pages/architecture.html" active>总体架构</a><a href="../pages/innovation.html">创新对比</a></div><div class="nav-group"><div class="nav-title">展示与成果</div><a href="../pages/gallery.html">界面展示</a><a href="../pages/achievements.html">成果与规划</a></div><div class="nav-group"><div class="nav-title">资源</div><a href="../pages/source.html">源码结构</a><a href="https://github.com/123sun321/program_AI" target="_blank" rel="noopener">GitHub 仓库<span class="ind">↗</span></a></div></aside>
+<div class="main"><div class="content">
+
+<h1 id="top">总体架构<span class="anchor">#</span></h1>
+<p class="lead">三层能力框架 —— 面向编程学习行为的可解释过程建模。</p>
+<div class="grid">
+<div class="card"><div class="ic">1</div><h3>过程感知层</h3><p>细粒度行为感知、关键状态快照、时序特征沉淀，负责把过程「记下来」。</p></div>
+<div class="card"><div class="ic">2</div><h3>过程建模层</h3><p>行为特征建模、知识图谱式错误关联、学习画像构建，负责把过程「看懂」。</p></div>
+<div class="card"><div class="ic">3</div><h3>反馈生成层</h3><p>代码增量解析、RAG 式上下文增强、个性化反馈生成、教学诊断支撑，负责把过程「用起来」。</p></div>
+</div>
+<h2 id="tech">技术构成</h2>
+<table>
+<tr><th>层次</th><th>技术选型</th></tr>
+<tr><td>后端</td><td>Java · Spring Boot 多模块（Maven）</td></tr>
+<tr><td>前端</td><td>Vue.js（学生端、管理/教师端两套应用）</td></tr>
+<tr><td>能力</td><td>在线代码编辑、行为日志采集、RAG 上下文增强、学习画像</td></tr>
+</table>
+<h2 id="flow">数据闭环</h2>
+<pre><code>过程记录 → 过程分析 → 学习反馈 → 教学决策 → 反哺过程记录</code></pre>
+<p>通过「记录—分析—反馈」闭环，驱动学习过程智能化升级：从关注「学得如何」，到关注「如何学得更好」。</p>
+<figure><img src="../assets/img/concept-flow.jpg" alt="技术架构概念图"><figcaption>过程数据流转的整体构想</figcaption></figure>
+
+<div class="pager"><a href="../pages/feedback.html"><small>← 上一篇</small>反馈与画像</a><a class="next" href="../pages/innovation.html"><small>下一篇 →</small>创新对比</a></div>
+<div class="footer">© 2026 智训云枢 · 郑州师范学院 · 软件应用与开发 ｜ 看见过程，才能理解学习</div>
+</div></div>
+<div class="toc"><div class="toc-t">本页目录</div><a href="#top">三层框架</a><a href="#tech">技术构成</a><a href="#flow">数据闭环</a></div>
+<script src="../assets/js/main.js"></script>
+</body></html>
