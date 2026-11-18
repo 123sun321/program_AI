@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>智训云枢 · 在线体验平台</title>
+<meta name="description" content="智训云枢在线体验平台——可登录、可操作的编程实训过程评价系统演示">
+<style>
+:root{
+  --primary:#409eff;--primary-dark:#337ecc;--success:#67c23a;--warning:#e6a23c;--danger:#f56c6c;
+  --text:#303133;--text-reg:#606266;--text-sec:#909399;--border:#e4e7ed;--border-l:#ebeef5;
+  --bg:#f5f7fa;--white:#fff;--side:#304156;--side-dark:#2b3a4d;--side-text:#bfcbd9;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;color:var(--text);background:var(--bg);font-size:14px;line-height:1.6}
+a{text-decoration:none;color:inherit}
+button,input,select{font-family:inherit;font-size:inherit}
+.el-btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:9px 18px;border:1px solid var(--border);border-radius:4px;background:#fff;color:var(--text-reg);cursor:pointer;transition:.15s;font-size:14px}
+.el-btn:hover{color:var(--primary);border-color:var(--primary);background:#ecf5ff}
+.el-btn.primary{background:var(--primary);border-color:var(--primary);color:#fff}
+.el-btn.primary:hover{background:var(--primary-dark);border-color:var(--primary-dark)}
+.el-btn.danger{color:var(--danger);border-color:#fbc4c4}
+.el-btn.sm{padding:6px 12px;font-size:12.5px}
+.el-tag{display:inline-block;padding:2px 9px;border-radius:4px;font-size:12px;line-height:20px}
+.el-tag.blue{background:#ecf5ff;color:var(--primary);border:1px solid #d9ecff}
+.el-tag.green{background:#f0f9eb;color:var(--success);border:1px solid #e1f3d8}
+.el-tag.orange{background:#fdf6ec;color:var(--warning);border:1px solid #faecd8}
+.el-tag.red{background:#fef0f0;color:var(--danger);border:1px solid #fde2e2}
+.el-tag.gray{background:#f4f4f5;color:var(--text-sec);border:1px solid #e9e9eb}
+
+/* ============ 登录页 ============ */
+#login{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,rgba(16,32,60,.55),rgba(30,80,150,.35)),url('assets/img/login-bg.png') center/cover no-repeat}
+.login-box{width:400px;max-width:92vw;background:#fff;border-radius:8px;padding:38px 36px 30px;box-shadow:0 12px 40px rgba(0,0,0,.25)}
+.login-hd{text-align:center;margin-bottom:26px}
+.login-hd img{max-width:190px;height:auto;margin-bottom:6px}
+.login-hd p{color:var(--text-sec);font-size:12.5px;letter-spacing:1px}
+.role-tabs{display:flex;background:#f5f7fa;border-radius:6px;padding:3px;margin-bottom:22px}
+.role-tab{flex:1;text-align:center;padding:8px 0;border-radius:4px;cursor:pointer;color:var(--text-reg);font-size:13.5px;transition:.15s}
+.role-tab.active{background:#fff;color:var(--primary);font-weight:600;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.field{margin-bottom:18px}
+.field label{display:block;font-size:13px;color:var(--text-reg);margin-bottom:7px}
+.field input{width:100%;padding:11px 13px;border:1px solid var(--border);border-radius:4px;outline:0;transition:.15s}
+.field input:focus{border-color:var(--primary);box-shadow:0 0 0 2px rgba(64,158,255,.12)}
+.login-box .el-btn{width:100%;padding:12px;font-size:15px;margin-top:4px}
+.quick{background:#f5f7fa;border-radius:6px;padding:12px 14px;margin-top:20px;font-size:12.5px;color:var(--text-sec);line-height:1.9}
+.quick b{color:var(--text-reg)}
+.login-tip{text-align:center;margin-top:16px;font-size:12px;color:var(--text-sec)}
+.login-tip a{color:var(--primary)}
+
+/* ============ 主框架 ============ */
+#app{display:none;min-height:100vh}
+#app.show{display:block}
+.sidebar{position:fixed;top:0;bottom:0;left:0;width:210px;background:var(--side);color:var(--side-text);z-index:50;display:flex;flex-direction:column;transition:transform .25s}
+.logo-bar{height:56px;display:flex;align-items:center;padding:0 18px;border-bottom:1px solid rgba(255,255,255,.08);flex-shrink:0}
+.logo-bar img{max-width:140px;filter:brightness(0) invert(1);opacity:.92}
+.menu{flex:1;overflow-y:auto;padding:10px 0}
+.menu-group{padding:12px 20px 6px;font-size:11px;color:#7b8ca3;letter-spacing:.5px}
+.menu-item{display:flex;align-items:center;gap:10px;padding:11px 20px;cursor:pointer;color:var(--side-text);font-size:14px;border-left:3px solid transparent;transition:.15s}
+.menu-item:hover{background:var(--side-dark);color:#fff}
+.menu-item.active{background:var(--side-dark);color:#fff;border-left-color:var(--primary)}
+.menu-item .ico{width:18px;text-align:center;font-size:15px;opacity:.85}
+.side-foot{padding:12px 20px;border-top:1px solid rgba(255,255,255,.08);font-size:11px;color:#7b8ca3}
+.main-wrap{margin-left:210px;min-height:100vh;transition:margin .25s}
+.navbar{height:56px;background:#fff;border-bottom:1px solid var(--border);display:flex;align-items:center;padding:0 22px;position:sticky;top:0;z-index:40;gap:16px}
+.menu-toggle{display:none;background:none;border:0;font-size:20px;cursor:pointer;color:var(--text-reg)}
+.crumb{color:var(--text-sec);font-size:13px}
+.crumb b{color:var(--text-reg);font-weight:400}
+.nav-right{margin-left:auto;display:flex;align-items:center;gap:16px}
+.bell{position:relative;font-size:18px;cursor:pointer;color:var(--text-reg)}
+.bell::after{content:"3";position:absolute;top:-6px;right:-8px;background:var(--danger);color:#fff;font-size:10px;width:16px;height:16px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.user-chip{display:flex;align-items:center;gap:9px;cursor:pointer}
+.avatar{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#409eff,#67c23a);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600}
+.user-chip .nm{font-size:13.5px;color:var(--text-reg)}
+.page{padding:22px}
+.page-hd{margin-bottom:18px}
+.page-hd h2{font-size:20px;font-weight:600;color:var(--text)}
+.page-hd .sub{color:var(--text-sec);font-size:13px;margin-top:3px}
+
+/* ============ 通用卡片/统计 ============ */
+.stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:18px}
+.stat-card{background:#fff;border:1px solid var(--border-l);border-radius:6px;padding:18px 20px;display:flex;align-items:center;gap:15px}
+.stat-ic{width:52px;height:52px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:24px;color:#fff;flex-shrink:0}
+.stat-ic.b{background:linear-gradient(135deg,#409eff,#66b1ff)}
+.stat-ic.g{background:linear-gradient(135deg,#67c23a,#85ce61)}
+.stat-ic.o{background:linear-gradient(135deg,#e6a23c,#ebb563)}
+.stat-ic.r{background:linear-gradient(135deg,#f56c6c,#f78989)}
+.stat-ic.p{background:linear-gradient(135deg,#9b59b6,#b37feb)}
+.stat-num{font-size:26px;font-weight:700;color:var(--text);line-height:1.2}
+.stat-lbl{color:var(--text-sec);font-size:12.5px;margin-top:2px}
+.panel{background:#fff;border:1px solid var(--border-l);border-radius:6px;margin-bottom:18px}
+.panel-hd{padding:15px 20px;border-bottom:1px solid var(--border-l);display:flex;align-items:center;gap:8px}
+.panel-hd h3{font-size:15px;font-weight:600}
+.panel-hd .extra{margin-left:auto;color:var(--text-sec);font-size:12.5px}
+.panel-bd{padding:20px}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.grid-2-3{display:grid;grid-template-columns:1.4fr 1fr;gap:18px}
+
+/* ============ 表格 ============ */
+.tbl{width:100%;border-collapse:collapse;font-size:13.5px}
+.tbl th{background:#fafafa;color:var(--text-reg);font-weight:600;text-align:left;padding:11px 14px;border-bottom:1px solid var(--border-l);white-space:nowrap}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--border-l);color:var(--text-reg)}
+.tbl tr:last-child td{border-bottom:0}
+.tbl tr:hover td{background:#f5f7fa}
+
+/* ============ 图表（纯CSS/SVG）============ */
+.bars{display:flex;align-items:flex-end;gap:14px;height:200px;padding:10px 0 0}
+.bar-col{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;gap:6px}
+.bar-col .v{font-size:11px;color:var(--text-sec)}
+.bar-col .bar{width:60%;max-width:42px;border-radius:4px 4px 0 0;background:linear-gradient(180deg,#409eff,#79bbff);transition:height .5s}
+.bar-col .lbl{font-size:11.5px;color:var(--text-sec);white-space:nowrap}
+.donut{display:flex;align-items:center;gap:24px;justify-content:center;padding:10px 0}
+.donut-chart{width:150px;height:150px;border-radius:50%;flex-shrink:0}
+.donut-legend{font-size:13px}
+.donut-legend div{margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.dot{width:10px;height:10px;border-radius:2px;display:inline-block}
+
+/* ============ 在线编程 ============ */
+.code-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}
+.code-editor{background:#1e293b;border-radius:6px;overflow:hidden;display:flex;min-height:380px}
+.code-ln{font-family:Consolas,monospace;font-size:13px;line-height:1.6;color:#5b6b85;text-align:right;padding:14px 10px;background:#182236;user-select:none;white-space:pre;border-right:1px solid #2a3852}
+.code-area{flex:1;resize:none;border:0;outline:0;background:#1e293b;color:#e2e8f0;font-family:Consolas,monospace;font-size:13px;line-height:1.6;padding:14px;tab-size:2;white-space:pre;overflow:auto}
+.console{background:#fff;border:1px solid var(--border-l);border-radius:6px;min-height:200px;max-height:320px;overflow:auto}
+.console-hd{padding:10px 14px;border-bottom:1px solid var(--border-l);font-size:13px;color:var(--text-reg);display:flex;align-items:center;gap:8px}
+.console-hd .st{margin-left:auto;font-size:12px}
+.console-bd{padding:8px 0;font-family:Consolas,monospace;font-size:12.5px}
+.con-line{padding:4px 14px;white-space:pre-wrap;word-break:break-word;border-bottom:1px solid #f5f7fa}
+.con-line.error{color:var(--danger);background:#fef0f0}
+.con-line.info{color:var(--primary)}
+.con-line.warn{color:var(--warning);background:#fdf6ec}
+.timeline{padding-left:8px;max-height:300px;overflow:auto}
+.tl-item{position:relative;padding:0 0 16px 26px;border-left:2px solid var(--border-l);margin-left:8px}
+.tl-item:last-child{border-left-color:transparent}
+.tl-item::before{content:"";position:absolute;left:-7px;top:2px;width:12px;height:12px;border-radius:50%;background:#fff;border:2px solid var(--primary)}
+.tl-item.err::before{border-color:var(--danger)}
+.tl-item.ok::before{border-color:var(--success)}
+.tl-item .tt{font-size:11.5px;color:var(--text-sec)}
+.tl-item .th{font-size:13px;color:var(--text-reg);margin-top:1px}
+
+/* ============ 提示条 ============ */
+.notice{background:#ecf5ff;border:1px solid #d9ecff;color:#3a7abd;border-radius:6px;padding:12px 16px;margin-bottom:18px;font-size:13px;display:flex;gap:10px;align-items:flex-start}
+.notice .ni{font-size:16px;flex-shrink:0}
+@media(max-width:1050px){.stat-row{grid-template-columns:repeat(2,1fr)}.grid-2,.grid-2-3,.code-layout{grid-template-columns:1fr}}
+@media(max-width:760px){
+  .sidebar{transform:translateX(-100%)}.sidebar.open{transform:translateX(0)}
+  .main-wrap{margin-left:0}.menu-toggle{display:block}
+  .stat-row{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ 登录页 ============ -->
+<div id="login">
+  <div class="login-box">
+    <div class="login-hd">
+      <img src="assets/img/platform-logo.png" alt="智训云枢">
+      <p>从结果评价走向过程理解的 AI 编程实训平台</p>
+    </div>
+    <div class="role-tabs" id="roleTabs">
+      <div class="role-tab active" data-role="student">学生端</div>
+      <div class="role-tab" data-role="teacher">教师端</div>
+      <div class="role-tab" data-role="admin">管理端</div>
+    </div>
+    <form id="loginForm" onsubmit="return false">
+      <div class="field"><label>账号</label><input id="loginUser" placeholder="请输入账号" autocomplete="off"></div>
+      <div class="field"><label>密码</label><input id="loginPwd" type="password" placeholder="请输入密码"></div>
+      <button class="el-btn primary" type="button" id="loginBtn">登 录</button>
+    </form>
+    <div class="quick" id="quickTip"></div>
+    <div class="login-tip">这是可操作的在线体验演示 · <a href="../index.html">返回作品介绍</a></div>
+  </div>
+</div>
+
+<!-- ============ 主应用 ============ -->
+<div id="app">
+  <aside class="sidebar" id="sidebar">
+    <div class="logo-bar"><img src="assets/img/platform-logo.png" alt="智训云枢"></div>
+    <div class="menu" id="menu"></div>
+    <div class="side-foot">智训云枢 · 在线体验版 v1.0</div>
+  </aside>
+  <div class="main-wrap">
+    <div class="navbar">
+      <button class="menu-toggle" id="menuToggle">☰</button>
+      <div class="crumb">首页 / <b id="crumbCur">工作台</b></div>
+      <div class="nav-right">
+        <span class="bell">🔔</span>
+        <div class="user-chip"><div class="avatar" id="avatar">学</div><span class="nm" id="userName">同学</span></div>
+        <button class="el-btn sm" id="logoutBtn">退出</button>
+      </div>
+    </div>
+    <div class="page" id="page"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+"use strict";
+var $=function(id){return document.getElementById(id)};
+
+/* ============ 账号与角色 ============ */
+var ACCOUNTS={
+  student:{user:'194115042001',pwd:'000000',name:'张同学',role:'student',label:'学生端'},
+  teacher:{user:'463621',pwd:'000000',name:'李老师',role:'teacher',label:'教师端'},
+  admin:{user:'admin',pwd:'zznuadmin2026',name:'管理员',role:'admin',label:'管理端'}
+};
+var curRole='student', curUser=null;
+var QUICK={
+  student:'演示账号：<b>194115042001</b> / 密码 <b>000000</b>',
+  teacher:'演示账号：<b>463621</b> / 密码 <b>000000</b>',
+  admin:'演示账号：<b>admin</b> / 密码 <b>zznuadmin2026</b>'
+};
+
+/* ============ 菜单配置 ============ */
+var MENUS={
+  student:[
+    {group:'学习空间'},
+    {id:'home',name:'工作台',ico:'⌂'},
+    {id:'courses',name:'我的课程',ico:'▤'},
+    {id:'practice',name:'实验练习',ico:'✎'},
+    {id:'editor',name:'在线编程',ico:'⌨'},
+    {group:'过程与反馈'},
+    {id:'trajectory',name:'学习轨迹',ico:'↗'},
+    {id:'profile',name:'学习画像',ico:'◈'},
+    {id:'feedback',name:'反馈建议',ico:'✦'}
+  ],
+  teacher:[
+    {group:'教学管理'},
+    {id:'home',name:'工作台',ico:'⌂'},
+    {id:'students',name:'学生管理',ico:'♙'},
+    {id:'assignments',name:'作业管理',ico:'▤'},
+    {group:'过程诊断'},
+    {id:'analysis',name:'学情分析',ico:'▥'},
+    {id:'diagnosis',name:'过程诊断',ico:'◎'},
+    {id:'suggest',name:'教学建议',ico:'✦'}
+  ],
+  admin:[
+    {group:'系统管理'},
+    {id:'home',name:'工作台',ico:'⌂'},
+    {id:'users',name:'用户管理',ico:'♙'},
+    {id:'courses',name:'课程管理',ico:'▤'},
+    {group:'数据'},
+    {id:'stats',name:'数据统计',ico:'▥'},
+    {id:'logs',name:'系统日志',ico:'≡'}
+  ]
+};
+
+/* ============ 模拟数据 ============ */
+var DATA={
+  courses:[
+    {id:'C01',name:'Java 程序设计基础',teacher:'李老师',progress:78,status:'学习中',color:'#409eff'},
+    {id:'C02',name:'数据结构与算法',teacher:'王老师',progress:45,status:'学习中',color:'#67c23a'},
+    {id:'C03',name:'Web 应用开发',teacher:'李老师',progress:92,status:'即将完成',color:'#e6a23c'}
+  ],
+  practices:[
+    {id:'P01',title:'循环与累加：数列求和',course:'Java 程序设计基础',diff:'基础',done:true,score:95},
+    {id:'P02',title:'条件判断：素数判定',course:'Java 程序设计基础',diff:'基础',done:true,score:88},
+    {id:'P03',title:'数组应用：FizzBuzz',course:'Java 程序设计基础',diff:'进阶',done:false,score:null},
+    {id:'P04',title:'函数设计：最大公约数',course:'数据结构与算法',diff:'进阶',done:false,score:null},
+    {id:'P05',title:'综合练习：成绩统计',course:'Web 应用开发',diff:'挑战',done:true,score:92}
+  ],
+  students:[
+    {id:'194115042001',name:'张同学',course:'Java 程序设计',progress:78,runs:42,errors:9,status:'正常'},
+    {id:'194115042002',name:'刘同学',course:'Java 程序设计',progress:35,runs:18,errors:22,status:'需关注'},
+    {id:'194115042003',name:'陈同学',course:'数据结构',progress:66,runs:55,errors:7,status:'正常'},
+    {id:'194115042004',name:'赵同学',course:'数据结构',progress:52,runs:31,errors:15,status:'需关注'},
+    {id:'194115042005',name:'王同学',course:'Web 开发',progress:88,runs:67,errors:5,status:'优秀'},
+    {id:'194115042006',name:'周同学',course:'Java 程序设计',progress:24,runs:11,errors:19,status:'需关注'}
+  ],
+  assignments:[
+    {id:'A01',title:'实验一：Java 基础语法',course:'Java 程序设计基础',deadline:'2026-11-20',submit:28,total:32},
+    {id:'A02',title:'实验二：循环与数组',course:'Java 程序设计基础',deadline:'2026-11-25',submit:25,total:32},
+    {id:'A03',title:'实验三：素数与排序',course:'数据结构与算法',deadline:'2026-11-28',submit:19,total:30},
+    {id:'A04',title:'实验四：简易计算器',course:'Web 应用开发',deadline:'2026-12-02',submit:30,total:32}
+  ],
+  logs:[
+    {t:'2026-11-18 19:32',user:'admin',act:'登录系统',ip:'127.0.0.1'},
+    {t:'2026-11-18 19:28',user:'463621',act:'查看学情分析',ip:'127.0.0.1'},
+    {t:'2026-11-18 19:15',user:'194115042001',act:'提交实验 P01',ip:'127.0.0.1'},
+    {t:'2026-11-18 18:50',user:'463621',act:'导出学习画像',ip:'127.0.0.1'},
+    {t:'2026-11-18 18:22',user:'admin',act:'新增课程',ip:'127.0.0.1'}
+  ]
+};
+
+/* ============ 登录 ============ */
+document.querySelectorAll('.role-tab').forEach(function(t){
+  t.onclick=function(){
+    document.querySelectorAll('.role-tab').forEach(function(x){x.classList.remove('active')});
+    t.classList.add('active'); curRole=t.getAttribute('data-role');
+    var a=ACCOUNTS[curRole];
+    $('loginUser').value=a.user; $('loginPwd').value=a.pwd;
+    $('quickTip').innerHTML=QUICK[curRole];
+  };
+});
+// 初始化默认选中学生端并填账号
+(function(){ var t=document.querySelector('.role-tab.active'); t.click(); })();
+
+function doLogin(){
+  var u=$('loginUser').value.trim(), p=$('loginPwd').value;
+  var match=null;
+  for(var k in ACCOUNTS){ if(ACCOUNTS[k].user===u && ACCOUNTS[k].pwd===p){ match=ACCOUNTS[k]; break; } }
+  if(!match){
+    $('loginPwd').style.borderColor='var(--danger)';
+    $('quickTip').innerHTML='<span style="color:var(--danger)">账号或密码错误，请使用下方演示账号。</span><br>'+QUICK[curRole];
+    return;
+  }
+  $('loginPwd').style.borderColor='';
+  curUser=match; curRole=match.role;
+  $('login').style.display='none'; $('app').classList.add('show');
+  $('avatar').textContent=match.name.charAt(0);
+  $('userName').textContent=match.name+'（'+match.label+'）';
+  buildMenu(); navigate('home');
+}
+$('loginBtn').onclick=doLogin;
+$('loginForm').addEventListener('keydown',function(e){ if(e.key==='Enter') doLogin(); });
+$('logoutBtn').onclick=function(){
+  if(!confirm('确定退出登录？')) return;
+  $('app').classList.remove('show'); $('login').style.display='flex'; curUser=null;
+};
+$('menuToggle').onclick=function(){ $('sidebar').classList.toggle('open'); };
+
+/* ============ 菜单与路由 ============ */
+function buildMenu(){
+  var m=$('menu'); m.innerHTML='';
+  MENUS[curRole].forEach(function(item){
+    if(item.group){ var g=document.createElement('div'); g.className='menu-group'; g.textContent=item.group; m.appendChild(g); return; }
+    var d=document.createElement('div'); d.className='menu-item'; d.setAttribute('data-id',item.id);
+    d.innerHTML='<span class="ico">'+item.ico+'</span><span>'+item.name+'</span>';
+    d.onclick=function(){ navigate(item.id); $('sidebar').classList.remove('open'); };
+    m.appendChild(d);
+  });
+}
+function menuName(id){
+  var f=MENUS[curRole].filter(function(x){return x.id===id});
+  return f.length?f[0].name:'工作台';
+}
+function navigate(id){
+  document.querySelectorAll('.menu-item').forEach(function(x){ x.classList.toggle('active',x.getAttribute('data-id')===id); });
+  $('crumbCur').textContent=menuName(id);
+  window._curPage=id;
+  var r=PAGES[curRole][id]||PAGES.fallback;
+  $('page').innerHTML=r();
+  if(id==='editor') initEditor();
+  window.scrollTo(0,0);
+}
+
+/* ============ 通用组件 ============ */
+function statRow(items){
+  return '<div class="stat-row">'+items.map(function(x){
+    return '<div class="stat-card"><div class="stat-ic '+x.c+'">'+x.i+'</div><div><div class="stat-num">'+x.n+'</div><div class="stat-lbl">'+x.l+'</div></div></div>';
+  }).join('')+'</div>';
+}
+function panel(title,body,extra){
+  return '<div class="panel"><div class="panel-hd"><h3>'+title+'</h3>'+(extra?'<span class="extra">'+extra+'</span>':'')+'</div><div class="panel-bd">'+body+'</div></div>';
+}
+function pageHd(title,sub){ return '<div class="page-hd"><h2>'+title+'</h2><div class="sub">'+sub+'</div></div>'; }
+function demoNotice(){ return '<div class="notice"><span class="ni">ℹ</span><div>这是<strong>可操作的在线体验演示</strong>，数据为模拟数据，操作与界面可真实点击。数据保存在你的浏览器中，刷新不丢失。</div></div>'; }
+
+/* ============ 学生端页面 ============ */
+var PAGES={student:{},teacher:{},admin:{}};
+
+PAGES.student.home=function(){
+  return pageHd('工作台','欢迎回来，'+curUser.name+'！这里是你的学习概览。')+demoNotice()+
+  statRow([
+    {c:'b',i:'▤',n:'3',l:'在学课程'},
+    {c:'g',i:'✓',n:'3/5',l:'已完成实验'},
+    {c:'o',i:'⏱',n:'12.5h',l:'累计学习时长'},
+    {c:'p',i:'★',n:'92',l:'综合评分'}
+  ])+
+  '<div class="grid-2-3">'+
+  panel('学习进度',DATA.courses.map(function(c){
+    return '<div style="margin-bottom:16px"><div style="display:flex;justify-content:space-between;margin-bottom:5px"><span>'+c.name+'</span><b style="color:var(--primary)">'+c.progress+'%</b></div><div class="bar" style="height:8px;background:#eef2f7;border-radius:6px;overflow:hidden"><i style="display:block;height:100%;width:'+c.progress+'%;background:linear-gradient(90deg,#409eff,#67c23a);border-radius:6px"></i></div></div>';
+  }).join(''),'共 3 门课程')+
+  panel('最近活动',
+    '<div class="timeline">'+
+    '<div class="tl-item ok"><div class="tt">今天 19:15</div><div class="th">完成实验「循环与累加」· 得分 95</div></div>'+
+    '<div class="tl-item"><div class="tt">今天 18:42</div><div class="th">在线编程运行 5 次，成功定位 1 个语法错误</div></div>'+
+    '<div class="tl-item err"><div class="tt">昨天 21:08</div><div class="th">实验「素数判定」触发引用错误，已修正</div></div>'+
+    '<div class="tl-item ok"><div class="tt">昨天 20:30</div><div class="th">查看学习画像，正确率提升至 84%</div></div>'+
+    '</div>')+
+  '</div>';
+};
+
+PAGES.student.courses=function(){
+  return pageHd('我的课程','查看你正在学习的课程与进度。')+
+  panel('课程列表','<table class="tbl"><thead><tr><th>课程名称</th><th>授课教师</th><th>学习进度</th><th>状态</th><th>操作</th></tr></thead><tbody>'+
+    DATA.courses.map(function(c){return '<tr><td><b>'+c.name+'</b></td><td>'+c.teacher+'</td><td>'+c.progress+'%</td><td><span class="el-tag '+(c.status==='即将完成'?'green':'blue')+'">'+c.status+'</span></td><td><button class="el-btn sm" onclick="alert(\'进入课程：'+c.name+'\')">进入</button></td></tr>'}).join('')+
+    '</tbody></table>');
+};
+
+PAGES.student.practice=function(){
+  return pageHd('实验练习','按课程组织的实验与练习任务。')+
+  panel('练习任务','<table class="tbl"><thead><tr><th>编号</th><th>题目</th><th>所属课程</th><th>难度</th><th>状态</th><th>操作</th></tr></thead><tbody>'+
+    DATA.practices.map(function(p){return '<tr><td>'+p.id+'</td><td><b>'+p.title+'</b></td><td>'+p.course+'</td><td><span class="el-tag '+(p.diff==='基础'?'green':p.diff==='进阶'?'orange':'red')+'">'+p.diff+'</span></td><td>'+(p.done?'<span class="el-tag green">已完成 '+p.score+'分</span>':'<span class="el-tag gray">未完成</span>')+'</td><td><button class="el-btn sm primary" onclick="window._goEditor && window._goEditor(\''+p.title+'\')">去完成</button></td></tr>'}).join('')+
+    '</tbody></table>');
+};
+
+PAGES.student.editor=function(){
+  return pageHd('在线编程','写代码、运行、查看输出——你的每一步都会被记录，形成过程轨迹。')+
+  '<div class="code-layout"><div>'+
+  '<div class="panel"><div class="panel-hd"><h3>代码编辑器</h3><span class="extra">JavaScript · 本地运行</span></div><div class="panel-bd" style="padding:0">'+
+  '<div style="padding:10px 14px;display:flex;gap:8px;border-bottom:1px solid var(--border-l)">'+
+  '<button class="el-btn primary sm" id="codeRun">▶ 运行</button>'+
+  '<button class="el-btn sm" id="codeReset">重置</button>'+
+  '<span style="margin-left:auto;color:var(--text-sec);font-size:12px;align-self:center" id="codeTask">练习：数列求和</span></div>'+
+  '<div class="code-editor"><div class="code-ln" id="codeLn">1</div>'+
+  '<textarea class="code-area" id="codeArea" spellcheck="false">// 计算 1 到 10 的和\nlet sum = 0;\nfor (let i = 1; i <= 10; i++) {\n  sum += i;\n}\nconsole.log("1 到 10 的和 =", sum);</textarea></div>'+
+  '</div></div>'+
+  '<div class="console"><div class="console-hd">▤ 运行结果<span class="st" id="runStat">尚未运行</span></div><div class="console-bd" id="consoleBd"><div class="con-line" style="color:var(--text-sec)">点击「运行」查看输出</div></div></div>'+
+  '</div><div>'+
+  panel('智能反馈','<div id="fbBox"><div class="el-tag blue">等待运行</div><div style="color:var(--text-sec);font-size:13px;margin-top:8px">运行代码后，这里会解释错误原因并给出改进建议。</div></div>')+
+  panel('过程轨迹','<div class="timeline" id="tlBox"><div style="color:var(--text-sec);font-size:13px">你的编辑与运行记录会实时显示在这里。</div></div>','实时记录')+
+  '</div></div>';
+};
+
+PAGES.student.trajectory=function(){
+  var evs=LOAD_EVENTS();
+  var body=evs.length?('<div class="timeline">'+evs.slice().reverse().slice(0,20).map(function(e){
+    return '<div class="tl-item '+(e.type==='run'?(e.ok?'ok':'err'):'')+'"><div class="tt">'+e.time+'</div><div class="th">'+(e.type==='edit'?'✎ 修改了代码':(e.ok?'▶ 运行成功':'▶ 运行失败 · '+(e.err||'')))+'</div></div>';
+  }).join('')+'</div>'):'<div style="color:var(--text-sec);text-align:center;padding:30px">暂无记录，去「在线编程」写点代码吧。</div>';
+  return pageHd('学习轨迹','把碎片化的操作重构为连续、可还原的学习路径。')+demoNotice()+
+  panel('操作时间线',body,'共 '+evs.length+' 条记录');
+};
+
+PAGES.student.profile=function(){
+  var evs=LOAD_EVENTS();
+  var runs=evs.filter(function(e){return e.type==='run'});
+  var oks=runs.filter(function(e){return e.ok});
+  var rate=runs.length?Math.round(oks.length/runs.length*100):0;
+  return pageHd('学习画像','基于你的过程数据生成的能力画像。')+demoNotice()+
+  statRow([
+    {c:'b',i:'▶',n:runs.length,l:'运行次数'},
+    {c:'g',i:'✓',n:rate+'%',l:'运行成功率'},
+    {c:'o',i:'✎',n:evs.filter(function(e){return e.type==='edit'}).length,l:'代码修改次数'},
+    {c:'r',i:'✕',n:runs.length-oks.length,l:'遇到错误次数'}
+  ])+
+  '<div class="grid-2">'+
+  panel('能力雷达（示意）','<div class="donut"><div class="donut-chart" style="background:conic-gradient(#409eff 0 72%,#67c23a 72% 88%,#e6a23c 88% 96%,#f56c6c 96% 100%)"></div><div class="donut-legend">'+
+    [['#409eff','代码基础 72%'],['#67c23a','调试能力 88%'],['#e6a23c','算法应用 60%'],['#f56c6c','综合实践 55%']].map(function(x){return '<div><span class="dot" style="background:'+x[0]+'"></span>'+x[1]+'</div>'}).join('')+
+    '</div></div>')+
+  panel('学习诊断','<div style="font-size:13.5px;line-height:2;color:var(--text-reg)">'+
+    '<p>你的<strong>调试能力</strong>表现突出，能在多次运行中逐步定位并修正问题，体现了良好的过程学习习惯。</p>'+
+    '<p><strong>算法应用</strong>与<strong>综合实践</strong>是下一阶段的提升重点，建议多做跨知识点的综合练习。</p>'+
+    '<p>保持"小步修改、频繁运行"的节奏，你的学习轨迹清晰、可追溯。</p></div>')+
+  '</div>';
+};
+
+PAGES.student.feedback=function(){
+  return pageHd('反馈建议','结合过程数据生成的可执行改进建议。')+demoNotice()+
+  panel('个性化建议',
+    '<div style="margin-bottom:14px;padding:14px;background:#f0f9eb;border-left:4px solid var(--success);border-radius:4px"><b style="color:var(--success)">✓ 做得好的地方</b><div style="color:var(--text-reg);margin-top:6px;font-size:13.5px">你习惯在运行前检查代码，错误率低于班级平均。遇到错误后能主动修改并重试，形成了完整的学习闭环。</div></div>'+
+    '<div style="margin-bottom:14px;padding:14px;background:#fdf6ec;border-left:4px solid var(--warning);border-radius:4px"><b style="color:var(--warning)">⚠ 可以改进的</b><div style="color:var(--text-reg);margin-top:6px;font-size:13.5px">在「数组应用」类题目上花费时间较长，建议先梳理数组下标与遍历的边界条件，再动手编码。</div></div>'+
+    '<div style="padding:14px;background:#ecf5ff;border-left:4px solid var(--primary);border-radius:4px"><b style="color:var(--primary)">✦ 下一步建议</b><div style="color:var(--text-reg);margin-top:6px;font-size:13.5px">推荐完成练习「函数设计：最大公约数」，巩固函数与循环的组合使用；完成后查看新的学习画像变化。</div></div>');
+};
+
+/* ============ 教师端页面 ============ */
+PAGES.teacher.home=function(){
+  return pageHd('工作台','李老师，欢迎回来。以下是班级整体学情概览。')+demoNotice()+
+  statRow([
+    {c:'b',i:'♙',n:'32',l:'在班学生'},
+    {c:'g',i:'▤',n:'4',l:'进行中作业'},
+    {c:'o',i:'⚠',n:'3',l:'需关注学生'},
+    {c:'p',i:'▥',n:'78%',l:'平均完成率'}
+  ])+
+  '<div class="grid-2">'+
+  panel('作业完成情况',
+    '<div class="bars">'+
+    [['实验一',88],['实验二',78],['实验三',63],['实验四',94]].map(function(x){return '<div class="bar-col"><span class="v">'+x[1]+'%</span><div class="bar" style="height:'+x[1]+'%"></div><span class="lbl">'+x[0]+'</span></div>'}).join('')+
+    '</div>')+
+  panel('需关注学生',
+    DATA.students.filter(function(s){return s.status==='需关注'}).map(function(s){return '<div style="display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--border-l)"><div class="avatar" style="width:30px;height:30px;background:var(--warning)">'+s.name.charAt(0)+'</div><div style="flex:1"><b>'+s.name+'</b><div style="font-size:12px;color:var(--text-sec)">'+s.course+' · 进度 '+s.progress+'%</div></div><span class="el-tag orange">错误 '+s.errors+'</span></div>'}).join(''))+
+  '</div>';
+};
+
+PAGES.teacher.students=function(){
+  return pageHd('学生管理','查看学生学习进度与状态。')+
+  panel('学生列表','<table class="tbl"><thead><tr><th>学号</th><th>姓名</th><th>课程</th><th>进度</th><th>运行次数</th><th>错误次数</th><th>状态</th></tr></thead><tbody>'+
+    DATA.students.map(function(s){return '<tr><td>'+s.id+'</td><td><b>'+s.name+'</b></td><td>'+s.course+'</td><td>'+s.progress+'%</td><td>'+s.runs+'</td><td>'+s.errors+'</td><td><span class="el-tag '+(s.status==='需关注'?'orange':s.status==='优秀'?'green':'blue')+'">'+s.status+'</span></td></tr>'}).join('')+
+    '</tbody></table>','共 '+DATA.students.length+' 名学生');
+};
+
+PAGES.teacher.assignments=function(){
+  return pageHd('作业管理','管理实验作业的发布与提交情况。')+
+  panel('作业列表','<table class="tbl"><thead><tr><th>编号</th><th>作业名称</th><th>课程</th><th>截止时间</th><th>提交/总数</th><th>提交率</th></tr></thead><tbody>'+
+    DATA.assignments.map(function(a){var rate=Math.round(a.submit/a.total*100);return '<tr><td>'+a.id+'</td><td><b>'+a.title+'</b></td><td>'+a.course+'</td><td>'+a.deadline+'</td><td>'+a.submit+' / '+a.total+'</td><td><span class="el-tag '+(rate>=85?'green':rate>=65?'blue':'orange')+'">'+rate+'%</span></td></tr>'}).join('')+
+    '</tbody></table>');
+};
+
+PAGES.teacher.analysis=function(){
+  return pageHd('学情分析','基于过程数据的班级学情统计。')+demoNotice()+
+  statRow([
+    {c:'b',i:'▶',n:'1268',l:'总运行次数'},
+    {c:'g',i:'✓',n:'76%',l:'平均成功率'},
+    {c:'o',i:'⏱',n:'18.6h',l:'人均学习时长'},
+    {c:'p',i:'↗',n:'+12%',l:'较上周提升'}
+  ])+
+  '<div class="grid-2">'+
+  panel('近一周运行趋势',
+    '<div class="bars">'+
+    [['周一',62],['周二',70],['周三',58],['周四',85],['周五',92],['周六',48],['周日',55]].map(function(x){return '<div class="bar-col"><span class="v">'+x[1]+'</span><div class="bar" style="height:'+x[1]+'%"></div><span class="lbl">'+x[0]+'</span></div>'}).join('')+
+    '</div>')+
+  panel('错误类型分布',
+    [['语法错误',42,'#409eff'],['引用错误',28,'#67c23a'],['类型错误',18,'#e6a23c'],['逻辑错误',12,'#f56c6c']].map(function(x){return '<div style="margin-bottom:14px"><div style="display:flex;justify-content:space-between;margin-bottom:5px;font-size:13px"><span>'+x[0]+'</span><b>'+x[1]+'%</b></div><div style="height:8px;background:#eef2f7;border-radius:6px;overflow:hidden"><i style="display:block;height:100%;width:'+x[1]+'%;background:'+x[2]+';border-radius:6px"></i></div></div>'}).join(''))+
+  '</div>';
+};
+
+PAGES.teacher.diagnosis=function(){
+  return pageHd('过程诊断','定位学生学习卡点，从结果判断下沉到过程理解。')+demoNotice()+
+  panel('学习困难定位',
+    '<table class="tbl"><thead><tr><th>学生</th><th>卡点知识点</th><th>表现</th><th>诊断</th></tr></thead><tbody>'+
+    [['刘同学','for 循环边界','反复出现数组越界，修改 8 次未解决','建议课堂讲解循环边界条件'],
+     ['赵同学','函数参数传递','引用错误频发，变量作用域混淆','推荐专项练习：函数与作用域'],
+     ['周同学','条件判断逻辑','逻辑错误导致结果偏差','建议一对一点评解题思路']].map(function(r){return '<tr><td><b>'+r[0]+'</b></td><td>'+r[1]+'</td><td>'+r[2]+'</td><td><span class="el-tag blue">'+r[3]+'</span></td></tr>'}).join('')+
+    '</tbody></table>');
+};
+
+PAGES.teacher.suggest=function(){
+  return pageHd('教学建议','基于过程诊断生成的教学决策参考。')+
+  panel('本周教学建议',
+    '<div style="line-height:2.2;font-size:14px;color:var(--text-reg)">'+
+    '<p><b style="color:var(--primary)">1. 循环结构专题</b>：班级 34% 的错误集中在循环边界，建议用 15 分钟讲解边界条件与调试方法。</p>'+
+    '<p><b style="color:var(--primary)">2. 分层练习</b>：为进度落后的 3 名同学推送基础题，为优秀学生开放挑战题「成绩统计」。</p>'+
+    '<p><b style="color:var(--primary)">3. 过程化点评</b>：结合学习轨迹点评，不只指出结果对错，而是还原学生的思考路径。</p>'+
+    '</div>');
+};
+
+/* ============ 管理端页面 ============ */
+PAGES.admin.home=function(){
+  return pageHd('工作台','系统总体运行概览。')+demoNotice()+
+  statRow([
+    {c:'b',i:'♙',n:'128',l:'注册用户'},
+    {c:'g',i:'▤',n:'12',l:'课程总数'},
+    {c:'o',i:'▥',n:'5600+',l:'累计运行'},
+    {c:'p',i:'◎',n:'99.2%',l:'系统可用率'}
+  ])+
+  panel('系统公告','<div style="line-height:2;color:var(--text-reg);font-size:13.5px"><p>• 平台运行正常，所有服务可用。</p><p>• 本学期新增 3 门课程，累计 128 名用户注册。</p><p>• 建议定期导出过程数据用于教学研究。</p></div>');
+};
+
+PAGES.admin.users=function(){
+  var all=DATA.students.map(function(s){return {user:s.id,name:s.name,role:'学生',status:'正常'}});
+  all.push({user:'463621',name:'李老师',role:'教师',status:'正常'});
+  all.push({user:'admin',name:'管理员',role:'管理员',status:'正常'});
+  return pageHd('用户管理','管理平台所有用户账号。')+
+  panel('用户列表','<table class="tbl"><thead><tr><th>账号</th><th>姓名</th><th>角色</th><th>状态</th><th>操作</th></tr></thead><tbody>'+
+    all.map(function(u){return '<tr><td>'+u.user+'</td><td><b>'+u.name+'</b></td><td><span class="el-tag '+(u.role==='管理员'?'red':u.role==='教师'?'orange':'blue')+'">'+u.role+'</span></td><td><span class="el-tag green">'+u.status+'</span></td><td><button class="el-btn sm" onclick="alert(\'查看用户：'+u.name+'\')">查看</button></td></tr>'}).join('')+
+    '</tbody></table>','共 '+all.length+' 个用户');
+};
+
+PAGES.admin.courses=function(){
+  return pageHd('课程管理','管理平台所有课程。')+
+  panel('课程列表','<table class="tbl"><thead><tr><th>编号</th><th>课程名称</th><th>授课教师</th><th>学生数</th><th>状态</th></tr></thead><tbody>'+
+    DATA.courses.map(function(c,i){return '<tr><td>'+c.id+'</td><td><b>'+c.name+'</b></td><td>'+c.teacher+'</td><td>'+[32,30,28][i]+'</td><td><span class="el-tag green">进行中</span></td></tr>'}).join('')+
+    '</tbody></table>');
+};
+
+PAGES.admin.stats=function(){
+  return pageHd('数据统计','平台核心数据统计。')+demoNotice()+
+  statRow([
+    {c:'b',i:'▶',n:'5600+',l:'总运行次数'},
+    {c:'g',i:'✓',n:'74%',l:'平均成功率'},
+    {c:'o',i:'▤',n:'128',l:'活跃用户'},
+    {c:'p',i:'✎',n:'2300+',l:'代码提交数'}
+  ])+
+  panel('各课程运行量',
+    '<div class="bars">'+
+    [['Java基础',2100],['数据结构',1850],['Web开发',1650]].map(function(x){return '<div class="bar-col"><span class="v">'+x[1]+'</span><div class="bar" style="height:'+(x[1]/2100*100)+'%"></div><span class="lbl">'+x[0]+'</span></div>'}).join('')+
+    '</div>');
+};
+
+PAGES.admin.logs=function(){
+  return pageHd('系统日志','记录关键操作，便于审计追溯。')+
+  panel('操作日志','<table class="tbl"><thead><tr><th>时间</th><th>用户</th><th>操作</th><th>IP</th></tr></thead><tbody>'+
+    DATA.logs.map(function(l){return '<tr><td>'+l.t+'</td><td>'+l.user+'</td><td>'+l.act+'</td><td>'+l.ip+'</td></tr>'}).join('')+
+    '</tbody></table>');
+};
+
+PAGES.fallback=function(){ return pageHd('页面','功能建设中'); };
+
+/* ============ 过程事件存储 ============ */
+var EKEY='zx_app_events_v1';
+function LOAD_EVENTS(){ try{ var a=JSON.parse(localStorage.getItem(EKEY)); return Array.isArray(a)?a:[]; }catch(e){ return []; } }
+function ADD_EVENT(e){ var a=LOAD_EVENTS(); e.time=new Date().toLocaleTimeString('zh-CN',{hour12:false}); a.push(e); try{localStorage.setItem(EKEY,JSON.stringify(a.slice(-200)))}catch(err){} }
+
+/* ============ 在线编程引擎 ============ */
+var WORKER_SRC=[
+'const fmt=(v,d)=>{if(d>3)return "…";if(v===undefined)return "undefined";if(v===null)return "null";if(typeof v==="string")return v;if(typeof v==="function")return "[Function "+(v.name||"anonymous")+"]";if(typeof v==="object"){const seen=new WeakSet();try{return JSON.stringify(v,(k,val)=>{if(typeof val==="function")return "[Function]";if(val&&typeof val==="object"){if(seen.has(val))return "[Circular]";seen.add(val);}return val;});}catch(e){return String(v);}}return String(v);};',
+'let logs=[];const push=(lv,a)=>{logs.push({level:lv,text:Array.from(a).map(x=>fmt(x,0)).join(" ")});};',
+'console.log=(...a)=>push("log",a);console.info=(...a)=>push("info",a);console.warn=(...a)=>push("warn",a);console.error=(...a)=>push("error",a);',
+'onmessage=function(e){logs=[];const t0=Date.now();try{(new Function(e.data))();postMessage({ok:true,logs:logs,ms:Date.now()-t0});}catch(err){postMessage({ok:false,logs:logs,ms:Date.now()-t0,err:{name:err.name,message:err.message,stack:(err.stack||"").split("\\n").slice(0,5).join("\\n")}});}};'
+].join('\n');
+
+function runInWorker(code){
+  return new Promise(function(resolve){
+    var url;try{url=URL.createObjectURL(new Blob([WORKER_SRC],{type:'application/javascript'}))}catch(e){resolve({ok:false,logs:[],err:{name:'EnvError',message:'浏览器不支持'}});return}
+    var w;try{w=new Worker(url)}catch(e){URL.revokeObjectURL(url);resolve({ok:false,logs:[],err:{name:'EnvError',message:'请用系统浏览器打开本网址'}});return}
+    var done=false;
+    var timer=setTimeout(function(){if(!done){done=true;w.terminate();URL.revokeObjectURL(url);resolve({ok:false,logs:[],err:{name:'TimeoutError',message:'执行超时，可能存在死循环'}});}},3000);
+    w.onmessage=function(e){if(done)return;done=true;clearTimeout(timer);w.terminate();URL.revokeObjectURL(url);resolve(e.data)};
+    w.onerror=function(e){if(done)return;done=true;clearTimeout(timer);w.terminate();URL.revokeObjectURL(url);resolve({ok:false,logs:[],err:{name:'WorkerError',message:e.message||'运行错误'}})};
+    w.postMessage(code);
+  });
+}
+function esc(s){return String(s==null?'':s).replace(/[&<>]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c]})}
+
+function initEditor(){
+  var area=$('codeArea'), ln=$('codeLn'), btn=$('codeRun');
+  if(!area) return;
+  function updLn(){var n=area.value.split('\n').length,s='';for(var i=1;i<=n;i++)s+=i+(i<n?'\n':'');ln.textContent=s;ln.scrollTop=area.scrollTop;}
+  area.addEventListener('input',function(){updLn()});
+  area.addEventListener('scroll',function(){ln.scrollTop=area.scrollTop});
+  area.addEventListener('keydown',function(e){if(e.key==='Tab'){e.preventDefault();var s=this.selectionStart,t=this.selectionEnd;this.value=this.value.slice(0,s)+'  '+this.value.slice(t);this.selectionStart=this.selectionEnd=s+2;updLn();}});
+  updLn();
+  $('codeReset').onclick=function(){area.value='// 计算 1 到 10 的和\nlet sum = 0;\nfor (let i = 1; i <= 10; i++) {\n  sum += i;\n}\nconsole.log("1 到 10 的和 =", sum);';updLn();$('consoleBd').innerHTML='<div class="con-line" style="color:var(--text-sec)">已重置</div>';};
+  btn.onclick=function(){
+    var code=area.value;
+    btn.disabled=true;btn.textContent='⏳ 运行中';$('runStat').textContent='执行中…';
+    runInWorker(code).then(function(r){
+      ADD_EVENT({type:'run',ok:r.ok,err:r.err?r.err.name:null});
+      // 输出
+      var cb=$('consoleBd');cb.innerHTML='';
+      if(!r.logs||!r.logs.length) cb.innerHTML='<div class="con-line" style="color:var(--text-sec)">（无输出，试试 console.log()）</div>';
+      else r.logs.forEach(function(l){var d=document.createElement('div');d.className='con-line '+(l.level==='error'?'error':l.level==='warn'?'warn':l.level==='info'?'info':'');d.textContent=l.text;cb.appendChild(d)});
+      if(r.ok) $('runStat').innerHTML='<span class="el-tag green">成功 '+(r.ms||0)+'ms</span>';
+      else $('runStat').innerHTML='<span class="el-tag red">失败 · '+esc(r.err.name)+'</span>';
+      // 反馈
+      renderFeedback(r);
+      // 轨迹
+      renderTinyTimeline();
+      btn.disabled=false;btn.textContent='▶ 运行';
+    });
+  };
+  renderTinyTimeline();
+}
+function renderFeedback(r){
+  var box=$('fbBox');if(!box)return;
+  if(r.ok){
+    var n=(r.logs||[]).length;
+    box.innerHTML='<div style="padding:12px;background:#f0f9eb;border-left:4px solid var(--success);border-radius:4px"><b style="color:var(--success)">✓ 运行成功</b><div style="color:var(--text-reg);margin-top:6px;font-size:13px">'+(n?('产生 '+n+' 行输出，耗时 '+(r.ms||0)+' ms。逻辑跑通，继续尝试更复杂的练习。'):'代码执行成功但无输出，建议用 console.log() 打印关键变量验证结果。')+'</div></div>';
+  }else{
+    var map={SyntaxError:['语法错误','括号/引号未配对、缺少分号或用了中文标点。','检查报错行附近的符号，改用英文半角。'],ReferenceError:['变量未定义','使用了未声明的变量，可能拼写错误。','使用前先 let 声明并赋值，核对拼写。'],TypeError:['类型错误','对某个值做了它不支持的操作。','先 console.log() 打印该值确认类型。'],TimeoutError:['执行超时','循环可能没有正确退出条件。','检查 while/for 的循环变量变化与跳出条件。']};
+    var e=map[r.err.name]||['运行错误',r.err.message,'根据错误信息逐步排查。'];
+    box.innerHTML='<div style="padding:12px;background:#fef0f0;border-left:4px solid var(--danger);border-radius:4px"><b style="color:var(--danger)">✕ '+e[0]+'（'+esc(r.err.name)+'）</b><div style="color:var(--text-reg);margin-top:6px;font-size:13px">'+e[1]+'</div><div style="color:var(--text-sec);margin-top:6px;font-size:12.5px">💡 '+e[2]+'</div></div>';
+  }
+}
+function renderTinyTimeline(){
+  var box=$('tlBox');if(!box)return;
+  var evs=LOAD_EVENTS().slice(-8).reverse();
+  if(!evs.length){box.innerHTML='<div style="color:var(--text-sec);font-size:13px">你的编辑与运行记录会实时显示在这里。</div>';return}
+  box.innerHTML='<div class="timeline">'+evs.map(function(e){
+    return '<div class="tl-item '+(e.type==='run'?(e.ok?'ok':'err'):'')+'"><div class="tt">'+e.time+'</div><div class="th">'+(e.type==='run'?(e.ok?'▶ 运行成功':'▶ 运行失败 · '+esc(e.err||'')):'✎ 编辑代码')+'</div></div>';
+  }).join('')+'</div>';
+}
+// 练习页「去完成」跳转
+window._goEditor=function(title){ if(curRole==='student'){navigate('editor');var t=$('codeTask');if(t)t.textContent='练习：'+title;} };
+
+/* ============ 启动 ============ */
+// 支持刷新后保持登录（仅本次会话）
+window.addEventListener('DOMContentLoaded',function(){});
+})();
+</script>
+</body></html>
+
+</body></html>
