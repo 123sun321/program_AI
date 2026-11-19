@@ -28,10 +28,14 @@ button,input,select{font-family:inherit;font-size:inherit}
 
 /* ============ 登录页 ============ */
 #login{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;
-  background:linear-gradient(135deg,rgba(16,32,60,.55),rgba(30,80,150,.35)),url('assets/img/login-bg.png') center/cover no-repeat}
+  background:linear-gradient(135deg,#0f2038 0%,#1e4a8a 45%,#0891b2 100%)}
 .login-box{width:400px;max-width:92vw;background:#fff;border-radius:8px;padding:38px 36px 30px;box-shadow:0 12px 40px rgba(0,0,0,.25)}
 .login-hd{text-align:center;margin-bottom:26px}
-.login-hd img{max-width:190px;height:auto;margin-bottom:6px}
+.login-hd .brand{display:inline-flex;align-items:center;gap:10px;margin-bottom:6px}
+.login-hd .brand-mark{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,#2563eb,#0891b2);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(37,99,235,.25)}
+.login-hd .brand-mark svg{width:22px;height:22px}
+.login-hd .brand-name{font-size:21px;font-weight:700;color:#1e293b;letter-spacing:1px}
+.login-hd .brand-name span{color:var(--primary)}
 .login-hd p{color:var(--text-sec);font-size:12.5px;letter-spacing:1px}
 .role-tabs{display:flex;background:#f5f7fa;border-radius:6px;padding:3px;margin-bottom:22px}
 .role-tab{flex:1;text-align:center;padding:8px 0;border-radius:4px;cursor:pointer;color:var(--text-reg);font-size:13.5px;transition:.15s}
@@ -51,7 +55,10 @@ button,input,select{font-family:inherit;font-size:inherit}
 #app.show{display:block}
 .sidebar{position:fixed;top:0;bottom:0;left:0;width:210px;background:var(--side);color:var(--side-text);z-index:50;display:flex;flex-direction:column;transition:transform .25s}
 .logo-bar{height:56px;display:flex;align-items:center;padding:0 18px;border-bottom:1px solid rgba(255,255,255,.08);flex-shrink:0}
-.logo-bar img{max-width:140px;filter:brightness(0) invert(1);opacity:.92}
+.logo-bar .brand{display:flex;align-items:center;gap:10px}
+.logo-bar .brand-mark{width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,#3b82f6,#22d3ee);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.logo-bar .brand-mark svg{width:18px;height:18px}
+.logo-bar .brand-name{font-size:17px;font-weight:700;color:#fff;letter-spacing:1px}
 .menu{flex:1;overflow-y:auto;padding:10px 0}
 .menu-group{padding:12px 20px 6px;font-size:11px;color:#7b8ca3;letter-spacing:.5px}
 .menu-item{display:flex;align-items:center;gap:10px;padding:11px 20px;cursor:pointer;color:var(--side-text);font-size:14px;border-left:3px solid transparent;transition:.15s}
@@ -152,7 +159,10 @@ button,input,select{font-family:inherit;font-size:inherit}
 <div id="login">
   <div class="login-box">
     <div class="login-hd">
-      <img src="assets/img/platform-logo.png" alt="智训云枢">
+      <div class="brand">
+        <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg></span>
+        <span class="brand-name">智训<span>云枢</span></span>
+      </div>
       <p>从结果评价走向过程理解的 AI 编程实训平台</p>
     </div>
     <div class="role-tabs" id="roleTabs">
@@ -173,7 +183,10 @@ button,input,select{font-family:inherit;font-size:inherit}
 <!-- ============ 主应用 ============ -->
 <div id="app">
   <aside class="sidebar" id="sidebar">
-    <div class="logo-bar"><img src="assets/img/platform-logo.png" alt="智训云枢"></div>
+    <div class="logo-bar"><div class="brand">
+      <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg></span>
+      <span class="brand-name">智训云枢</span>
+    </div></div>
     <div class="menu" id="menu"></div>
     <div class="side-foot">智训云枢 · 在线体验版 v1.0</div>
   </aside>
